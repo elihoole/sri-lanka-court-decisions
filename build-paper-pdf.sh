@@ -22,20 +22,14 @@ echo "Combining files with page breaks..."
 temp_file="../temp-combined.md"
 > "$temp_file"  # Clear/create temp file
 
-first=true
 for file in "${sorted[@]}"; do
     # Note: If you have a separate title page file (0-0-title-page.md), uncomment below to skip it
     # if [ "$file" = "0-0-title-page.md" ]; then
     #     continue
     # fi
 
-    # Add page break before each file (except the first one)
-    if [ "$first" = true ]; then
-        first=false
-    else
-        # Use multiple methods to ensure page break works
-        echo -e '\n\\newpage\n' >> "$temp_file"
-    fi
+    # Add page break before each file
+    echo -e '\n\\newpage\n' >> "$temp_file"
     cat "$file" >> "$temp_file"
     echo "" >> "$temp_file"  # Add blank line after file content
 done

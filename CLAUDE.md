@@ -24,6 +24,8 @@ I have been working on this paper for a long time and I want to bring to a concl
 
 ## Skeleton of the paper
 
+All sections sit within sections/ directory as separate .md files. 
+
 **0. Abstract**
 Introduces the empirical study of Sri Lanka's apex courts (Supreme Court and Court of Appeal) from 2012–2022 using computational methods. Presents the CDTextLK corpus (1278 Supreme Court and 7314 Court of Appeal decisions) and describes eight key patterns identified through computational analysis. Argues these insights challenge received wisdom about judicial impact and provide a necessary corrective to knowledge generated through landmark cases.
 

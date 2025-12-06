@@ -2,7 +2,7 @@
 
 The overall trend that we see is that the Court of Appeal has consistently delivered more judgements than the Supreme Court; the no of judgements issued by the Supreme Court has increased significantly after 2016\. Furthermore, there was a considerable drop in the number of decisions delivered by both apex courts in the years 2020 and 2021, likely due to the COVID-19 pandemic. The other notably low performing year across the two courts was 2015\. Incidentally this was, an year in which a presidential election was held in January followed by a general election in August and the year of the enactment of the 19th Amendment
 
-**Numerically greater contribution by the Court of Appeal**
+Numerically greater contribution by the Court of Appeal
 
 ![The Court of Appeal issued roughly 4 times as many decisions as the Supreme Court in a given year.][image1]
 
@@ -12,7 +12,7 @@ The issuance of a greater number of judgements is significant because jurisprude
 
 To further interpret this data we need to know how many of the parties appeal to the Supreme Court against the decisions by the Court of Appeal. If that number is not significant, it further supports the view that the significantly greater number of judgements issued by the Court of Appeal, also have the greater effect in terms of dispute resolution as well. If so, it is necessary to consider whether the doctrinal and normative interpretation of judicial decisions in Sri Lanka should necessarily include jurisprudence of the Court of Appeal. There was a brief time in which decisions of the Court of Appeal were published as an unofficial court report by a non-government organization, Law & Society Trust.[^48]
 
-## **The Judgements issued by the Supreme Court**
+## The Judgements issued by the Supreme Court
 
 Figure 1: no of judgements issued by the Supreme Court
 
@@ -40,7 +40,7 @@ No of writ judgements CA
 
 How many writ appeals are going up to SC?
 
-## **Judgements and Orders Issued by the Court of Appeal**
+## Judgements and Orders Issued by the Court of Appeal
 
 Interestingly, a comparable trend is not observed in the Court of Appeal whose best performing year was 2013 in which the court delivered 1109 decisions. The high number of decisions by the Court of Appeal in 2013 might also be a result of litigants having more confidence in the Court of Appeal, in comparison with the Supreme Court, due to the purported impeachment. Overall, in the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court’s 116 decisions.
 
@@ -48,7 +48,7 @@ FIGURE – FRs in SC cf Writs in SC and CA
 
 ![][image4]
 
-## **Time taken to deliver decisions**
+## Time taken to deliver decisions
 
 ![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.][image5]
 
@@ -92,7 +92,7 @@ However, the experience in the Court of Appeal provides an interesting point of 
 
 The average time taken for writ decisions was 3.15 years (2.80 SD) against 8.01 years (6.43 SD) for other matters. 25% of writs were decided within a year of filing. The practical procedure followed in writ petitions is provided below. As it can be seen, it is not unlike the procedure followed in fundamental rights litigation. Unlike with fundamental rights petitions, a time limit has not been provided in the Constitution for the hearing of a writ petition. Even in the common law, there are no known principles regarding the completion of writ petitions. Time or delay is considered a factor when the court determines whether to grant to leave to proceed in a writ matter.[^55] Apart from this requirement there are no known principles in the common law that guide the court. Even in the absence of stipulated time limits, the data suggests that the Court of Appeal’s proceedings are concluded within a shorter time period.  
 
-## **Length of decisions**
+## Length of decisions
 
 ![Supreme Court decisions are, on average, longer than Court of Appeal decisions.][image9]
 
@@ -126,7 +126,7 @@ This is an instance where the empirical data, obtained through computational met
 
 Furthermore, this empirical pattern and doctrinal assessment, reveals another aspect of Sri Lanka’s public law jurisprudence. Even though a greater number of writ petitions may be filed, the actual law on writs remains underdeveloped. Academic study of Sri Lanka’s public law tends to focus mostly on the fundamental rights jurisprudence of the Court with very little attention paid to the study of Sri Lanka’s writ jurisprudence *qua* writ jurisprudence.[^56] 
 
-**Dismissed vs. allowed**
+Dismissed vs. allowed
 
 *Proportion of decisions dismissed vs. allowed.*
 
@@ -147,7 +147,7 @@ Figure: total number of FR judgements in favour of petitioners and dismissed; to
 
 In the Supreme Court, 62% of the decisions on fundamental rights petitions were allowed and 38% were dismissed.
 
-**Token-level mutual information analysis**
+Token-level mutual information analysis
 
 Following the steps outlined in , we performed mutual information analysis on the Supreme Court and Court of Appeal decisions to identify the most salient words in each corpus. Mutual information analysis is where we quantify the presence or absence of words within a corpus. The frequency of the words used has the potential to reveal attributes of the jurisprudence of both courts. For example… These empirical patterns can provide helpful entry points to analyse the jurisprudence of these courts too. We followed the same tokenisation scheme (breaking down the specific words) as in Section [4.3](#bookmark=id.z7ou7uqtzwkn) but further stemmed each token. We used a simple add 1 smoothing scheme to avoid zero probabilities. Top-15 tokens with the highest mutual information scores are tabulated in Table [\[tab:token-stats\]](#bookmark=id.s6zo1v3r4n33).
 
@@ -159,7 +159,7 @@ The word ‘err’ appears in 24% of Supreme Court decisions but only in 1% of C
 
 The high prevalence of the words ‘paragraph’ and ‘refer’ in Supreme Court decisions arises in the context of the court referring to specific sections of petitions, the constitution, and other legislation and hints at a more formal, perhaps rigorous, style of writing in the Supreme Court compared to the Court of Appeal.
 
-**Topic modelling with Latent Dirichlet Allocation (LDA)[^57]**
+Topic modelling with Latent Dirichlet Allocation (LDA)[^57]
 
 *Top-3 topics with the highest average probability across the two corpora and the top-40 tokens associated with each topic.*
 
@@ -210,13 +210,13 @@ We applied Latent Dirichlet Allocation (LDA) to CDTextLK in order to understand 
 
 To find the three most common topics, across Supreme Court and Court of Appeal decisions, we, first, ran LDA on the entirety of CDTextLK under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores. The top-40 tokens associated with each of the three topics are tabulated in Table [3](#bookmark=id.685o3n45iaak). We observe that Topic 1 concerns land and property disputes, Topic 2 captures state employment and promotion dispute related writs, and Topic 3 covers criminal proceedings.
 
-# **ANALYSIS**
+# ANALYSIS
 
 A study of non-intersecting top 10 topics between the two sub corpora corroborates what we know about the structure of the legal system in the country. For instance, while appeals on criminal matters are heard by the Court of Appeal, appeals on civil matters, following the institution of the Civil Appeal High Court, are no longer heard by the Court of Appeal. The fifth and sixth most common topics in the Court of Appeal decisions – denoted by terms such as ‘vehicl’, ‘owner’, ‘offenc’, ‘confisc’, ‘charg’, ‘forest’, ‘websit’, ‘accus’, ‘polic’, ‘regist’, ‘transport’, ‘station’, ‘driver’, ‘prove’, ‘timber’, ‘illeg’, ‘deceas’, ‘murder’, ‘injuri’, and ‘stab’ – do not appear in the top 10 topics in the Supreme Court decisions. Similarly, disputes between central government and administrative powers such as provincial councils and pradeshya sabhas are heard by the Supreme Court. The ninth most common topic in the Supreme Court decisions – denoted by terms such as ‘council’, ‘member’, ‘writ’, ‘elect’, ‘sabha’, ‘provinci’, ‘pradeshiya’, ‘constitut’, ‘articl’, ‘power’, ‘minist’, ‘chairman’, ‘local’, ‘presid’, ‘governor’, ‘uva’, ‘appoint’, and ‘central’ – does not appear in the top 10 topics in the Court of Appeal decisions.
 
 We also ran LDA on decisions that took ten or more years for resolution (num\_topics=5 and random\_seed=0) and found that the most common topic in this category was related to land and property disputes. \- ANALYSIS
 
-## **Computational Insights to Jurisprudence and Access to Justice**
+## Computational Insights to Jurisprudence and Access to Justice
 
 The dominant focus when it comes the work of courts – FR, Supreme Court and dominant focus in administration of justice \- the promotion of ADR may be misplaced and may be guided by a incomplete understanding of the actual effect of the work of appellate courts. From an empirical perspective, writs more active than FR, Court of Appeal output is greater than the SC output in terms of judgements (although length of judgements greater by SC). FRs taking 5 yrs on average. Land and state employment clogging up the appellate courts. 
 

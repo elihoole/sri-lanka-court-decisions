@@ -62,7 +62,7 @@ To approximate the date on which an application was filed, we extracted the year
 
 ### Supreme Court Fundamental Rights: The Two-Month Fiction
 
-The Constitution mandates that fundamental rights petitions be determined within two months of filing (Article 126(5)).[^53] However, the Supreme Court has held that this requirement is directory rather than mandatory.[^54] 
+The Constitution mandates that fundamental rights petitions be determined within two months of filing (Article 126(5)).[^note_art126_2] However, the Supreme Court has held that this requirement is directory rather than mandatory.[^54] 
 
 ![][image6]
 
@@ -86,7 +86,7 @@ The Court of Appeal thus resolves writs faster (mean 3.15 years) than the Suprem
 
 ### Implications for Access to Justice
 
-As per recent reports, 5,785 cases are pending before the Supreme Court and 4,572 before the Court of Appeal.[^50] The figures are worse in lower courts: 27,324 cases pending before High Courts and 262,665 before District Courts.[^51] The total number of cases pending is 1,131,818.[^52]
+As per recent reports, 5,785 cases are pending before the Supreme Court and 4,572 before the Court of Appeal.[@srilankamirror2024pending] The figures are worse in lower courts: 27,324 cases pending before High Courts and 262,665 before District Courts.[@srilankamirror2024pending] The total number of cases pending is 1,131,818.[@srilankamirror2024pending]
 
 The time taken to determine fundamental rights petitions fundamentally undermines the constitutional mandate. The data reveal that 37% took five or more years for resolution, with a mean time of 4.17 years—against a constitutional requirement of two months. These findings clarify the quality of access to justice available to petitioners who approach the appellate courts.
 
@@ -100,7 +100,7 @@ The timing data reveal how long disputes take to resolve but not what those disp
 
 ### Computational Method: Topic Modeling
 
-To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA) to CDTextLK. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
+To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[^note_lda_methodology] to CDTextLK. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
 
 To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of CDTextLK under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores.
 
@@ -327,4 +327,7 @@ Finally, substantive concentration in land disputes and state employment cases r
 
 CDTextLK does not resolve these questions, but it provides an empirical foundation for engaging them. The patterns identified here—quantitative dominance, temporal dysfunction, substantive concentration—are not speculative. They are measurable features of appellate jurisprudence that demand explanation and, where warranted, reform.
 
-[^57]: LDA methodology
+[^note_lda_methodology]: [@blei2003latent]
+
+[^note_art126_2]: Art 126
+

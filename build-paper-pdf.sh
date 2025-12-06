@@ -41,6 +41,9 @@ cd ..
 pandoc temp-combined.md \
     -o CDTextLK-paper-draft.pdf \
     --pdf-engine=xelatex \
+    --citeproc \
+    --bibliography=references.bib \
+    --csl=oscola.csl \
     --toc \
     --toc-depth=3 \
     --number-sections \

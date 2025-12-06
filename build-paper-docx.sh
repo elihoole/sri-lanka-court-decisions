@@ -61,6 +61,9 @@ sed -i '0,/^# /! s/^# /\\newpage\n\n# /' temp-combined-docx.md
 # Build pandoc command with optional reference doc
 PANDOC_CMD="pandoc temp-combined-docx.md \
     -o CDTextLK-paper-draft.docx \
+    --citeproc \
+    --bibliography=references.bib \
+    --csl=oscola.csl \
     --toc \
     --toc-depth=3 \
     --number-sections \

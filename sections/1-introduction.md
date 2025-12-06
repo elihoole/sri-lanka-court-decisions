@@ -1,4 +1,4 @@
-1. # **Introduction**
+# **Introduction**
 
 In common-law jurisdictions, judicial precedents – formally understood as appellate rulings that bind lower courts on questions of law – determine the content of the law. In practice, however, precedent is often conflated with a narrower set of influential 'landmark' judgments that come to dominate how the law is perceived and interpreted. Sri Lanka, as a common-law jurisdiction, reflects this pattern. Computational methods – the use of data science and artificial intelligence to identify patterns across large datasets – offer a way to move beyond this narrow focus by enabling systematic analysis of the full corpus of case law. These methods enable analysis of large corpora that would be impractical to undertake manually. In doing so, they generate new forms of knowledge that extend beyond jurisprudence driven by landmark rulings. Such knowledge has the potential to unsettle received assumptions and ingrained perceptions about the workings of courts. Put differently, computational analysis can make visible dimensions of judicial activity that landmark-focused approaches often obscure.
 

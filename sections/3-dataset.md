@@ -1,5 +1,5 @@
 
-# **3\. CDTextLK: Court Decision Texts Sri Lanka Dataset**
+3. # **CDTextLK: Court Decision Texts Sri Lanka Dataset**
 
 *CDTextLK dataset at a glance; SD \= standard deviation.*
 

@@ -12,9 +12,9 @@ Scraping the two court websites presented minimal technical barriers, as both ar
 
 [^pdfminer]: PDFMiner.six version [X.X] was used for PDF text extraction.
 
-Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments (Table 1). The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
+Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments, as shown in @tbl:dataset-composition. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
 
-**Table 1.** CDTextLK dataset composition and descriptive statistics (SD = standard deviation)
+: CDTextLK dataset composition and descriptive statistics (SD = standard deviation) {#tbl:dataset-composition}
 
 |  | Number of | Mean token |
 | :---- | :---- | :---- |

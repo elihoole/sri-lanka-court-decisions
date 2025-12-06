@@ -41,6 +41,11 @@ cd ..
 pandoc temp-combined.md \
     -o CDTextLK-paper-draft.pdf \
     --pdf-engine=xelatex \
+    --filter pandoc-crossref \
+    -M tablePrefix="Table" \
+    -M figurePrefix="Figure" \
+    -M tblPrefix="Table" \
+    -M figPrefix="Figure" \
     --citeproc \
     --bibliography=references.bib \
     --csl=chicago-fullnote-bibliography.csl \

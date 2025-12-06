@@ -12,9 +12,9 @@ The findings demonstrate that the Court of Appeal's numerical dominance far exce
 
 ### The Six-to-One Pattern
 
-![The Court of Appeal issued nearly 6 times as many decisions as the Supreme Court in a given year.](images/num_decisions_per_year.png)
+![The Court of Appeal issued nearly 6 times as many decisions as the Supreme Court in a given year.](images/num_decisions_per_year.png){#fig:decisions-per-year}
 
-The Court of Appeal issued nearly six times as many judgments as the Supreme Court in a given year. As demonstrated in Figure 1, this pattern holds consistently across the decade under study. The Court of Appeal averaged 665 decisions per year compared to the Supreme Court's 116 decisions. 
+The Court of Appeal issued nearly six times as many judgments as the Supreme Court in a given year. As demonstrated in @fig:decisions-per-year, this pattern holds consistently across the decade under study. The Court of Appeal averaged 665 decisions per year compared to the Supreme Court's 116 decisions. 
 
 This quantitative disparity has structural explanations. The Court of Appeal has a greater number of justices than the Supreme Court. More significantly, it is a court of first instance for writ applications under Article 140, whereas the Supreme Court primarily exercises appellate jurisdiction with the exception of its original jurisdiction under Article 126 (fundamental rights) and Article 129 (election petitions). The Court of Appeal thus handles both original writ petitions and appeals from lower courts across civil, criminal, and administrative matters.
 
@@ -48,9 +48,9 @@ The outcome patterns also differ. Of the decisions on writs in the Court of Appe
 
 ### The Court of Appeal as Effective Final Arbiter
 
-The Court of Appeal's dominance in writ jurisdiction extends beyond volume to practical finality. During the period 2012-2022, the Supreme Court decided only 31 appeals from Court of Appeal writ decisions—compared to 1,741 writ decisions issued by the Court of Appeal during the same period.
+The Court of Appeal's dominance in writ jurisdiction extends beyond volume to practical finality. During the period 2012-2022, the Supreme Court decided only 31 appeals from Court of Appeal writ decisions—compared to 1,741 writ decisions issued by the Court of Appeal during the same period, as shown in @tbl:ca-writs-vs-sc-appeals.
 
-*Table: Court of Appeal Writ Decisions vs. Supreme Court Appeals (2012-2022)*
+: Court of Appeal Writ Decisions vs Supreme Court Appeals (2012-2022) {#tbl:ca-writs-vs-sc-appeals}
 
 | Metric | Value |
 | :---- | ----: |
@@ -82,7 +82,9 @@ The prevalence of writs and their functional finality raise practical questions 
 
 ## Temporal Dysfunction: The Constitutional Time Mandate and Its Failure
 
-![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.](images/time_to_decision.png)
+As shown in @fig:time-to-decision, 37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.
+
+![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.](images/time_to_decision.png){#fig:time-to-decision}
 
 ### Methodology Note
 
@@ -94,9 +96,11 @@ To approximate the date on which an application was filed, we extracted the year
 
 The Constitution mandates that fundamental rights petitions be determined within two months of filing (Article 126(5)).[^note_art126_2] However, the Supreme Court has held that this requirement is directory rather than mandatory.[^54] 
 
-![37% of FR petitions took five or more years for resolution](images/image_no_6_fr_delay_distribution.png)
+As illustrated in @fig:fr-delay-distribution, the data confirm serious concerns about delays in the court system.
 
-The data confirm serious concerns about delays in the court system. Of the 361 fundamental rights petitions in the dataset, 332 took 3 to 15 years for resolution. Of these, 140—almost half—took 10 to 15 years to be concluded. Around 37% of fundamental rights petitions took five or more years for resolution. Only 20% resolved within one year of filing. The mean time taken was 4.17 years (3.05 standard deviation)—a substantial variation from the constitutional requirement of two months.
+![37% of FR petitions took five or more years for resolution](images/image_no_6_fr_delay_distribution.png){#fig:fr-delay-distribution}
+
+Of the 361 fundamental rights petitions in the dataset, 332 took 3 to 15 years for resolution. Of these, 140—almost half—took 10 to 15 years to be concluded. Around 37% of fundamental rights petitions took five or more years for resolution. Only 20% resolved within one year of filing. The mean time taken was 4.17 years (3.05 standard deviation)—a substantial variation from the constitutional requirement of two months.
 
 Two months is insufficient to accommodate the practical steps involved in fundamental rights litigation, which includes filing, service, objections, counter-affidavits, reply, oral submissions, and judgment writing.
 
@@ -105,7 +109,9 @@ The reasons for these delays require further investigation. Contributing factors
 
 ### Court of Appeal Writs: Faster Despite No Mandate
 
-![Court of Appeal writs petitions resolve faster than Supreme Court FR applications](images/image_no_8_sc_fr_vs_ca_writ_delay_distribution.png)
+As demonstrated in @fig:fr-vs-writ-delay, Court of Appeal writ petitions resolve faster than Supreme Court fundamental rights applications.
+
+![Court of Appeal writs petitions resolve faster than Supreme Court FR applications](images/image_no_8_sc_fr_vs_ca_writ_delay_distribution.png){#fig:fr-vs-writ-delay}
 
 Unlike fundamental rights petitions, no constitutional or common law time limit governs writ determinations. Time or delay is considered when determining whether to grant leave to proceed,[^55] but no broader principles guide completion of writ petitions.
 
@@ -131,9 +137,9 @@ The timing data reveal how long disputes take to resolve but not what those disp
 
 To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[^note_lda_methodology] to CDTextLK. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
 
-To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of CDTextLK under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores.
+To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of CDTextLK under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores, as shown in @tbl:topic-modeling-top3.
 
-*Top-3 topics with the highest average probability across the two corpora and the top-40 tokens associated with each topic.*
+: Top-3 Topics with Highest Average Probability and Top-40 Tokens {#tbl:topic-modeling-top3}
 
 | Topic 1 | Topic 2 | Topic 3 |
 | :---- | :---- | :---- |
@@ -234,9 +240,9 @@ Linguistic patterns reveal how courts write, but volume patterns reveal when and
 
 ### The 2016-2017 Peak and the Low Years
 
-The Supreme Court's output varied substantially across the decade. The court delivered 175 decisions in 2016 and 203 in 2017—the two highest annual totals in the period. Between 2012-2015, the court averaged 68 decisions per year. Between 2016-2022, it averaged 144 decisions per year.
+The Supreme Court's output varied substantially across the decade. The court delivered 175 decisions in 2016 and 203 in 2017—the two highest annual totals in the period. Between 2012-2015, the court averaged 68 decisions per year. Between 2016-2022, it averaged 144 decisions per year, as shown in @fig:sc-output-variation.
 
-![Supreme Court and Court of Appeal decision output 2012-2022](images/num_decisions_per_year.png)
+![Supreme Court and Court of Appeal decision output 2012-2022](images/num_decisions_per_year.png){#fig:sc-output-variation}
 
 ### The Independence Hypothesis
 
@@ -250,9 +256,9 @@ However, correlation does not establish causation, and this requires further inv
 
 The Court of Appeal does not exhibit a comparable trend. Its best performing year was 2013, when the court delivered 1109 decisions. The high output in 2013 may reflect litigants having more confidence in the Court of Appeal than the Supreme Court during the purported impeachment. If litigants perceived the Supreme Court as compromised during the judicial crisis but viewed the Court of Appeal as relatively insulated, they may have filed more cases in the Court of Appeal or pursued remedies there rather than appealing to the Supreme Court. This would explain why the Court of Appeal's output peaked precisely when the Supreme Court's output was depressed.
 
-Overall, in the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court's 116 decisions. The Court of Appeal has consistently delivered more judgments than the Supreme Court throughout the decade, suggesting a different institutional dynamic less sensitive to constitutional crises or reforms affecting the apex court.
+Overall, in the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court's 116 decisions. The Court of Appeal has consistently delivered more judgments than the Supreme Court throughout the decade, suggesting a different institutional dynamic less sensitive to constitutional crises or reforms affecting the apex court, as illustrated in @fig:ca-output-variation.
 
-![Court of Appeal decision output showing 2013 peak](images/num_decisions_per_year.png)
+![Court of Appeal decision output showing 2013 peak](images/num_decisions_per_year.png){#fig:ca-output-variation}
 
 Variation in output reveals institutional responsiveness to political and constitutional context. Decision length, by contrast, reveals something different: the doctrinal weight courts assign to different types of disputes. Fundamental rights cases receive significantly more extensive judicial treatment than writs, empirically confirming doctrinal hierarchies.
 
@@ -264,16 +270,16 @@ We tokenized decisions using the regex pattern \[A-Za-z\]+, discounting all punc
 
 ### Judgment Length by Court and Case Type
 
-Judgment length varies systematically across courts and case types. Supreme Court decisions are, on average, substantially longer than those of the Court of Appeal, and exhibit greater dispersion in length. Across all Supreme Court cases, the median judgment length is 2,856 words, with a mean of 3,646 words and a standard deviation of 3,038 words, indicating a strongly right-skewed distribution. Court of Appeal decisions are markedly shorter, with a median length of 1,184 words, a mean of 1,688 words, and a lower standard deviation of 2,091 words, suggesting more constrained variation in judicial writing.
+Judgment length varies systematically across courts and case types. Supreme Court decisions are, on average, substantially longer than those of the Court of Appeal, and exhibit greater dispersion in length, as shown in @fig:length-of-decision. Across all Supreme Court cases, the median judgment length is 2,856 words, with a mean of 3,646 words and a standard deviation of 3,038 words, indicating a strongly right-skewed distribution. Court of Appeal decisions are markedly shorter, with a median length of 1,184 words, a mean of 1,688 words, and a lower standard deviation of 2,091 words, suggesting more constrained variation in judicial writing.
 
 
-![Supreme Court judgments are, on average, longer than Court of Appeal ones](images/length_of_decision.png)
+![Supreme Court judgments are, on average, longer than Court of Appeal ones](images/length_of_decision.png){#fig:length-of-decision}
 
 
-These structural differences persist within the principal public law jurisdictions of each court. Fundamental Rights (FR) judgments of the Supreme Court are longer than the Court’s overall baseline, with a median length of 3,022 words, a mean of 3,805 words, and a standard deviation of 3,157 words, reflecting both doctrinal density and substantial variation in judicial treatment. Court of Appeal writ decisions are marginally longer than the Court of Appeal average (median 1,303; mean 1,836), but remain comparatively concise and less dispersed (standard deviation 1,970). Over time, average judgment length has increased in both courts, with the most pronounced growth observed in Supreme Court Fundamental Rights cases.
+These structural differences persist within the principal public law jurisdictions of each court. Fundamental Rights (FR) judgments of the Supreme Court are longer than the Court's overall baseline, with a median length of 3,022 words, a mean of 3,805 words, and a standard deviation of 3,157 words, reflecting both doctrinal density and substantial variation in judicial treatment. Court of Appeal writ decisions are marginally longer than the Court of Appeal average (median 1,303; mean 1,836), but remain comparatively concise and less dispersed (standard deviation 1,970). Over time, average judgment length has increased in both courts, with the most pronounced growth observed in Supreme Court Fundamental Rights cases, as illustrated in @fig:avg-words-by-type.
 
 
-![Average judgment length increased over time across courts and jurisdiction](images/image_no_11_avg_words_by_decision_type.png)
+![Average judgment length increased over time across courts and jurisdiction](images/image_no_11_avg_words_by_decision_type.png){#fig:avg-words-by-type}
 
 
 ### Interpretation
@@ -298,12 +304,14 @@ For our present purposes, we note that the CDTextLK does not include data on dis
 
 ### Observed Patterns
 
+: Proportion of Decisions Dismissed vs Allowed {#tbl:outcomes}
+
 |  | Dismissed | Allowed |
 | :---- | :---- | :---- |
 | Supreme Court | 532 (41.63%) | 746 (58.37%) |
 | Court of Appeal | 3651 (49.92%) | 3663 (50.08%) |
 
-In Table 2, we can observe that about half of the decisions in the Court of Appeal dismissed their petitions or appeals. In the Supreme Court, however, the majority of decisions (58%) allowed the petition or appeal to stand. Of the decisions on writs in the Court of Appeal, 55% were allowed and 45% were dismissed. In the Supreme Court, 62% of the decisions on fundamental rights petitions were allowed and 38% were dismissed.
+In @tbl:outcomes, we can observe that about half of the decisions in the Court of Appeal dismissed their petitions or appeals. In the Supreme Court, however, the majority of decisions (58%) allowed the petition or appeal to stand. Of the decisions on writs in the Court of Appeal, 55% were allowed and 45% were dismissed. In the Supreme Court, 62% of the decisions on fundamental rights petitions were allowed and 38% were dismissed.
 
 Figure: total number of FR judgments in favour of petitioners and dismissed; total number of writs in SC in favour of petitioner or dismissed, total number of writs in CA in favour of petitioner or dismissed
 

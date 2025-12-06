@@ -61,6 +61,11 @@ sed -i '0,/^# /! s/^# /\\newpage\n\n# /' temp-combined-docx.md
 # Build pandoc command with optional reference doc
 PANDOC_CMD="pandoc temp-combined-docx.md \
     -o CDTextLK-paper-draft.docx \
+    --filter pandoc-crossref \
+    -M tablePrefix=Table \
+    -M figurePrefix=Figure \
+    -M tblPrefix=Table \
+    -M figPrefix=Figure \
     --citeproc \
     --bibliography=references.bib \
     --csl=chicago-fullnote-bibliography.csl \

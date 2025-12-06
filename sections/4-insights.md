@@ -6,13 +6,13 @@ The study of judicial decisions in Sri Lanka has traditionally focused on landma
 
 This section presents six key insights organized around four themes: quantitative dominance, temporal dysfunction, substantive concentration, and overlooked jurisprudence. These insights emerge from both descriptive statistics—the volume, timing, and length of decisions—and computational methods including topic modeling and mutual information analysis. Together, they provide a corrective to the landmark case-focused understanding of judicial work by making visible the patterns that structure day-to-day judicial practice.
 
-The findings demonstrate that the Court of Appeal's numerical dominance far exceeds its doctrinal recognition; that writ petitions vastly outnumber fundamental rights petitions yet remain understudied; that constitutional time mandates are systematically violated while courts without such mandates perform better; that land disputes and state employment matters dominate appellate dockets; and that linguistic patterns confirm hierarchies embedded in judicial practice. These patterns have significant implications for access to justice, legal scholarship, and institutional reform.
+The findings demonstrate that the Court of Appeal's numerical dominance far exceeds its doctrinal recognition; that writ petitions vastly outnumber fundamental rights petitions yet remain understudied, with the low ratio of Supreme Court appeals to Court of Appeal writ decisions (31:1,741) indicating that the Court of Appeal serves as the effective final forum in the overwhelming majority of writ cases; that constitutional time mandates are systematically violated while courts without such mandates perform better; that land disputes and state employment matters dominate appellate dockets; and that linguistic patterns confirm hierarchies embedded in judicial practice. These patterns have significant implications for access to justice, legal scholarship, and institutional reform.
 
 ## Quantitative Dominance and the Overlooked Court
 
 ### The Four-to-One Pattern
 
-![The Court of Appeal issued roughly 4 times as many decisions as the Supreme Court in a given year.][image1]
+![The Court of Appeal issued roughly 4 times as many decisions as the Supreme Court in a given year.](images/num_decisions_per_year.png)
 
 The Court of Appeal issued roughly four times as many judgments as the Supreme Court in a given year. As demonstrated in Figure 1, this pattern holds consistently across the decade under study. The Court of Appeal averaged 665 decisions per year compared to the Supreme Court's 116 decisions. 
 
@@ -22,37 +22,55 @@ This quantitative disparity has structural explanations. The Court of Appeal has
 
 The numerical dominance of Court of Appeal judgments stands in stark contrast to their doctrinal treatment. Jurisprudentially, decisions of the Court of Appeal are given far less significance than Supreme Court decisions. The Supreme Court is the apex court and therefore determines judicial precedent. Because it is the final court of appeal, its decisions are examined and debated more extensively in legal scholarship and practice. 
 
-Yet this numerical dominance suggests that the Court of Appeal may have greater impact overall in terms of disputes resolved. This raises an empirical question: how many parties appeal to the Supreme Court against Court of Appeal decisions? If that number is small, the Court of Appeal's quantitative advantage translates into greater practical effect in dispute resolution. If most disputes are effectively resolved at the Court of Appeal level without further appeal, the doctrinal and normative interpretation of judicial decisions in Sri Lanka should systematically include Court of Appeal jurisprudence.
+This numerical dominance translates into greater practical impact in dispute resolution. Empirical analysis confirms that most disputes are effectively resolved at the Court of Appeal level: during the period 2012-2022, the Supreme Court decided only 31 appeals from Court of Appeal writ decisions, compared to 1,741 writ decisions issued by the Court of Appeal. The ratio of SC appeals to CA writ decisions (31:1,741) suggests an appeal rate around 1.8%. For writ jurisdiction—which comprises 23% of the Court of Appeal's docket—the low ratio of appeals indicates that the Court of Appeal functions as the de facto final arbiter in the overwhelming majority of cases. This finding has significant implications: if the Court of Appeal is the practical forum where writ remedies are determined, the doctrinal and normative interpretation of judicial decisions in Sri Lanka should systematically include Court of Appeal jurisprudence rather than focusing predominantly on Supreme Court precedent.
 
 Currently, the Court of Appeal's contribution is understood only in an ad hoc manner by judiciary, practitioners, academics, and other court observers. There was a brief period in which decisions of the Court of Appeal were published as an unofficial court report by a non-government organization, Law & Society Trust.[^48] However, no systematic effort has been made to study Court of Appeal jurisprudence as a body of law with its own patterns and significance. The quantitative data point to the need for such systematic study, particularly given the court's role in both writ jurisdiction and criminal appeals—areas that, as subsequent sections demonstrate, dominate appellate dockets but remain understudied in legal scholarship.
 
-The Court of Appeal's quantitative dominance raises a further question: what types of cases account for this output? The answer lies in the distribution between writ petitions and fundamental rights petitions.
+The Court of Appeal's quantitative dominance—and the low rate of appeals to the Supreme Court—raises a further question: what types of cases account for this output? The answer lies in the distribution between writ petitions and fundamental rights petitions, and in the Supreme Court's extremely limited role in reviewing Court of Appeal writ decisions.
 
 ## The Writ Puzzle: Pervasive but Understudied
 
+### Jurisdictional Distribution: SC vs CA
+
+The constitutional framework establishes distinct forums for public law remedies. Article 140[@constitution1978] confers on the Court of Appeal jurisdiction to issue prerogative writs—certiorari, mandamus, prohibition, and others—for judicial review of administrative action, tribunal decisions, and jurisdictional errors. Article 126[@constitution1978] vests the Supreme Court with exclusive jurisdiction over fundamental rights petitions alleging constitutional violations. The Supreme Court's original writ jurisdiction, by contrast, is narrowly circumscribed: Article 104H[@constitution1978] limits such jurisdiction to election-related matters.
+
+The empirical distribution confirms this constitutional design. Of the 1,278 Supreme Court decisions in the dataset, only 4 (0.3%) were original writ petitions under Article 104H. The Court of Appeal, by contrast, issued 1,741 writ decisions (23% of its docket) during the same period. In original writ jurisdiction, the Court of Appeal handles 435 times more cases than the Supreme Court. This stark disparity reflects the constitutional allocation of writ jurisdiction to the Court of Appeal as the primary forum for administrative law and judicial review.
+
 ### Quantitative Disparity
 
-![][image3]
+The disparity between writ petitions and fundamental rights petitions is substantial. Of the 7,314 Court of Appeal decisions in the dataset, 1,741 (23%) were judgments on writs. Of the 1,278 Supreme Court decisions, 361 (28%) were judgments on fundamental rights petitions. While writ petitions substantially outnumber fundamental rights petitions in absolute terms, these remedies are administered by different courts: writs predominantly by the Court of Appeal under Article 140, and fundamental rights exclusively by the Supreme Court under Article 126.
 
-The disparity between writ petitions and fundamental rights petitions is substantial. Of the 7314 Court of Appeal decisions in the dataset, 1741 (23%) were judgments on writs. Of the 1278 Supreme Court decisions, 361 (28%) were judgments on fundamental rights petitions. While writ petitions substantially outnumber fundamental rights petitions in absolute terms, writs constitute a smaller proportion of the Supreme Court's docket than of the Court of Appeal's. It is important to note that the way in which judgments are presented makes it difficult to distinguish between writ petitions filed under the Supreme Court's original jurisdiction and writ petitions heard in appeal from the Court of Appeal.
+The Supreme Court's engagement with writ jurisdiction is minimal. Of the 1,278 Supreme Court decisions, 4 were original writ petitions under Article 104H (election-related writs) and 31 were appeals from Court of Appeal writ decisions (identified through normalized pattern matching for case references to Court of Appeal writ applications)—together comprising only 2.7% of the Supreme Court's docket. The Court of Appeal's 1,741 writ decisions thus vastly outnumber not only the Supreme Court's original writ jurisdiction but also subsequent appellate review. The ratio of Supreme Court appeals to Court of Appeal writ decisions is examined in detail below.
 
 The temporal patterns reveal an additional dimension to this disparity. The average time taken for writ decisions in the Court of Appeal was 3.15 years (2.80 SD) against 4.17 years (3.05 SD) for fundamental rights petitions in the Supreme Court. 25% of writs in the Court of Appeal were decided within a year of filing compared to only 20% of fundamental rights petitions in the Supreme Court resolved within one year. This performance is particularly notable given that, unlike fundamental rights petitions, no constitutional or common law time limit exists for writ determinations.
 
-The outcome patterns also differ. Of the decisions on writs in the Court of Appeal that were fully adjudicated, 55% were allowed and 45% were dismissed. In the Supreme Court, 62% of fundamental rights decisions were allowed and 38% were dismissed. After petitions clear the leave to proceed stage in either jurisdiction, the probability favors the petitioner—but fundamental rights petitions show a slightly higher success rate than writs.
+The outcome patterns also differ. Of the decisions on writs in the Court of Appeal that were fully adjudicated, 55% were allowed and 45% were dismissed. In the Supreme Court, 62% of fundamental rights decisions were allowed and 38% were dismissed. After petitions clear the leave to proceed stage in either jurisdiction, the probability favours the petitioner—but fundamental rights petitions show a slightly higher success rate than writs.
+
+### The Court of Appeal as Effective Final Arbiter
+
+The Court of Appeal's dominance in writ jurisdiction extends beyond volume to practical finality. During the period 2012-2022, the Supreme Court decided only 31 appeals from Court of Appeal writ decisions—compared to 1,741 writ decisions issued by the Court of Appeal during the same period. The ratio of SC appeals to CA writ decisions (31:1,741) suggests an appeal rate around 1.8%. This ratio remained consistently low across the decade, with an average of 2.8 appeals annually. While we cannot track individual case cohorts through the appellate system, the low ratio of SC appeals to CA writ decisions indicates that the Court of Appeal functions as the effective final arbiter in the overwhelming majority of writ cases.
+
+This finding answers empirically the question posed earlier: whether the Court of Appeal's numerical dominance translates into greater practical impact in dispute resolution. The data confirm that it does. Based on the relative volumes during this period, for the vast majority of litigants seeking writ remedies, the Court of Appeal is not merely the first forum but the only forum. The Supreme Court's appellate jurisdiction over Court of Appeal writs, while constitutionally available under Articles 127-128[@constitution1978], is rarely invoked in practice.
+
+Three non-exclusive explanations may account for this low ratio. First, litigants may be satisfied with Court of Appeal writ determinations and choose not to pursue further appeal. Second, the Supreme Court's leave requirements for appeals may present a significant barrier, filtering out cases that do not meet the threshold for further review. Third, Court of Appeal writ remedies may effectively resolve the underlying disputes, rendering further litigation unnecessary or impractical. Determining which explanation predominates would require further investigation into leave applications, reasons for grant or refusal of leave, and longitudinal tracking of individual cases from the Court of Appeal through potential Supreme Court appeals.
+
+From an access to justice perspective, these findings have significant implications. The Court of Appeal provides regular, accessible, and functionally final review of administrative action and jurisdictional errors. With an average of 158 writ decisions annually, it serves as the primary mechanism for judicial review in Sri Lanka. The low ratio of Supreme Court appeals suggests that Court of Appeal writ remedies effectively resolve disputes in most cases, making this jurisdiction a more substantial avenue for access to justice than its current doctrinal recognition acknowledges.
 
 ### The Doctrinal Paradox
 
-Despite this numerical dominance, writ jurisprudence remains underdeveloped in Sri Lankan legal scholarship and practice. Academic study of Sri Lanka's public law focuses predominantly on the fundamental rights jurisprudence of the Supreme Court with little attention paid to writ jurisprudence *qua* writ jurisprudence.[^56] This raises questions about why doctrinal scholarship privileges fundamental rights over writs when writs quantitatively dominate.
+Despite this numerical dominance and practical finality, writ jurisprudence remains underdeveloped in Sri Lankan legal scholarship and practice. Academic study of Sri Lanka's public law focuses predominantly on the fundamental rights jurisprudence of the Supreme Court with little attention paid to writ jurisprudence *qua* writ jurisprudence.[^56] This raises questions about why doctrinal scholarship privileges fundamental rights over writs when writs quantitatively dominate—and when the low ratio of Supreme Court appeals to Court of Appeal writ decisions (31:1,741) indicates that the Court of Appeal serves as the effective final forum for the overwhelming majority of writ remedies.
 
-The empirical data provide an alternative account to the view that writs and fundamental rights are blending in practice. Fundamental rights petitions are the exception; writs are the norm. Yet the doctrinal weight afforded to these two jurisdictions inverts their quantitative relationship. This inversion is visible in multiple dimensions of the data.
+The empirical data provide an alternative account to the view that writs and fundamental rights are blending in practice. Fundamental rights petitions remain the exception; writs are the norm. Moreover, these remedies operate in different forums with different rates of finality. The Supreme Court's exclusive fundamental rights jurisdiction under Article 126 makes it the apex court for constitutional violations, but the Court of Appeal's near-exclusive resolution of writ petitions under Article 140 makes it the apex court for administrative law and judicial review. Yet the doctrinal weight afforded to these two jurisdictions inverts their quantitative relationship and obscures their functional separation.
 
-The empirical-doctrinal gap reveals a structural issue in how public law scholarship understands judicial work. Courts adjudicate more writs than fundamental rights petitions, yet legal education, scholarly analysis, and professional discourse privilege fundamental rights jurisprudence. If writs dominate the docket and resolve more quickly, they arguably provide more routine access to justice than the constitutionally privileged fundamental rights jurisdiction. Yet the law on writs remains comparatively underdeveloped, and no systematic effort has been made to study writ jurisprudence as a distinct body of doctrine deserving scholarly attention in its own right.
+The empirical-doctrinal gap reveals a structural issue in how public law scholarship understands judicial work. Courts adjudicate more writs than fundamental rights petitions, writs resolve more quickly on average, and writ decisions are rarely subject to appellate review—yet legal education, scholarly analysis, and professional discourse privilege fundamental rights jurisprudence. If writs provide more routine access to justice than the constitutionally privileged fundamental rights jurisdiction, their comparative neglect has distributive consequences. As demonstrated in the topic modelling analysis below, writ petitions disproportionately concern state employment disputes and administrative actions affecting public servants. The neglect of writ jurisprudence may thus reflect whose claims receive doctrinal attention and whose claims are treated as routine administrative matters.
 
-The prevalence of writs raises practical questions about judicial performance. How long do these cases take to resolve? The Constitution mandates that fundamental rights petitions be resolved within two months, but the empirical reality diverges sharply from this constitutional promise.
+The law on writs remains comparatively underdeveloped, and no systematic effort has been made to study writ jurisprudence as a distinct body of doctrine deserving scholarly attention in its own right. The quantitative and qualitative data presented here suggest that such systematic study is overdue—not merely as a complement to fundamental rights scholarship but as a necessary correction to received assumptions about where judicial impact occurs and which remedies structure day-to-day access to justice in Sri Lanka.
+
+The prevalence of writs and their functional finality raise practical questions about judicial performance across both remedies. How long do these cases take to resolve? The Constitution mandates that fundamental rights petitions be resolved within two months, but the empirical reality diverges sharply from this constitutional promise—creating an instructive contrast with writ jurisdiction, which operates without constitutional time mandates yet resolves more quickly.
 
 ## Temporal Dysfunction: The Constitutional Time Mandate and Its Failure
 
-![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.][image5]
+![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.](images/time_to_decision.png)
 
 ### Methodology Note
 
@@ -207,9 +225,7 @@ Linguistic patterns reveal how courts write, but volume patterns reveal when and
 
 The Supreme Court's output varied substantially across the decade. The court delivered 175 decisions in 2016 and 203 in 2017—the two highest annual totals in the period. Between 2012-2015, the court averaged 68 decisions per year. Between 2016-2022, it averaged 144 decisions per year.
 
-![][image2]
-
-![][image3]
+![Supreme Court and Court of Appeal decision output 2012-2022](images/num_decisions_per_year.png)
 
 ### The Independence Hypothesis
 
@@ -225,7 +241,7 @@ The Court of Appeal does not exhibit a comparable trend. Its best performing yea
 
 Overall, in the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court's 116 decisions. The Court of Appeal has consistently delivered more judgments than the Supreme Court throughout the decade, suggesting a different institutional dynamic less sensitive to constitutional crises or reforms affecting the apex court.
 
-![][image4]
+![Court of Appeal decision output showing 2013 peak](images/num_decisions_per_year.png)
 
 Variation in output reveals institutional responsiveness to political and constitutional context. Decision length, by contrast, reveals something different: the doctrinal weight courts assign to different types of disputes. Fundamental rights cases receive significantly more extensive judicial treatment than writs, empirically confirming doctrinal hierarchies.
 
@@ -237,7 +253,7 @@ We tokenized decisions using the regex pattern \[A-Za-z\]+, discounting all punc
 
 ### Pages by Decision Type
 
-![][image10]
+![Decision length distribution by court and decision type](images/length_of_decision.png)
 
 Fundamental rights judgments are longer than judgments on writ petitions in both the Court of Appeal and the Supreme Court. The length of judgments on fundamental rights and special determinations has increased over the period under study.
 

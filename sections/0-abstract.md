@@ -14,7 +14,7 @@ Key take aways:
 
 3. Land disputes and state employment matters dominate appellate court workload, not the constitutional questions typically featured in legal scholarship – suggesting that discourse on judicial reform and case management may be addressing the wrong problems.
 
-4. Writ jurisdiction significantly exceeds fundamental rights jurisdiction numerically, yet receives minimal scholarly and doctrinal attention – an empirical reality that challenges assumptions about the relative significance of these public law remedies.
+4. Writ jurisdiction significantly exceeds fundamental rights jurisdiction numerically (1,741 CA writ decisions vs. 361 SC FR decisions during 2012-2022), yet receives minimal scholarly attention despite the low ratio of Supreme Court appeals to Court of Appeal writ decisions (31:1,741) indicating that the Court of Appeal serves as the effective final forum in the overwhelming majority of writ cases – an empirical reality that challenges assumptions about where judicial impact occurs and which remedies provide routine access to justice.
 
 5. Once leave to proceed is granted in fundamental rights cases, 62% result in judgments favouring petitioners – indicating that the leave stage functions as the primary gatekeeping mechanism and warrants closer examination.
 

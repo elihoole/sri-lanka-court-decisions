@@ -1,6 +1,20 @@
 % Bibliography Formatting Customization
 % Overrides OSCOLA defaults for better readability
 
+% Figure placement - prevent images from floating to separate pages
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+% Reduce spacing around figures
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+
 % Add numbering to bibliography entries
 \usepackage{etoolbox}
 \makeatletter

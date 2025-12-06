@@ -1,18 +1,116 @@
 # **Insights from the CDTextLK**
 
-## Overview of Key Patterns
+## Introduction: Patterns Beyond Precedent
 
-The overall trend that we see is that the Court of Appeal has consistently delivered more judgments than the Supreme Court; the no of judgments issued by the Supreme Court has increased significantly after 2016\. Furthermore, there was a considerable drop in the number of decisions delivered by both apex courts in the years 2020 and 2021, likely due to the COVID-19 pandemic. The other notably low performing year across the two courts was 2015\. Incidentally this was, an year in which a presidential election was held in January followed by a general election in August and the year of the enactment of the 19th Amendment
+The study of judicial decisions in Sri Lanka has traditionally focused on landmark cases and constitutional developments—Supreme Court determinations on fundamental rights, special determinations on bills, and appellate decisions on questions of law. This approach privileges doctrinal significance and treats courts primarily as sites of legal interpretation. Yet this perspective captures only part of what courts do. The empirical analysis of CDTextLK reveals patterns that challenge received assumptions about the nature and distribution of judicial work in Sri Lanka's appellate courts.
 
-## Numerically greater contribution by the Court of Appeal
+This section presents six key insights organized around four themes: quantitative dominance, temporal dysfunction, substantive concentration, and overlooked jurisprudence. These insights emerge from both descriptive statistics—the volume, timing, and length of decisions—and computational methods including topic modeling and mutual information analysis. Together, they provide a corrective to the landmark case-focused understanding of judicial work by making visible the patterns that structure day-to-day judicial practice.
+
+The findings demonstrate that the Court of Appeal's numerical dominance far exceeds its doctrinal recognition; that writ petitions vastly outnumber fundamental rights petitions yet remain understudied; that constitutional time mandates are systematically violated while courts without such mandates perform better; that land disputes and state employment matters dominate appellate dockets; and that linguistic patterns confirm hierarchies embedded in judicial practice. These patterns have significant implications for access to justice, legal scholarship, and institutional reform
+
+## Quantitative Dominance and the Overlooked Court
+
+### The Four-to-One Pattern
 
 ![The Court of Appeal issued roughly 4 times as many decisions as the Supreme Court in a given year.][image1]
 
-As demonstrated in Figure 1 above, the Court of Appeal issued roughly 4 times as many judgments as the Supreme Court in a given year*.* Figure 2 presents the actual difference between the number of judgments issued by the two courts. It is necessary to recall here that the Court of Appeal has the greater number of justices and that it is a court of first instance for writ applications under Article 140\. 
+The Court of Appeal issued roughly four times as many judgments as the Supreme Court in a given year. As demonstrated in Figure 1, this pattern holds consistently across the decade under study. In the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court's 116 decisions. Figure 2 presents the actual difference between the number of judgments issued by the two courts. 
 
-The issuance of a greater number of judgments is significant because jurisprudentially or doctrinally, decisions of the Court of Appeal are given far less significance than Supreme Court decisions. The Supreme Court is the apex court and therefore determines judicial precedent. Because it is the final court of appeal, its decisions are examined and debated more . However, figure 1 suggests that Court of Appeal may have a greater impact overall in terms of its final decisions and in term of the number of disputes that are resolved. 
+This quantitative disparity has structural explanations. The Court of Appeal has a greater number of justices than the Supreme Court. More significantly, it is a court of first instance for writ applications under Article 140, whereas the Supreme Court primarily exercises appellate jurisdiction with the exception of its original jurisdiction under Article 126 (fundamental rights) and Article 129 (election petitions). The Court of Appeal thus handles both original writ petitions and appeals from lower courts across civil, criminal, and administrative matters.
 
-To further interpret this data we need to know how many of the parties appeal to the Supreme Court against the decisions by the Court of Appeal. If that number is not significant, it further supports the view that the significantly greater number of judgments issued by the Court of Appeal, also have the greater effect in terms of dispute resolution as well. If so, it is necessary to consider whether the doctrinal and normative interpretation of judicial decisions in Sri Lanka should necessarily include jurisprudence of the Court of Appeal. There was a brief time in which decisions of the Court of Appeal were published as an unofficial court report by a non-government organization, Law & Society Trust.[^48]
+### Implications for Jurisprudential Authority
+
+The numerical dominance of Court of Appeal judgments stands in stark contrast to their doctrinal treatment. Jurisprudentially, decisions of the Court of Appeal are given far less significance than Supreme Court decisions. The Supreme Court is the apex court and therefore determines judicial precedent. Because it is the final court of appeal, its decisions are examined and debated more extensively in legal scholarship and practice. 
+
+Yet Figure 1 suggests that the Court of Appeal may have a greater impact overall in terms of final decisions and the number of disputes resolved. This raises an empirical question: how many parties appeal to the Supreme Court against decisions by the Court of Appeal? If that number is not significant, it further supports the view that the significantly greater number of judgments issued by the Court of Appeal also have the greater effect in terms of dispute resolution. If most disputes are effectively resolved at the Court of Appeal level without further appeal, it becomes necessary to consider whether the doctrinal and normative interpretation of judicial decisions in Sri Lanka should systematically include Court of Appeal jurisprudence.
+
+Currently, the Court of Appeal's contribution is understood only in an ad hoc manner by judiciary, practitioners, academics, and other court observers. There was a brief period in which decisions of the Court of Appeal were published as an unofficial court report by a non-government organization, Law & Society Trust.[^48] However, no systematic effort has been made to study Court of Appeal jurisprudence as a body of law with its own patterns and significance. The quantitative data point to the need for such systematic study, particularly given the court's role in both writ jurisdiction and criminal appeals—areas that, as subsequent sections demonstrate, dominate appellate dockets but remain understudied in legal scholarship.
+
+## The Writ Puzzle: Pervasive but Understudied
+
+### Quantitative Disparity
+
+Figure Disaggregation of the number of judgments writs and FR
+
+![][image3]
+
+The disparity between writ petitions and fundamental rights petitions is substantial. This figure reveals the significant gap in the number of judgments between the two main public law jurisdictions. Of the 7314 Court of Appeal decisions in the dataset, 1741 (23%) were judgments on writs. Of the 1278 Supreme Court decisions, 361 (28%) were judgments on fundamental rights petitions. Overall, judgments on writs are significantly low against the number of other judgments issued by the Supreme Court, though it is important to note that the way in which judgments are presented makes it difficult to distinguish between writ petitions filed under the Supreme Court's original jurisdiction and writ petitions heard in appeal from the Court of Appeal. This work, we leave for another day.
+
+The temporal patterns reveal an additional dimension to this disparity. The average time taken for writ decisions in the Court of Appeal was 3.15 years (2.80 SD) against 4.17 years (3.05 SD) for fundamental rights petitions in the Supreme Court. 25% of writs in the Court of Appeal were decided within a year of filing compared to only 20% of fundamental rights petitions in the Supreme Court resolved within one year. This performance is particularly notable given that, unlike fundamental rights petitions, no constitutional or common law time limit exists for writ determinations.
+
+The outcome patterns also differ. Of the decisions on writs in the Court of Appeal that were fully adjudicated, 55% were allowed and 45% were dismissed. In the Supreme Court, 62% of fundamental rights decisions were allowed and 38% were dismissed. After petitions clear the leave to proceed stage in either jurisdiction, the probability favors the petitioner—but fundamental rights petitions show a slightly higher success rate than writs.
+
+### The Doctrinal Paradox
+
+Despite this numerical dominance, writ jurisprudence remains underdeveloped in Sri Lankan legal scholarship and practice. Academic study of Sri Lanka's public law tends to focus predominantly on the fundamental rights jurisprudence of the Supreme Court with very little attention paid to the study of Sri Lanka's writ jurisprudence *qua* writ jurisprudence.[^56] This raises questions about why doctrinal scholarship attaches such significance to fundamental rights over writs when the quantitative difference is substantial.
+
+The empirical data provide an alternative account to the view that writs and fundamental rights are blending in practice. Fundamental rights petitions are the exception; writs are the norm. Yet the doctrinal weight afforded to these two jurisdictions inverts their quantitative relationship. This inversion is visible in multiple dimensions of the data.
+
+Length of decisions provides one measure. The number of pages per decision in fundamental rights judgments is significantly higher than the number of pages in judgments on writ petitions in both the Court of Appeal and the Supreme Court. The mean length of a Supreme Court decision is 3646 tokens (3038 SD) and that of a Court of Appeal decision is 1688 tokens (2091 SD). While the longest decision in the corpus was a Court of Appeal decision on a tax appeal (35,630 tokens), the longest Supreme Court decision (29,620 tokens) was a fundamental rights petition concerning the Chunnakam power plant's alleged groundwater contamination (SC/FR/141/2015).
+
+Topic modeling provides another lens. We applied Latent Dirichlet Allocation (LDA) to CDTextLK using the Gensim implementation with 20 topics and random seed of 0. In addition to tokenizing and stemming, we removed tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents, and all tokens less than 3 characters long. The three most common topics across both courts were: (1) land and property disputes (tokens: defend, plaintiff, land, district, action, title, deed, possess); (2) state employment and administrative disputes (tokens: decis, writ, mark, offic, servic, public, board, author, letter, appoint, univers, commiss); and (3) criminal proceedings (tokens: accus, sentenc, trial, wit, high, polic, prosecut, convict, offenc).
+
+Topic 2, which captures state employment disputes, shows writ petitions associated with routine administrative matters—appointments, promotions, transfers, circulars—rather than constitutional questions. Fundamental rights petitions, while numerically fewer, tend to involve more complex constitutional claims that generate longer judgments and more extensive doctrinal analysis. This empirical pattern confirms the qualitative assessment: even though the actual number of fundamental rights petitions is significantly less than the actual number of writ judgments, the doctrinal weight afforded to fundamental rights judgments in the legal system is significantly higher.
+
+The empirical-doctrinal gap reveals a structural issue in how public law scholarship understands judicial work. Courts spend more time adjudicating writs than fundamental rights petitions, yet legal education, scholarly analysis, and professional discourse privilege fundamental rights jurisprudence. If writs dominate the docket and resolve more quickly, they arguably provide more routine access to justice than the constitutionally privileged fundamental rights jurisdiction. Yet the law on writs remains comparatively underdeveloped, and no systematic effort has been made to study writ jurisprudence as a distinct body of doctrine deserving scholarly attention in its own right.
+
+## Temporal Dysfunction: The Constitutional Time Mandate and Its Failure
+
+![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.][image5]
+
+*37% of all decisions of the Supreme Court and 48% of all the decisions Court of Appeal decisions took more than five years to be delivered.*
+
+### Methodology Note
+
+The Supreme Court website lists the date on which each decision was issued. The Court of Appeal website, on the other hand, groups decisions by the month and the year and does not list the date. Further, since the registries of both courts are not digitised, for both courts, there is no way of knowing the date on which an application related to a decision was filed. Under these constraints, calculating the exact time taken to deliver decisions is not possible. 
+
+To approximate the date on which an application was filed, we extracted the year in which the application related to a decision was filed from the application (or case) number. For example, the case number SC/FR/123/2012 indicates that the application was filed in 2012. Assuming that filing of applications is distributed uniformly through the year, we approximated the date of filing as {extracted\_year}-June-30 for all cases across the two courts. Making the same assumption, we approximated the date of decision delivery in the Court of Appeal as {given\_year}-{given\_month}-15. We then calculated the time taken to deliver a decision as the difference between the date of decision delivery and the date of application filing.
+
+### Supreme Court Fundamental Rights: The Two-Month Fiction
+
+Time lines for litigation before appellate courts are prescribed under the Constitution, legislation and in the rules of the Supreme Court or Court of Appeal. Petitioners must satisfy the time limits in order to seek remedies before Courts. \[ADD EXAMPLES\] The only rule applicable to Court in terms of being time bound is under Art 126(5) where the Constitution stipulates that a fundamental rights petition 'shall' be determined within two months. However, in the case of *…* it was held by the Court that this time limit is not mandatory.[^49]
+
+Figure – time taken for FR in the SC
+
+![][image6]
+
+The constitution mandates that fundamental rights petitions be resolved within two months of filing.[^53] However, in the case of … Supreme Court held that this requirement was directory and not mandatory.[^54] The data provided in the figure above confirms the serious concerns that have been raised about the delays in the court system. The CDTextLK data reveals that in the ten years, 332 judgments out of 474 took 3 to 15 years. Out of the 332, 140—almost half the petitions—took 10 to 15 years to be concluded. 
+
+In the Supreme Court, the vast majority of the cases (95%) resolve under 10 years. Of the 1278 Supreme Court decisions, 361 (28%) were judgments on fundamental rights petitions. The data reveals that in reality, around 37% of the fundamental rights petitions took five or more years for resolution. Only 20% of fundamental rights petitions resolved within a year of filing. The mean time taken to resolve a fundamental rights petition was 4.17 years (3.05 standard deviation). This is a significant variation from the constitutional requirement.
+
+It is necessary to note here that two months, in any event, amount to a time limit that does not allow for the process involved in the judicial determination of a fundamental rights petition. As provided in the figure below, the practical steps involved in a fundamental rights litigation cannot be accommodated within two months.
+
+*Steps taken in a FR litigation*
+
+More research ought to be carried out to identify the reasons for these delays. Factors that contribute may include the number of cases that come before the court, the lack of strict time allocation for making oral submissions by counsel, postponements sought by parties to each case and the time required to write judgments.
+
+Figure - time taken for writs at SC
+
+![][image7]
+
+### Court of Appeal Writs: Faster Despite No Mandate
+
+Figure – time taken for writs at CA
+
+![][image8]
+
+Unlike with fundamental rights petitions, a time limit has not been provided in the Constitution for the hearing of a writ petition. Even in the common law, there are no known principles regarding the completion of writ petitions. Time or delay is considered a factor when the court determines whether to grant leave to proceed in a writ matter.[^55] Apart from this requirement there are no known principles in the common law that guide the court.
+
+However, the experience in the Court of Appeal provides an interesting point of comparison. Of the 7314 Court of Appeal decisions, 1741 (23%) were judgments on writs. Writ decisions took considerably less time to resolve than other matters in the same court. The average time taken for writ decisions was 3.15 years (2.80 SD) against 8.01 years (6.43 SD) for other matters. 25% of writs were decided within a year of filing.
+
+In comparison to the time taken by the Supreme Court to determine Fundamental Rights petitions, less time is taken by the Court of Appeal in issuing judgments on writ petitions. Here too, the greater number of petitions take longer than less time. 1221 judgments of the total 2228 were issued between 3 and 10 years with the bulk of that—748 out of 1221—being issued within 3 to 5 years. By contrast, in the Court of Appeal, around 27% take ten or more years.
+
+The practical procedure followed in writ petitions is provided below. As it can be seen, it is not unlike the procedure followed in fundamental rights litigation. Even in the absence of stipulated time limits, the data suggests that the Court of Appeal's proceedings are concluded within a shorter time period.
+
+### Implications for Access to Justice
+
+As per recent reports, there are 5,785 cases pending before the Supreme Court and 4,572 cases before the Court of Appeal.[^50] The figures are significantly worse in the lower courts: with 27,324 cases pending before High Courts and 262,665 cases before District Courts.[^51] The total number of cases pending is 1,131,818.[^52]
+
+The time taken to determine fundamental rights petitions fundamentally undermines the constitutional mandate. The Constitution stipulates that fundamental rights petitions shall be resolved within two months; the data reveal that 37% took five or more years for resolution, with a mean time of 4.17 years. Only 20% of fundamental rights petitions resolved within one year of filing. These findings provide a clearer picture of the quality of access to justice available to petitioners who approach the appellate courts.
+
+The comparative puzzle deepens when considering that writ petitions in the Court of Appeal took considerably less time (mean 3.15 years) despite no constitutionally stipulated time limit. This raises questions about structural causes: backlog, judicial resources, and procedural culture. Why does the Court of Appeal, handling a larger volume of cases, resolve writs faster than the Supreme Court resolves fundamental rights petitions? The answer likely lies in a combination of factors including case complexity, the nature of constitutional adjudication, and institutional practices—but these require further investigation.
+
+The systematic delays demand investigation into their causes and institutional responses tailored to the types of cases that actually dominate the dockets. The constitutional time mandate for fundamental rights has been rendered meaningless in practice, while the court without such a mandate performs better. This inversion suggests that formal rules matter less than institutional capacity, resource allocation, and procedural culture.
 
 ## The Judgements issued by the Supreme Court
 

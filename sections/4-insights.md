@@ -48,7 +48,19 @@ The outcome patterns also differ. Of the decisions on writs in the Court of Appe
 
 ### The Court of Appeal as Effective Final Arbiter
 
-The Court of Appeal's dominance in writ jurisdiction extends beyond volume to practical finality. During the period 2012-2022, the Supreme Court decided only 31 appeals from Court of Appeal writ decisions—compared to 1,741 writ decisions issued by the Court of Appeal during the same period. The ratio of SC appeals to CA writ decisions (31:1,741) suggests an appeal rate around 1.8%. This ratio remained consistently low across the decade, with an average of 2.8 appeals annually. While we cannot track individual case cohorts through the appellate system, the low ratio of SC appeals to CA writ decisions indicates that the Court of Appeal functions as the effective final arbiter in the overwhelming majority of writ cases.
+The Court of Appeal's dominance in writ jurisdiction extends beyond volume to practical finality. During the period 2012-2022, the Supreme Court decided only 31 appeals from Court of Appeal writ decisions—compared to 1,741 writ decisions issued by the Court of Appeal during the same period.
+
+*Table: Court of Appeal Writ Decisions vs. Supreme Court Appeals (2012-2022)*
+
+| Metric | Value |
+| :---- | ----: |
+| CA Writ Decisions | 1,741 |
+| SC Appeals from CA Writs | 31 |
+| **Implied Appeal Rate** | **1.8%** |
+| Average SC Appeals per Year | 2.8 |
+| Average CA Writs per Year | 158 |
+
+The ratio of SC appeals to CA writ decisions (31:1,741) suggests an appeal rate around 1.8%. This ratio remained consistently low across the decade, with an average of 2.8 appeals annually. While we cannot track individual case cohorts through the appellate system, the low ratio of SC appeals to CA writ decisions indicates that the Court of Appeal functions as the effective final arbiter in the overwhelming majority of writ cases.
 
 This finding answers empirically the question posed earlier: whether the Court of Appeal's numerical dominance translates into greater practical impact in dispute resolution. The data confirm that it does. Based on the relative volumes during this period, for the vast majority of litigants seeking writ remedies, the Court of Appeal is not merely the first forum but the only forum. The Supreme Court's appellate jurisdiction over Court of Appeal writs, while constitutionally available under Articles 127-128[@constitution1978], is rarely invoked in practice.
 
@@ -82,7 +94,7 @@ To approximate the date on which an application was filed, we extracted the year
 
 The Constitution mandates that fundamental rights petitions be determined within two months of filing (Article 126(5)).[^note_art126_2] However, the Supreme Court has held that this requirement is directory rather than mandatory.[^54] 
 
-![][image6]
+![37% of FR petitions took five or more years for resolution](images/image_no_6_fr_delay_distribution.png)
 
 The data confirm serious concerns about delays in the court system. Of the 361 fundamental rights petitions in the dataset, 332 took 3 to 15 years for resolution. Of these, 140—almost half—took 10 to 15 years to be concluded. Around 37% of fundamental rights petitions took five or more years for resolution. Only 20% resolved within one year of filing. The mean time taken was 4.17 years (3.05 standard deviation)—a substantial variation from the constitutional requirement of two months.
 
@@ -90,11 +102,10 @@ Two months is insufficient to accommodate the practical steps involved in fundam
 
 The reasons for these delays require further investigation. Contributing factors may include caseload, absence of strict time allocation for oral submissions, postponements sought by parties, and the time required to write judgments.
 
-![][image7]
 
 ### Court of Appeal Writs: Faster Despite No Mandate
 
-![][image8]
+![Court of Appeal writs petitions resolve faster than Supreme Court FR applications](images/image_no_8_sc_fr_vs_ca_writ_delay_distribution.png)
 
 Unlike fundamental rights petitions, no constitutional or common law time limit governs writ determinations. Time or delay is considered when determining whether to grant leave to proceed,[^55] but no broader principles guide completion of writ petitions.
 
@@ -251,23 +262,25 @@ Variation in output reveals institutional responsiveness to political and consti
 
 We tokenized decisions using the regex pattern \[A-Za-z\]+, discounting all punctuation and numbers. The mean length of a Supreme Court decision is 3646 tokens (3038 SD) and that of a Court of Appeal decision is 1688 tokens (2091 SD). Although Supreme Court decisions are, on average, longer, the longest decision in the corpus was a Court of Appeal decision. This judgment on an appeal of a determination by the Tax Appeal Commission against Unilever Sri Lanka Limited (CA/TAX/04/2013) is 35,630 tokens long. The longest Supreme Court decision, at 29,620 tokens, was on the fundamental rights petition SC/FR/141/2015 filed by Centre for Environment and Nature Studies against Northern Power Company (Pvt) Ltd which operated a thermal power plant in Chunnakam, Jaffna and was accused of contaminating the village's groundwater.
 
-### Pages by Decision Type
+### Judgment Length by Court and Case Type
 
-![Decision length distribution by court and decision type](images/length_of_decision.png)
+Judgment length varies systematically across courts and case types. Supreme Court decisions are, on average, substantially longer than those of the Court of Appeal, and exhibit greater dispersion in length. Across all Supreme Court cases, the median judgment length is 2,856 words, with a mean of 3,646 words and a standard deviation of 3,038 words, indicating a strongly right-skewed distribution. Court of Appeal decisions are markedly shorter, with a median length of 1,184 words, a mean of 1,688 words, and a lower standard deviation of 2,091 words, suggesting more constrained variation in judicial writing.
 
-Fundamental rights judgments are longer than judgments on writ petitions in both the Court of Appeal and the Supreme Court. The length of judgments on fundamental rights and special determinations has increased over the period under study.
 
-Figure: No of average pages for FRs, Writs (in CA + SC), and SDs per year
+![Supreme Court judgments are, on average, longer than Court of Appeal ones](images/length_of_decision.png)
 
-![A graph showing the number of people in the marketAI-generated content may be incorrect.][image11]
 
-This chart provides significant insight into the issuing of judgments by the Sri Lankan appellate courts. Overall, the number of pages in judgments has increased steadily. Of the different types of judgments, the most significant increase in the number of pages has been in relation to Special Determinations.
+These structural differences persist within the principal public law jurisdictions of each court. Fundamental Rights (FR) judgments of the Supreme Court are longer than the Court’s overall baseline, with a median length of 3,022 words, a mean of 3,805 words, and a standard deviation of 3,157 words, reflecting both doctrinal density and substantial variation in judicial treatment. Court of Appeal writ decisions are marginally longer than the Court of Appeal average (median 1,303; mean 1,836), but remain comparatively concise and less dispersed (standard deviation 1,970). Over time, average judgment length has increased in both courts, with the most pronounced growth observed in Supreme Court Fundamental Rights cases.
+
+
+![Average judgment length increased over time across courts and jurisdiction](images/image_no_11_avg_words_by_decision_type.png)
+
 
 ### Interpretation
 
-There are no apparent guidelines or standards governing lengths of judicial decisions. The length of a judgment does not necessarily correlate with quality. The strength of a judgment depends on its accurate identification of material facts, consideration of relevant precedent, and analysis of facts in light of applicable law. The increased length of judgments does, however, indicate greater workload discharged by the courts.
+There are no apparent formal guidelines or standards governing the length of judicial decisions, and length itself should not be confused with quality. The persuasiveness and authority of a judgment depend on accurate identification of material facts, engagement with relevant precedent, and coherent application of law to fact. Nonetheless, the increasing length of judgments—particularly in the Supreme Court—does reflect a growing volume of judicial labour, including more extensive factual narration, doctrinal exposition, and engagement with comparative or constitutional reasoning.
 
-The empirical data confirm the doctrinal significance of different types of cases. While fundamental rights petitions are fewer in number than writ judgments, the legal system assigns them greater doctrinal weight. This may explain why fundamental rights judgments are longer. The empirical pattern confirms doctrinal hierarchies: fundamental rights receive more extensive treatment than writs, Supreme Court decisions receive more extensive treatment than Court of Appeal decisions.[^56]
+More importantly, variation in judgment length mirrors entrenched doctrinal hierarchies within Sri Lanka’s public law system. Fundamental Rights petitions, though fewer in number than writ applications, receive significantly more extensive judicial treatment, underscoring their elevated constitutional status. Similarly, Supreme Court decisions consistently exhibit greater length and variability than those of the Court of Appeal. The empirical patterns thus reinforce doctrinal expectations: constitutional adjudication commands deeper and more discursive reasoning than administrative review, and apex court judgments function as primary sites of legal exposition and norm-setting. Together with earlier findings on caseload composition, temporal delay, and output variation, judgment length provides a further window into how institutional role, jurisdiction, and doctrinal priority shape judicial practice.[^56]
 
 The patterns identified thus far—quantitative dominance, writ prevalence, temporal dysfunction, substantive concentration, linguistic hierarchies, output variations, and decision length—describe how courts work. Outcome data provide a final empirical lens: how often do courts dismiss versus allow petitions?
 

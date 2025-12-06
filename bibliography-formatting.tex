@@ -1,0 +1,26 @@
+% Bibliography Formatting Customization
+% Overrides OSCOLA defaults for better readability
+
+% Add numbering to bibliography entries
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\thebibliography}{\list}{\enumerate}{}{}
+\patchcmd{\endthebibliography}{\endlist}{\endenumerate}{}{}
+\makeatother
+
+% Increase spacing between bibliography entries
+\usepackage{setspace}
+\let\oldbibliography\thebibliography
+\renewcommand{\thebibliography}[1]{%
+  \oldbibliography{#1}%
+  \setlength{\itemsep}{0.5em}%
+  \setlength{\parskip}{0.5em}%
+}
+
+% Remove angle brackets from URLs
+\usepackage{url}
+\urlstyle{same}
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother

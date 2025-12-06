@@ -55,13 +55,15 @@ Summarises the contribution of CDTextLK as both a corpus and a preliminary empir
 
 ### Overview
 
-The paper has been migrated from a manual footnote system to a hybrid **bibliography + footnote system** using Pandoc's citation processing with OSCOLA style. This enables automatic bibliography generation while preserving explanatory footnotes.
+The paper has been migrated from a manual footnote system to a hybrid **bibliography + footnote system** using Pandoc's citation processing with Chicago Manual of Style (18th edition, notes and bibliography). This enables automatic bibliography generation while preserving explanatory footnotes.
 
 ### Infrastructure Created
 
 **Files:**
 - `references.bib` - BibTeX database with 18 complete entries + 14 placeholders
-- `oscola.csl` - Oxford Standard for Citation of Legal Authorities style file (25KB)
+- `chicago-fullnote-bibliography.csl` - Chicago Manual of Style 18th edition (notes and bibliography) style file
+- `oscola.csl` - OSCOLA style file (deprecated, replaced with Chicago)
+- `bibliography-formatting.tex` - LaTeX customizations for bibliography appearance
 - Modified `build-paper-pdf.sh` - Added `--citeproc`, `--bibliography`, `--csl` flags
 - Modified `build-paper-docx.sh` - Added same citation processing flags
 - `.instructions/footnote-bibliography-migration.md` - Complete 8-phase migration plan
@@ -143,9 +145,11 @@ Historical analysis of judicial appointments remains incomplete.[^38]
 ./build-paper-pdf.sh
 ```
 Produces: `CDTextLK-paper-draft.pdf` with:
-- Auto-generated References section (18 entries in OSCOLA format)
+- Auto-generated Bibliography section (18 entries in Chicago format)
+- Numbered bibliography entries with proper spacing
 - Superscript in-text citations (¹, ², ³...)
 - Page-bottom footnotes for comments
+- Clean URLs without angle brackets
 - Clean build with no warnings
 
 **DOCX Generation:**
@@ -166,7 +170,8 @@ Produces: `CDTextLK-paper-draft.docx` with:
 - ✅ Footnotes appear at page bottoms
 - ✅ All citation types working (articles, books, chapters, online, legislation)
 - ✅ Duplicates handled correctly (^1=^12, ^15=^16, ^50-52)
-- ✅ OSCOLA formatting applied correctly
+- ✅ Chicago style formatting applied (numbered entries, proper spacing, clean URLs)
+- ✅ Bibliography entries numbered and properly spaced (December 6, 2025)
 
 ### Next Steps for Dinesha
 
@@ -191,4 +196,8 @@ See `.instructions/dinesha-handoff.md` for:
 - ^47 may be duplicate of ^11 (Abeywardena) - needs verification
 - All named footnote definitions moved to end of respective sections for clarity
 - Old manual `7-reference.md` completely replaced with auto-generation note
+- **Citation style switched from OSCOLA to Chicago** (December 6, 2025) to fix bibliography formatting issues:
+  - Added numbered bibliography entries
+  - Improved spacing between entries
+  - Removed angle brackets from URLs
 Contains footnotes and bibliographic references for the paper.

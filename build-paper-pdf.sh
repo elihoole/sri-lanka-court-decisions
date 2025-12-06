@@ -43,10 +43,11 @@ pandoc temp-combined.md \
     --pdf-engine=xelatex \
     --citeproc \
     --bibliography=references.bib \
-    --csl=oscola.csl \
+    --csl=chicago-fullnote-bibliography.csl \
     --toc \
     --toc-depth=3 \
     --number-sections \
+    -H bibliography-formatting.tex \
     -V geometry:a4paper \
     -V geometry:margin=1in \
     -V linkcolor:blue \
@@ -54,7 +55,7 @@ pandoc temp-combined.md \
     -V urlcolor:blue \
     -V fontsize=11pt \
     -V pagestyle=plain
-    # Note: Uncomment the lines below if you create custom LaTeX templates:
+    # Note: Uncomment the lines below if you create additional custom LaTeX templates:
     # -B title-page.tex \
     # -H font-config.tex \
     # -H quote-style.tex \

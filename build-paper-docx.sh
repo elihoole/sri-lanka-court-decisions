@@ -63,7 +63,7 @@ PANDOC_CMD="pandoc temp-combined-docx.md \
     -o CDTextLK-paper-draft.docx \
     --citeproc \
     --bibliography=references.bib \
-    --csl=oscola.csl \
+    --csl=chicago-fullnote-bibliography.csl \
     --toc \
     --toc-depth=3 \
     --number-sections \

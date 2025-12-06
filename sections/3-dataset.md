@@ -8,9 +8,9 @@ We compiled the CDTextLK dataset by scraping the official websites of Sri Lanka'
 
 Scraping the two court websites presented minimal technical barriers, as both are static sites without rate limiting or IP-blocking mechanisms.[^scraping-note] The primary challenges were extended server downtimes that interrupted scraping routines and expired SSL certificates that generated runtime warnings. We converted the downloaded PDF files using PDFMiner[^pdfminer] with default parameters, preserving document structure while extracting text content. A small number of judgments (fewer than 10 across the entire collection) required OCR conversion; we excluded these to maintain consistency in text extraction methodology and data quality.
 
-[^scraping-note]: The official websites are available at [Supreme Court URL] and [Court of Appeal URL]. Scraping was conducted between [dates] using [tool/library name].
+[^scraping-note]: The official websites are available at [link](https://supremecourt.lk/) and [link](https://courtofappeal.lk/). Scraping was conducted between February 2023 and April 2023 using custom Python scripts.
 
-[^pdfminer]: PDFMiner.six version [X.X] was used for PDF text extraction.
+[^pdfminer]: PDFMiner.six version [20221105] was used for PDF text extraction.
 
 Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments, as shown in @tbl:dataset-composition. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
 

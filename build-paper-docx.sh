@@ -24,7 +24,7 @@ temp_file="../temp-combined-docx.md"
 
 # Add title page content
 echo "---" >> "$temp_file"
-echo "title: 'HRL Holdings Vs. Urban Development Authority: Legal Notes'" >> "$temp_file"
+echo "title: \"First Steps: Empirical Study of Sri Lanka's Apex Courts with a Focus on Public Law Litigation\"" >> "$temp_file"
 echo "---" >> "$temp_file"
 echo "" >> "$temp_file"
 echo "\\newpage" >> "$temp_file"

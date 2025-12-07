@@ -1,6 +1,6 @@
-# Abstract
+# Abstract {.unnumbered}
 
-**First Steps: Empirical Study of Sri Lanka’s Apex Courts with a Focus on Public Law Litigation**
+**First Steps: Empirical Study of Sri Lanka's Apex Courts with a Focus on Public Law Litigation**
 
 Elijah Hoole, Dinesha Samararatne, Yanitra Kumaraguru and Amanda Halliday
 

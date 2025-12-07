@@ -1,4 +1,4 @@
-# **Computational Insights from CDTextLK**
+# **Computational Insights from CDTextLK** {#sec:insights}
 
 ## Introduction: Patterns Beyond Precedent
 
@@ -294,13 +294,9 @@ The patterns identified thus far—quantitative dominance, writ prevalence, temp
 
 *Proportion of decisions dismissed vs. allowed.*
 
-### Limitations of the Data
+### Data Limitations
 
-Different rules apply to the different types of cases that come before the Supreme Court or Court of Appeal in terms of whether they may be dismissed or allowed. Dismissal, in this section, means dismissal after a full hearing. These cases include all judgments issued by these courts, not only writs and FR.
-
-In the case of writs and FR petitions, proceedings are in two stages. When a petition has been filed, the Court initially conducts a hearing to determine whether leave to proceed will be granted. At this stage, it is possible for a petition to be dismissed. However, whether or not a judgment or order is issued to record a dismissal, is at the discretion of the Courts. Where leave to proceed is granted, Court may also grant interim relief sought by the petitioner. In such instances, Court issues an order. 
-
-For our present purposes, we note that the CDTextLK does not include data on dismissals at the leave to proceed stage as that data is not produced as a written record. To that extent the data on dismissal have a significant limitation as it does not depict the accurate number of dismissals by courts. The actual dismissal rates are therefore higher than the data suggests, since many petitions are dismissed at the leave stage without a written judgment being issued.
+Dismissal, in this section, means dismissal after a full hearing. Writs and fundamental rights petitions proceed in two stages: an initial leave determination followed by a full hearing if leave is granted. CDTextLK does not include data on dismissals at the leave stage, as these are typically not recorded as written judgments. The actual dismissal rates are therefore higher than the data suggests. For a fuller discussion of dataset scope and coverage limitations, see [Section 5](#sec:limitations).
 
 ### Observed Patterns
 

@@ -53,6 +53,7 @@ pandoc temp-combined.md \
     --toc-depth=3 \
     --number-sections \
     -H bibliography-formatting.tex \
+    -H text-alignment.tex \
     -V geometry:a4paper \
     -V geometry:margin=1in \
     -V linkcolor:blue \

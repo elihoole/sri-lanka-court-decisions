@@ -1,8 +1,8 @@
-# **Computational Insights from SriLankaCourtDecisions** {#sec:insights}
+# **Computational Insights from `SriLankaCourtDecisions`** {#sec:insights}
 
 ## Introduction: Patterns Beyond Precedent
 
-The study of judicial decisions in Sri Lanka has traditionally focused on landmark cases and constitutional developments—Supreme Court determinations on fundamental rights, special determinations on bills, and appellate decisions on questions of law. This approach privileges doctrinal significance and treats courts primarily as sites of legal interpretation. Yet this perspective captures only part of what courts do. The empirical analysis of the SriLankaCourtDecisions corpus reveals patterns that challenge received assumptions about the nature and distribution of judicial work in Sri Lanka's appellate courts.
+The study of judicial decisions in Sri Lanka has traditionally focused on landmark cases and constitutional developments—Supreme Court determinations on fundamental rights, special determinations on bills, and appellate decisions on questions of law. This approach privileges doctrinal significance and treats courts primarily as sites of legal interpretation. Yet this perspective captures only part of what courts do. The empirical analysis of the `SriLankaCourtDecisions` corpus reveals patterns that challenge received assumptions about the nature and distribution of judicial work in Sri Lanka's appellate courts.
 
 This section presents six key insights organized around four themes: quantitative dominance, temporal dysfunction, substantive concentration, and overlooked jurisprudence. These insights emerge from both descriptive statistics—the volume, timing, and length of decisions—and computational methods including topic modeling and mutual information analysis. Together, they provide a corrective to the landmark case-focused understanding of judicial work by making visible the patterns that structure day-to-day judicial practice.
 
@@ -135,9 +135,9 @@ The timing data reveal how long disputes take to resolve but not what those disp
 
 ### Computational Method: Topic Modeling
 
-To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[^note_lda_methodology] to the SriLankaCourtDecisions corpus. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
+To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[^note_lda_methodology] to the `SriLankaCourtDecisions` corpus. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
 
-To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of the SriLankaCourtDecisions corpus under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores, as shown in @tbl:topic-modeling-top3.
+To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of the `SriLankaCourtDecisions` corpus under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores, as shown in @tbl:topic-modeling-top3.
 
 : Top-3 Topics with Highest Average Probability and Top-40 Tokens {#tbl:topic-modeling-top3}
 
@@ -292,11 +292,9 @@ The patterns identified thus far—quantitative dominance, writ prevalence, temp
 
 ## Outcomes: Dismissals and Allowances
 
-*Proportion of decisions dismissed vs. allowed.*
-
 ### Data Limitations
 
-Dismissal, in this section, means dismissal after a full hearing. Writs and fundamental rights petitions proceed in two stages: an initial leave determination followed by a full hearing if leave is granted. The SriLankaCourtDecisions corpus does not include data on dismissals at the leave stage, as these are typically not recorded as written judgments. The actual dismissal rates are therefore higher than the data suggests. For a fuller discussion of dataset scope and coverage limitations, see [Section 5](#sec:limitations).
+Dismissal, in this section, means dismissal after a full hearing. Writs and fundamental rights petitions proceed in two stages: an initial leave determination followed by a full hearing if leave is granted. The `SriLankaCourtDecisions` corpus does not include data on dismissals at the leave stage, as these are typically not recorded as written judgments. The actual dismissal rates are therefore higher than the data suggests. For a fuller discussion of dataset scope and coverage limitations, see [Section 5](#sec:limitations).
 
 ### Observed Patterns
 
@@ -325,7 +323,7 @@ These findings—quantitative dominance, writ prevalence, temporal dysfunction, 
 
 ### Six Core Insights
 
-The empirical analysis of the SriLankaCourtDecisions corpus reveals patterns that challenge received assumptions about the work of Sri Lanka's appellate courts. These findings expose the gap between doctrinal debates and the empirical realities of judicial practice.
+The empirical analysis of the `SriLankaCourtDecisions` corpus reveals patterns that challenge received assumptions about the work of Sri Lanka's appellate courts. These findings expose the gap between doctrinal debates and the empirical realities of judicial practice.
 
 **1. Quantitative versus doctrinal significance.** The Court of Appeal numerically dominates—issuing nearly six times as many judgments as the Supreme Court—yet remains jurisprudentially neglected. This quantitative contribution is understood only in an ad hoc manner by judiciary, practitioners, academics, and court observers.
 
@@ -341,7 +339,7 @@ The empirical analysis of the SriLankaCourtDecisions corpus reveals patterns tha
 
 ### Methodological Contribution
 
-Computational methods make visible patterns obscured by the landmark case focus that dominates legal scholarship and professional discourse. The SriLankaCourtDecisions corpus enables systematic study of appellate jurisprudence that was previously impossible. By analyzing the entirety of decisions issued over a decade rather than selecting landmark cases, this approach reveals what courts actually do—not just what they say in celebrated constitutional moments.
+Computational methods make visible patterns obscured by the landmark case focus that dominates legal scholarship and professional discourse. The `SriLankaCourtDecisions` corpus enables systematic study of appellate jurisprudence that was previously impossible. By analyzing the entirety of decisions issued over a decade rather than selecting landmark cases, this approach reveals what courts actually do—not just what they say in celebrated constitutional moments.
 
 
 Topic modeling identifies the substantive areas that dominate dockets. Mutual information analysis reveals linguistic patterns that encode institutional hierarchies. Quantitative analysis of decision volumes, timing, length, and outcomes provides empirical grounding for claims about judicial work, independence, and access to justice. These methods do not replace doctrinal analysis but complement it by revealing the empirical realities within which doctrine operates.
@@ -358,7 +356,7 @@ Third, systematic delays undermine the rule of law regardless of ultimate outcom
 
 Finally, substantive concentration in land disputes and state employment cases reveals that appellate courts function primarily as forums for resolving disputes with the state or its instrumentalities. This pattern raises questions about the accessibility and effectiveness of lower courts for resolving such disputes and the role of appellate courts in managing state-citizen relations. Whether this concentration represents institutional design, litigation incentives, or systemic dysfunction warrants further investigation.
 
-The SriLankaCourtDecisions corpus does not resolve these questions, but it provides an empirical foundation for engaging them. The patterns identified here—quantitative dominance, temporal dysfunction, substantive concentration—are not speculative. They are measurable features of appellate jurisprudence that demand explanation and, where warranted, reform.
+The `SriLankaCourtDecisions` corpus does not resolve these questions, but it provides an empirical foundation for engaging them. The patterns identified here—quantitative dominance, temporal dysfunction, substantive concentration—are not speculative. They are measurable features of appellate jurisprudence that demand explanation and, where warranted, reform.
 
 [^note_lda_methodology]: [@blei2003latent]
 

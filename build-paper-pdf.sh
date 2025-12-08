@@ -54,6 +54,10 @@ pandoc temp-combined.md \
     --number-sections \
     -H bibliography-formatting.tex \
     -H text-alignment.tex \
+    -B title-page.tex \
+    -H font-config.tex \
+    -H quote-style.tex \
+    -H section-breaks.tex \
     -V geometry:a4paper \
     -V geometry:margin=1in \
     -V linkcolor:blue \

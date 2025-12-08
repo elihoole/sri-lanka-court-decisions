@@ -22,14 +22,6 @@ echo "Combining files with page breaks..."
 temp_file="../temp-combined-docx.md"
 > "$temp_file"  # Clear/create temp file
 
-# Add title page content
-echo "---" >> "$temp_file"
-echo "title: \"First Steps: Empirical Study of Sri Lanka's Apex Courts with a Focus on Public Law Litigation\"" >> "$temp_file"
-echo "---" >> "$temp_file"
-echo "" >> "$temp_file"
-echo "\\newpage" >> "$temp_file"
-echo "" >> "$temp_file"
-
 first=true
 for file in "${sorted[@]}"; do
     # Note: If you have a separate title page file (0-0-title-page.md), uncomment below to skip it
@@ -37,12 +29,8 @@ for file in "${sorted[@]}"; do
     #     continue
     # fi
 
-    # Add page break before each file (except the first one)
     if [ "$first" = true ]; then
         first=false
-    else
-        # Use page break for DOCX
-        echo -e '\n\\newpage\n' >> "$temp_file"
     fi
     cat "$file" >> "$temp_file"
     echo "" >> "$temp_file"  # Add blank line after file content
@@ -53,15 +41,39 @@ echo ""
 echo "Generating DOCX..."
 cd ..
 
-# Add page breaks before each top-level section (# heading)
-# Use sed to insert \newpage before lines starting with "# " (but not ## or ###)
-# Skip the very first section
-sed -i '0,/^# /! s/^# /\\newpage\n\n# /' temp-combined-docx.md
+# Prepare title page with current date (avoid sed delimiter issues)
+python - <<'PY'
+from pathlib import Path
+from datetime import datetime
+title = Path("title-page-docx.md").read_text()
+today_str = datetime.now().strftime("%B %-d, %Y")
+Path("title-page-docx-temp.md").write_text(title.replace("${TODAY}", today_str))
+PY
+
+# Add page breaks before each top-level section (# heading) using pandoc's pagebreak block
+python - <<'PY'
+from pathlib import Path
+path = Path("temp-combined-docx.md")
+lines = path.read_text().splitlines()
+out = []
+first_heading = True
+for line in lines:
+    if line.startswith("# "):
+        if first_heading:
+            first_heading = False
+        else:
+            out.append("::: pagebreak")
+            out.append(":::")
+            out.append("")
+    out.append(line)
+path.write_text("\n".join(out) + "\n")
+PY
 
 # Build pandoc command with optional reference doc
 PANDOC_CMD="pandoc temp-combined-docx.md \
     -o SriLankaCourtDecisions-paper-draft.docx \
     --filter pandoc-crossref \
+    --include-before-body=title-page-docx-temp.md \
     -M tablePrefix=Table \
     -M figurePrefix=Figure \
     -M tblPrefix=Table \
@@ -86,13 +98,13 @@ fi
 eval $PANDOC_CMD
 
 # Clean up temporary file
-rm -f temp-combined-docx.md
+rm -f temp-combined-docx.md title-page-docx-temp.md
 
 echo ""
 echo "✓ DOCX generated successfully: SriLankaCourtDecisions-paper-draft.docx"
 echo ""
 echo "The DOCX includes:"
-echo "  - Title page (from YAML metadata)"
+echo "  - Custom title page (DOCX-friendly layout)"
 echo "  - Table of contents (requires Word to update - see below)"
 echo "  - Numbered sections (1, 2, 3, etc.)"
 echo "  - Internal cross-references"

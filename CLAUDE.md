@@ -27,7 +27,7 @@ I have been working on this paper for a long time and I want to bring to a concl
 All sections sit within sections/ directory as separate .md files. 
 
 **0. Abstract**
-Introduces the empirical study of Sri Lanka's apex courts (Supreme Court and Court of Appeal) from 2012–2022 using computational methods. Presents the CDTextLK corpus (1278 Supreme Court and 7314 Court of Appeal decisions) and describes eight key patterns identified through computational analysis. Argues these insights challenge received wisdom about judicial impact and provide a necessary corrective to knowledge generated through landmark cases.
+Introduces the empirical study of Sri Lanka's apex courts (Supreme Court and Court of Appeal) from 2012–2022 using computational methods. Presents the SriLankaCourtDecisions corpus (1278 Supreme Court and 7314 Court of Appeal decisions) and describes eight key patterns identified through computational analysis. Argues these insights challenge received wisdom about judicial impact and provide a necessary corrective to knowledge generated through landmark cases.
 
 **1. Introduction**
 Explains the dominance of landmark judgments in common-law systems and proposes computational methods as a means to analyse the full corpus of case law beyond this narrow focus. Sets out the article's two main questions: what insights emerge from systematic empirical examination of Sri Lankan appellate judgments, and what are the prospects for such examination given current data availability. Provides roadmap for subsequent sections.
@@ -35,14 +35,14 @@ Explains the dominance of landmark judgments in common-law systems and proposes 
 **2. Empirical Study of Sri Lankan Courts**
 Situates the study within the tradition of legal empiricism and judicial statistics research, contrasting the rare empirical work in Sri Lanka with more established practices elsewhere. Describes Sri Lanka's mixed legal system shaped by Portuguese, Dutch, and British colonialism, explains the role of case law in developing Roman-Dutch, English Common, and Customary Laws, and details the structure and function of the Superior Courts. Examines the judicial branch from 2012–2022 in the context of constitutional developments (18th, 19th, and 20th Amendments) and discusses limitations in legal system digitisation.
 
-**3. CDTextLK: Court Decision Texts Sri Lanka Dataset**
-Describes the compilation of the CDTextLK dataset by scraping official court websites for the period 2012–2022. Details the dataset structure (1278 Supreme Court decisions, 7314 Court of Appeal decisions) and the technical challenges encountered, including duplicates, non-standardised case numbers, and OCR issues. Provides basic descriptive statistics including mean token counts for each court.
+**3. SriLankaCourtDecisions: Court Decision Texts Sri Lanka Dataset**
+Describes the compilation of the SriLankaCourtDecisions dataset by scraping official court websites for the period 2012–2022. Details the dataset structure (1278 Supreme Court decisions, 7314 Court of Appeal decisions) and the technical challenges encountered, including duplicates, non-standardised case numbers, and OCR issues. Provides basic descriptive statistics including mean token counts for each court.
 
-**4. Insights from the CDTextLK**
+**4. Insights from the SriLankaCourtDecisions**
 Presents eight empirical patterns identified through exploratory data analysis, mutual information analysis, and topic modelling. Covers: the Court of Appeal's greater numerical contribution; variations in Supreme Court output correlating with judicial independence; time taken to deliver decisions (37% of SC and 48% of CA decisions took over 5 years); length of decisions; proportion of dismissed versus allowed cases; token-level mutual information analysis revealing salient words; and topic modelling identifying land disputes, state employment writs, and criminal proceedings as dominant themes. Discusses implications for understanding judicial impact and access to justice.
 
 **5. Conclusion**
-Summarises the contribution of CDTextLK as both a corpus and a preliminary empirical analysis. Acknowledges the findings as preliminary given the nascent stage of legal system digitisation in Sri Lanka, while emphasising that computational methods have already revealed or confirmed trends warranting further investigation and, in some cases, urgent reform. Notes that immediate next steps are clear and will build on the findings already highlighted.
+Summarises the contribution of SriLankaCourtDecisions as both a corpus and a preliminary empirical analysis. Acknowledges the findings as preliminary given the nascent stage of legal system digitisation in Sri Lanka, while emphasising that computational methods have already revealed or confirmed trends warranting further investigation and, in some cases, urgent reform. Notes that immediate next steps are clear and will build on the findings already highlighted.
 
 **6. Future Work**
 *[Section appears to require development]*
@@ -144,7 +144,7 @@ Historical analysis of judicial appointments remains incomplete.[^38]
 ```bash
 ./build-paper-pdf.sh
 ```
-Produces: `CDTextLK-paper-draft.pdf` with:
+Produces: `SriLankaCourtDecisions-paper-draft.pdf` with:
 - Auto-generated Bibliography section (18 entries in Chicago format)
 - Numbered bibliography entries with proper spacing
 - Superscript in-text citations (¹, ², ³...)
@@ -156,7 +156,7 @@ Produces: `CDTextLK-paper-draft.pdf` with:
 ```bash
 ./build-paper-docx.sh
 ```
-Produces: `CDTextLK-paper-draft.docx` with:
+Produces: `SriLankaCourtDecisions-paper-draft.docx` with:
 - Same bibliography and citation features
 - Compatible with Microsoft Word
 - Table of contents (requires F9 refresh in Word)

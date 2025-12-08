@@ -1,8 +1,8 @@
 
 
-# **CDTextLK: Court Decision Texts Sri Lanka Dataset** {#sec:dataset}
+# **SriLankaCourtDecisions: Court Decision Texts Sri Lanka Dataset** {#sec:dataset}
 
-We compiled the CDTextLK dataset by scraping the official websites of Sri Lanka's Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. Although the Supreme Court website lists judgments from 2009 onwards, the years 2009–2011 contain incomplete data, likely due to retrospective uploading practices. The Court of Appeal entries begin in 2012.
+We compiled the SriLankaCourtDecisions dataset by scraping the official websites of Sri Lanka's Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. Although the Supreme Court website lists judgments from 2009 onwards, the years 2009–2011 contain incomplete data, likely due to retrospective uploading practices. The Court of Appeal entries begin in 2012.
 
 ## Data Collection and Processing
 
@@ -14,7 +14,7 @@ Scraping the two court websites presented minimal technical barriers, as both ar
 
 Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments, as shown in @tbl:dataset-composition. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
 
-: CDTextLK dataset composition and descriptive statistics (SD = standard deviation) {#tbl:dataset-composition}
+: SriLankaCourtDecisions dataset composition and descriptive statistics (SD = standard deviation) {#tbl:dataset-composition}
 
 |  | Number of | Mean token |
 | :---- | :---- | :---- |
@@ -37,5 +37,5 @@ The numerical dominance of Court of Appeal judgments (7314 versus 1278) reflects
 
 ## Limitations
 
-The dataset confronts several constraints including temporal scope, data quality, digitization challenges, and coverage gaps. For a detailed discussion of these limitations and their implications for the analysis presented in this article, see [Section 5](#sec:limitations). Despite these constraints, CDTextLK represents the most comprehensive corpus of Sri Lankan appellate judgments assembled to date and provides sufficient coverage for meaningful empirical analysis of recent trends in the Superior Courts.
+The dataset confronts several constraints including temporal scope, data quality, digitization challenges, and coverage gaps. For a detailed discussion of these limitations and their implications for the analysis presented in this article, see [Section 5](#sec:limitations). Despite these constraints, SriLankaCourtDecisions represents the most comprehensive corpus of Sri Lankan appellate judgments assembled to date and provides sufficient coverage for meaningful empirical analysis of recent trends in the Superior Courts.
 

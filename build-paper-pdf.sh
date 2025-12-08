@@ -39,7 +39,7 @@ echo ""
 echo "Generating PDF..."
 cd ..
 pandoc temp-combined.md \
-    -o CDTextLK-paper-draft.pdf \
+    -o SriLankaCourtDecisions-paper-draft.pdf \
     --pdf-engine=xelatex \
     --filter pandoc-crossref \
     -M tablePrefix="Table" \
@@ -71,7 +71,7 @@ pandoc temp-combined.md \
 rm -f temp-combined.md
 
 echo ""
-echo "✓ PDF generated successfully: CDTextLK-paper-draft.pdf"
+echo "✓ PDF generated successfully: SriLankaCourtDecisions-paper-draft.pdf"
 echo ""
 echo "The PDF includes:"
 echo "  - Automatic table of contents with page numbers"

@@ -60,7 +60,7 @@ sed -i '0,/^# /! s/^# /\\newpage\n\n# /' temp-combined-docx.md
 
 # Build pandoc command with optional reference doc
 PANDOC_CMD="pandoc temp-combined-docx.md \
-    -o CDTextLK-paper-draft.docx \
+    -o SriLankaCourtDecisions-paper-draft.docx \
     --filter pandoc-crossref \
     -M tablePrefix=Table \
     -M figurePrefix=Figure \
@@ -89,7 +89,7 @@ eval $PANDOC_CMD
 rm -f temp-combined-docx.md
 
 echo ""
-echo "✓ DOCX generated successfully: CDTextLK-paper-draft.docx"
+echo "✓ DOCX generated successfully: SriLankaCourtDecisions-paper-draft.docx"
 echo ""
 echo "The DOCX includes:"
 echo "  - Title page (from YAML metadata)"
@@ -101,7 +101,7 @@ echo "  - Professional formatting"
 echo "  - Footnotes"
 echo ""
 echo "⚠ IMPORTANT - To see the Table of Contents in Word:"
-echo "  1. Open CDTextLK-paper-draft.docx in Microsoft Word"
+echo "  1. Open SriLankaCourtDecisions-paper-draft.docx in Microsoft Word"
 echo "  2. Click anywhere in the TOC area (near the top)"
 echo "  3. Press F9 (or right-click and select 'Update Field')"
 echo "  4. Choose 'Update entire table'"

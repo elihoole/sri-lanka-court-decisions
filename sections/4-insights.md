@@ -1,6 +1,4 @@
-# **Computational Insights from `SriLankaCourtDecisions`** {#sec:insights}
-
-## Introduction: Patterns Beyond Precedent
+# **Patterns Beyond Precedent** {#sec:insights}
 
 The study of judicial decisions in Sri Lanka has traditionally focused on landmark cases and constitutional developments—Supreme Court determinations on fundamental rights, special determinations on bills, and appellate decisions on questions of law. This approach privileges doctrinal significance and treats courts primarily as sites of legal interpretation. Yet this perspective captures only part of what courts do. The empirical analysis of the `SriLankaCourtDecisions` corpus reveals patterns that challenge received assumptions about the nature and distribution of judicial work in Sri Lanka's appellate courts.
 
@@ -24,7 +22,7 @@ The numerical dominance of Court of Appeal judgments stands in stark contrast to
 
 This numerical dominance translates into greater practical impact in dispute resolution. Empirical analysis confirms that most disputes are effectively resolved at the Court of Appeal level, with the Supreme Court rarely reviewing writ decisions on appeal. This finding has significant implications: if the Court of Appeal is the practical forum where writ remedies are determined, the doctrinal and normative interpretation of judicial decisions in Sri Lanka should systematically include Court of Appeal jurisprudence rather than focusing predominantly on Supreme Court precedent.
 
-Currently, the Court of Appeal's contribution is understood only in an ad hoc manner by judiciary, practitioners, academics, and other court observers. There was a brief period in which decisions of the Court of Appeal were published as an unofficial court report by a non-government organization, Law & Society Trust.[^48] However, no systematic effort has been made to study Court of Appeal jurisprudence as a body of law with its own patterns and significance. The quantitative data point to the need for such systematic study, particularly given the court's role in both writ jurisdiction and criminal appeals—areas that, as subsequent sections demonstrate, dominate appellate dockets but remain understudied in legal scholarship.
+Currently, the Court of Appeal's contribution is understood only in an ad hoc manner by judiciary, practitioners, academics, and other court observers. There was a brief period in which decisions of the Court of Appeal were published as an unofficial court report by a non-government organization, Law & Society Trust.[^note_appellate_recorder] However, no systematic effort has been made to study Court of Appeal jurisprudence as a body of law with its own patterns and significance. The quantitative data point to the need for such systematic study, particularly given the court's role in both writ jurisdiction and criminal appeals—areas that, as subsequent sections demonstrate, dominate appellate dockets but remain understudied in legal scholarship.
 
 The Court of Appeal's quantitative dominance—and the low rate of appeals to the Supreme Court—raises a further question: what types of cases account for this output? The answer lies in the distribution between writ petitions and fundamental rights petitions, and in the Supreme Court's extremely limited role in reviewing Court of Appeal writ decisions.
 
@@ -70,7 +68,7 @@ From an access to justice perspective, these findings have significant implicati
 
 ### The Doctrinal Paradox
 
-Despite this numerical dominance and practical finality, writ jurisprudence remains underdeveloped in Sri Lankan legal scholarship and practice. Academic study of Sri Lanka's public law focuses predominantly on the fundamental rights jurisprudence of the Supreme Court with little attention paid to writ jurisprudence *qua* writ jurisprudence.[^56] This raises questions about why doctrinal scholarship privileges fundamental rights over writs when writs quantitatively dominate and the Court of Appeal serves as the effective final forum for the overwhelming majority of writ remedies.
+Despite this numerical dominance and practical finality, writ jurisprudence remains underdeveloped in Sri Lankan legal scholarship and practice. Academic study of Sri Lanka's public law focuses predominantly on the fundamental rights jurisprudence of the Supreme Court with little attention paid to writ jurisprudence *qua* writ jurisprudence.[^note_writ_scholarship] This raises questions about why doctrinal scholarship privileges fundamental rights over writs when writs quantitatively dominate and the Court of Appeal serves as the effective final forum for the overwhelming majority of writ remedies.
 
 The empirical data provide an alternative account to the view that writs and fundamental rights are blending in practice. Fundamental rights petitions remain the exception; writs are the norm. Moreover, these remedies operate in different forums with different rates of finality. The Supreme Court's exclusive fundamental rights jurisdiction under Article 126 makes it the apex court for constitutional violations, but the Court of Appeal's near-exclusive resolution of writ petitions under Article 140 makes it the apex court for administrative law and judicial review. Yet the doctrinal weight afforded to these two jurisdictions inverts their quantitative relationship and obscures their functional separation.
 
@@ -86,15 +84,13 @@ As shown in @fig:time-to-decision, 37% of Supreme Court decisions and 48% of Cou
 
 ![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.](images/time_to_decision.png){#fig:time-to-decision}
 
-### Methodology Note
-
 The Supreme Court website lists the date on which each decision was issued. The Court of Appeal website, on the other hand, groups decisions by the month and the year and does not list the date. Further, since the registries of both courts are not digitised, for both courts, there is no way of knowing the date on which an application related to a decision was filed. Under these constraints, calculating the exact time taken to deliver decisions is not possible. 
 
 To approximate the date on which an application was filed, we extracted the year in which the application related to a decision was filed from the application (or case) number. For example, the case number SC/FR/123/2012 indicates that the application was filed in 2012. Assuming that filing of applications is distributed uniformly through the year, we approximated the date of filing as {extracted\_year}-June-30 for all cases across the two courts. Making the same assumption, we approximated the date of decision delivery in the Court of Appeal as {given\_year}-{given\_month}-15. We then calculated the time taken to deliver a decision as the difference between the date of decision delivery and the date of application filing.
 
 ### Supreme Court Fundamental Rights: The Two-Month Fiction
 
-The Constitution mandates that fundamental rights petitions be determined within two months of filing (Article 126(5)).[^note_art126_2] However, the Supreme Court has held that this requirement is directory rather than mandatory.[^54] 
+The Constitution mandates that fundamental rights petitions be determined within two months of filing (Article 126(5)).[^note_art126_2] However, the Supreme Court has held that this requirement is directory rather than mandatory.[@visuvalingam1983, p. 226] 
 
 As illustrated in @fig:fr-delay-distribution, the data confirm serious concerns about delays in the court system.
 
@@ -113,7 +109,7 @@ As demonstrated in @fig:fr-vs-writ-delay, Court of Appeal writ petitions resolve
 
 ![Court of Appeal writs petitions resolve faster than Supreme Court FR applications](images/image_no_8_sc_fr_vs_ca_writ_delay_distribution.png){#fig:fr-vs-writ-delay}
 
-Unlike fundamental rights petitions, no constitutional or common law time limit governs writ determinations. Time or delay is considered when determining whether to grant leave to proceed,[^55] but no broader principles guide completion of writ petitions.
+Unlike fundamental rights petitions, no constitutional or common law time limit governs writ determinations. Time or delay is considered when determining whether to grant leave to proceed,[^note_writ_delay_considerations] but no broader principles guide completion of writ petitions.
 
 The Court of Appeal's experience provides an instructive comparison. Of the 7314 Court of Appeal decisions, 1741 (23%) were judgments on writs. Writ decisions took considerably less time to resolve than other matters in the same court. The average time taken for writ decisions was 3.15 years (2.80 SD) against 8.01 years (6.43 SD) for other matters. 25% of writs were decided within a year of filing.
 
@@ -286,7 +282,7 @@ These structural differences persist within the principal public law jurisdictio
 
 There are no apparent formal guidelines or standards governing the length of judicial decisions, and length itself should not be confused with quality. The persuasiveness and authority of a judgment depend on accurate identification of material facts, engagement with relevant precedent, and coherent application of law to fact. Nonetheless, the increasing length of judgments—particularly in the Supreme Court—does reflect a growing volume of judicial labour, including more extensive factual narration, doctrinal exposition, and engagement with comparative or constitutional reasoning.
 
-More importantly, variation in judgment length mirrors entrenched doctrinal hierarchies within Sri Lanka’s public law system. Fundamental Rights petitions, though fewer in number than writ applications, receive significantly more extensive judicial treatment, underscoring their elevated constitutional status. Similarly, Supreme Court decisions consistently exhibit greater length and variability than those of the Court of Appeal. The empirical patterns thus reinforce doctrinal expectations: constitutional adjudication commands deeper and more discursive reasoning than administrative review, and apex court judgments function as primary sites of legal exposition and norm-setting. Together with earlier findings on caseload composition, temporal delay, and output variation, judgment length provides a further window into how institutional role, jurisdiction, and doctrinal priority shape judicial practice.[^56]
+More importantly, variation in judgment length mirrors entrenched doctrinal hierarchies within Sri Lanka's public law system. Fundamental Rights petitions, though fewer in number than writ applications, receive significantly more extensive judicial treatment, underscoring their elevated constitutional status. Similarly, Supreme Court decisions consistently exhibit greater length and variability than those of the Court of Appeal. The empirical patterns thus reinforce doctrinal expectations: constitutional adjudication commands deeper and more discursive reasoning than administrative review, and apex court judgments function as primary sites of legal exposition and norm-setting. Together with earlier findings on caseload composition, temporal delay, and output variation, judgment length provides a further window into how institutional role, jurisdiction, and doctrinal priority shape judicial practice.[^note_writ_scholarship]
 
 The patterns identified thus far—quantitative dominance, writ prevalence, temporal dysfunction, substantive concentration, linguistic hierarchies, output variations, and decision length—describe how courts work. Outcome data provide a final empirical lens: how often do courts dismiss versus allow petitions?
 
@@ -361,3 +357,9 @@ The `SriLankaCourtDecisions` corpus does not resolve these questions, but it pro
 [^note_lda_methodology]: [@blei2003latent]
 
 [^note_art126_2]: Art 126
+
+[^note_appellate_recorder]: Appellate Court Recorder, Law & Society Trust.
+
+[^note_writ_scholarship]: Some examples of the discussion of writ jurisprudence include the following: [@gomez2001modern]; [@gomez2006blending]; [@marsoof2005expanding]; [@gomez2023mixing]; [@talagala2020writ]
+
+[^note_writ_delay_considerations]: Case law on delays in writ proceedings indicates that delay is a relevant consideration at the leave stage.

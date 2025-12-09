@@ -2,7 +2,7 @@
 
 # **`SriLankaCourtDecisions`: Court Decision Texts Sri Lanka Dataset** {#sec:dataset}
 
-We compiled the `SriLankaCourtDecisions` dataset by scraping the official websites of Sri Lanka's Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. Although the Supreme Court website lists judgments from 2009 onwards, the years 2009–2011 contain incomplete data, likely due to retrospective uploading practices. The Court of Appeal entries begin in 2012.
+We compiled the `SriLankaCourtDecisions` dataset by scraping the official websites of Sri Lanka's Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. Although the Supreme Court website lists judgments from 2009 onwards, the years 2009–2011 contain incomplete data, likely due to retrospective uploading practices. The Court of Appeal entries begin in 2012. The dataset will be available for use at [URL/DOI to be provided upon release].
 
 ## Data Collection and Processing
 
@@ -38,4 +38,3 @@ The numerical dominance of Court of Appeal judgments (7314 versus 1278) reflects
 ## Limitations
 
 The dataset confronts several constraints including temporal scope, data quality, digitization challenges, and coverage gaps. For a detailed discussion of these limitations and their implications for the analysis presented in this article, see [Section 5](#sec:limitations). Despite these constraints, `SriLankaCourtDecisions` represents the most comprehensive corpus of Sri Lankan appellate judgments assembled to date and provides sufficient coverage for meaningful empirical analysis of recent trends in the Superior Courts.
-

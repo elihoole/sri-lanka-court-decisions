@@ -14,7 +14,7 @@ Elijah Hoole, Dinesha Samararatne, Yanitra Kumaraguru
 
 4. Topic modelling identifies land disputes and state employment matters as the dominant themes in appellate jurisprudence, not the constitutional questions typically featured in legal scholarship. This insight offers helpful guidance to efforts on institutional reform including case management.
 
-5. The numerical variations in Supreme Court judgements between 2012–2015 and 2016–2022 correlate with constitutional developments affecting judicial independence, particularly the 19th Amendment. This insight demonstrates that empirical patterns can expose relationships between institutional and political contexts and judicial performance.
+5. The numerical variations in Supreme Court judgments between 2012–2015 and 2016–2022 correlate with constitutional developments affecting judicial independence, particularly the 19th Amendment. This pattern suggests a plausible hypothesis about relationships between institutional-political contexts and judicial performance, though the present study does not establish causation.
 
 6. The linguistic patterns and decision length empirically identified in these judgements confirm doctrinal hierarchies: Supreme Court decisions employ the language of error and formal citation practices that reflect apex court authority, while fundamental rights judgments are substantially longer than writ decisions, revealing the differential judicial labour allocated to constitutional versus administrative disputes.
 

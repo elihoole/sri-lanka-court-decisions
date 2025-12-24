@@ -56,14 +56,6 @@ Computational methods have already been used to study courts of several jurisdic
 
 With due recognition of the constraints that apply  the potential that computational methods hold for the study of courts is substantial. While failing to demonstrate causal relations, the ability to process data in quantities far beyond what would be possible manually produces results that can both reveal the realities of the judicial system and discern patterns in judicial workload and output on a scale that would have previously been impossible. In doing so, the findings of research by way of computational methods could serve to confirm concerns or characteristics already suspected of the court system or provide direction towards areas warranting further investigation. Collectively, it holds promise to pave the path towards judicial and legal system reform where required. The necessity of interpreting the empirical alongside the normative and doctrinal, and not in isolation, only increases in importance during the formulation of any such reform.
 
-[^47]:  Aparna Chandra et al., *Court on Trial: A Data-Driven Account of the Supreme Court of India* (Penguin, 2023).
-
-[^48]:  David Lazer et al., “Computational Social Science,” *Science* 323, no. 5915 (2009) 721–22.
-
-[^49]:  Jens Frankenreiter and Michael A Livermore, “Computational Methods in Legal Analysis,” *Annual Review of Law and Social Science* 16 (2020) 19, 42\.
-
-[^50]:  Madhav Khosla, “Is a Science of Comparative Constitutionalism Possible?” *Harvard Law Review* 135 (2022) 2110–10.
-
 [^1]:   Mark C Suchman and Elizabeth Mertz, “Toward a New Legal Empiricisms: Empirical Legal Studies and New Legal Realism,” Annual Review of Law and Social Science 6 (2010) 563.
 
 
@@ -156,3 +148,12 @@ With due recognition of the constraints that apply  the potential that computati
 [^45]:  Umesh Moramudali, “Sri Lanka’s Foreign Debt Crisis: Deep Roots?” in *Routledge Handbook of Contemporary Sri Lanka*, ed. Kanchana N Ruwanpura and Amjad M Saleem (Routledge, 2025), 147\.
 
 [^46]:  Jayadeva Uyangoda, *Localising Democracy and Democratisation in Non-Western Societies: Insights from Sri Lanka’s Experience* (Social Scientists’ Association, 2024).
+
+
+[^47]:  Aparna Chandra et al., *Court on Trial: A Data-Driven Account of the Supreme Court of India* (Penguin, 2023).
+
+[^48]:  David Lazer et al., “Computational Social Science,” *Science* 323, no. 5915 (2009) 721–22.
+
+[^49]:  Jens Frankenreiter and Michael A Livermore, “Computational Methods in Legal Analysis,” *Annual Review of Law and Social Science* 16 (2020) 19, 42\.
+
+[^50]:  Madhav Khosla, “Is a Science of Comparative Constitutionalism Possible?” *Harvard Law Review* 135 (2022) 2110–10.

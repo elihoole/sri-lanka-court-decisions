@@ -1,3 +1,10 @@
+## Git Workflow
+
+- **Commit frequently**: After completing a logical unit of work (e.g., fixing a section, adding bib entries, converting citations), commit without prompting
+- **Use feature branches**: Create branches for significant changes (e.g., `fix/footnote-renumbering`)
+- **Commit message format**: Use clear, descriptive messages with bullet points for multiple changes
+- **Don't push without asking**: Commits are local until explicitly asked to push
+
 ## About the project
 
 I have been working on this paper for a long time and I want to bring to a conclusion. My colleague returned the final Word document from her end. And I have decomposed the different sections under `sections-final`. You don't have to worry about the content of the paper sitting in any other folder. 

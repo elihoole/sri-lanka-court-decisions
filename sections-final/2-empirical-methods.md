@@ -78,7 +78,7 @@ With due recognition of the constraints that apply, the potential that computati
 
 [^note_art118]: Art 118 of the Constitution read with Art 120.
 
-[^note_ssl_invalid]: Supreme Court and Court of Appeal sites have invalid SSL certificates at the time of writing.
+[^note_ssl_invalid]: Supreme Court and Court of Appeal sites had invalid SSL certificates at the time of data scraping and initial writing.
 
 [^note_art105]: Article 105(3) of the Constitution.
 

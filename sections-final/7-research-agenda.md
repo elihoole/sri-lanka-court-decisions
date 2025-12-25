@@ -68,6 +68,6 @@ District Court and Magistrate Court decisions are not systematically digitised, 
 
 The computational methods employed in this study – topic modelling through LDA, mutual information analysis, and basic descriptive statistics – represent initial applications of established techniques. Further methodological development could employ more sophisticated approaches: dynamic topic modelling to reveal how topics shift over time, supervised machine learning to predict case outcomes based on textual features, and network analysis to map citation patterns among decisions.
 
-The use of sentiment analysis – adapted to the specialized language of judicial decisions – could reveal whether particular dispute types or procedural contexts generate more emotive or more neutral judicial language. This would not assess the quality of decisions but would contribute to understanding how courts write about different categories of disputes.
+The use of sentiment analysis – adapted to the specialised language of judicial decisions – could reveal whether particular dispute types or procedural contexts generate more emotive or more neutral judicial language. This would not assess the quality of decisions but would contribute to understanding how courts write about different categories of disputes.
 
 Comparative corpus linguistics could analyse Sri Lankan judicial language against judgments from other jurisdictions, revealing distinctiveness or convergence in judicial style, citation practices, and reasoning structures.

@@ -1,6 +1,6 @@
-# SriLankaCourtDecisions: Court Decision Texts Sri Lanka Dataset
+# \texttt{SriLankaCourtDecisions}: Court Decision Texts Sri Lanka Dataset
 
-We compiled the SriLankaCourtDecisions dataset by scraping the official websites of Sri Lanka’s Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022\. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. The dataset will be available for use at \[URL/DOI to be provided upon release\].
+We compiled the \texttt{SriLankaCourtDecisions} dataset by scraping the official websites of Sri Lanka’s Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022\. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. The dataset will be available for use at \[URL/DOI to be provided upon release\].
 
 The constitution establishes distinct forums for public law remedies. Article 140 confers on the Court of Appeal jurisdiction to issue prerogative writs—certiorari, mandamus, prohibition, and others—for judicial review of administrative action, tribunal decisions, and jurisdictional errors. Article 126 vests the Supreme Court with exclusive jurisdiction over fundamental rights petitions alleging constitutional violations. The Supreme Court’s original writ jurisdiction, by contrast, is narrowly circumscribed: Article 104H, for instance, limits such jurisdiction to election-related matters.
 
@@ -13,7 +13,7 @@ Scraping the two court websites presented minimal technical barriers, as both ar
 
 Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments, as shown in Table 1\. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
 
-*Table 1: SriLankaCourtDecisions dataset composition and descriptive statistics (SD \= standard deviation)*
+*Table 1: \texttt{SriLankaCourtDecisions} dataset composition and descriptive statistics (SD \= standard deviation)*
 
 |  | Number of | Mean token |
 | :---- | :---- | :---- |

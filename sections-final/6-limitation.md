@@ -2,7 +2,7 @@
 
 This study confronts limitations inherent to empirical legal research generally and to the specific constraints of legal system digitization in Sri Lanka. These limitations operate at multiple levels: methodological, temporal, archival, technical, and analytical. We address each in turn, noting how they constrain the claims advanced in this article and the research questions they leave open for future investigation.
 
-The dataset confronts several constraints including temporal scope, data quality, digitization challenges, and coverage gaps. Despite these constraints, SriLankaCourtDecisions represents the most comprehensive corpus of Sri Lankan appellate judgments assembled to date and provides sufficient coverage for meaningful empirical analysis of recent trends in the Superior Courts. 
+The dataset confronts several constraints including temporal scope, data quality, digitization challenges, and coverage gaps. Despite these constraints, \texttt{SriLankaCourtDecisions} represents the most comprehensive corpus of Sri Lankan appellate judgments assembled to date and provides sufficient coverage for meaningful empirical analysis of recent trends in the Superior Courts. 
 
 The findings are preliminary but sufficient to challenge received assumptions and warrant attention in reform debates. The necessity of interpreting the empirical alongside the normative and doctrinal, and not in isolation, only increases in importance during the formulation of any such reform.
 
@@ -42,5 +42,5 @@ Furthermore, there is an inconsistency in how the courts use “orders” versus
 
 In the case of writs and fundamental rights petitions, proceedings are in two stages. When a petition has been filed, the Court initially conducts a hearing to determine whether leave to proceed will be granted. At this stage, it is possible for a petition to be dismissed. However, whether or not a judgment or order is issued to record a dismissal, is at the discretion of the Courts. Where leave to proceed is granted, Court may also grant interim relief sought by the petitioner. In such instances, Court issues an order.
 
-The SriLankaCourtDecisions corpus does not include data on dismissals at the leave to proceed stage as that data is not produced as a written record. To that extent the data on dismissal have a significant limitation as it does not depict the accurate number of dismissals by courts. The actual dismissal rates are therefore higher than the data suggests, since many petitions are dismissed at the leave stage without a written judgment being issued. This limitation affects our analysis of patterns in Section 5 below.
+The \texttt{SriLankaCourtDecisions} corpus does not include data on dismissals at the leave to proceed stage as that data is not produced as a written record. To that extent the data on dismissal have a significant limitation as it does not depict the accurate number of dismissals by courts. The actual dismissal rates are therefore higher than the data suggests, since many petitions are dismissed at the leave stage without a written judgment being issued. This limitation affects our analysis of patterns in Section 5 below.
 

@@ -2,7 +2,7 @@
 
 **Key Insights:**
 
-*The SriLankaCourtDecisions corpus on writs and fundamental rights judgements delivered 2012 to 2022, reveals that:*
+*The \texttt{SriLankaCourtDecisions} corpus on writs and fundamental rights judgements delivered 2012 to 2022, reveals that:*
 
 1. *The Court of Appeal delivers nearly six times more judgments than the Supreme Court annually, yet, its jurisprudence remains systematically understudied;*  
 2. *Numerically, judgements on writ petitions vastly outnumber judgements on fundamental rights petitions;*  

@@ -1,6 +1,6 @@
 # Patterns Beyond Precedent
 
-The empirical analysis of SriLankaCourtDecisions reveals patterns that challenge received assumptions about the nature and distribution of judicial work in Sri Lanka’s appellate courts. These insights emerge from both descriptive statistics—the volume, timing, and length of decisions—and computational methods including topic modelling and mutual information analysis. Together, they expand the landmark case-focused understanding of judicial work by making visible the patterns that structure day-to-day judicial practice. These insights therefore broaden, deepen, and complicate our understanding of the jurisprudence on fundamental rights and writs, and of the work of the courts more broadly.
+The empirical analysis of \texttt{SriLankaCourtDecisions} reveals patterns that challenge received assumptions about the nature and distribution of judicial work in Sri Lanka’s appellate courts. These insights emerge from both descriptive statistics—the volume, timing, and length of decisions—and computational methods including topic modelling and mutual information analysis. Together, they expand the landmark case-focused understanding of judicial work by making visible the patterns that structure day-to-day judicial practice. These insights therefore broaden, deepen, and complicate our understanding of the jurisprudence on fundamental rights and writs, and of the work of the courts more broadly.
 
 ## Six-to-one: Greater numerical output by the Court of Appeal
 
@@ -130,7 +130,7 @@ The patterns identified thus far—quantitative dominance, writ prevalence, temp
 
 ## Dismissals and Leave to Proceed
 
-Dismissal, in this section, means dismissal after a full hearing. Writs and fundamental rights petitions proceed in two stages: an initial leave determination followed by a full hearing if leave is granted. SriLankaCourtDecisions does not include data on dismissals at the leave stage, as these are typically not recorded as written judgments. The actual dismissal rates are therefore higher than the data suggests.
+Dismissal, in this section, means dismissal after a full hearing. Writs and fundamental rights petitions proceed in two stages: an initial leave determination followed by a full hearing if leave is granted. \texttt{SriLankaCourtDecisions} does not include data on dismissals at the leave stage, as these are typically not recorded as written judgments. The actual dismissal rates are therefore higher than the data suggests.
 
 *Table 3: Proportion of Decisions Dismissed vs Allowed*
 
@@ -151,9 +151,9 @@ After petitions clear the leave to proceed stage, the probability favors the pet
 
 ## Topics of Common Concern to both courts
 
-To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[@blei2003latent] to SriLankaCourtDecisions. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
+To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[@blei2003latent] to \texttt{SriLankaCourtDecisions}. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
 
-To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of SriLankaCourtDecisions under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores, as shown in Table 4\.
+To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of \texttt{SriLankaCourtDecisions} under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores, as shown in Table 4\.
 
 *Table 4: Top-3 Topics with Highest Average Probability and Top-40 Tokens*
 

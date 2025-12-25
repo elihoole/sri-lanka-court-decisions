@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Build script for Final Written Defense DOCX
-# Generates DOCX with automatic table of contents and page number cross-references
-# Each markdown file starts on a new page
+# Build script for Academic Paper DOCX
+# Generates DOCX with EB Garamond font, proper styling, and page breaks
+# Uses a reference template for consistent formatting
 
 set -e  # Exit on error
 
@@ -24,11 +24,6 @@ temp_file="../temp-combined-docx.md"
 
 first=true
 for file in "${sorted[@]}"; do
-    # Note: If you have a separate title page file (0-0-title-page.md), uncomment below to skip it
-    # if [ "$file" = "0-0-title-page.md" ]; then
-    #     continue
-    # fi
-
     if [ "$first" = true ]; then
         first=false
     fi
@@ -41,8 +36,8 @@ echo ""
 echo "Generating DOCX..."
 cd ..
 
-# Prepare title page with current date (avoid sed delimiter issues)
-python - <<'PY'
+# Prepare title page with current date
+python3 - <<'PY'
 from pathlib import Path
 from datetime import datetime
 title = Path("title-page-docx.md").read_text()
@@ -51,7 +46,7 @@ Path("title-page-docx-temp.md").write_text(title.replace("${TODAY}", today_str))
 PY
 
 # Add page breaks before each top-level section (# heading) using pandoc's pagebreak block
-python - <<'PY'
+python3 - <<'PY'
 from pathlib import Path
 path = Path("temp-combined-docx.md")
 lines = path.read_text().splitlines()
@@ -69,9 +64,11 @@ for line in lines:
 path.write_text("\n".join(out) + "\n")
 PY
 
-# Build pandoc command with optional reference doc
-PANDOC_CMD="pandoc temp-combined-docx.md \
+# Build pandoc command with reference doc and lua filter
+pandoc temp-combined-docx.md \
     -o SriLankaCourtDecisions-paper-draft.docx \
+    --reference-doc=utils/reference.docx \
+    --lua-filter=utils/academic-docx-format.lua \
     --filter pandoc-crossref \
     --include-before-body=title-page-docx-temp.md \
     -M secPrefix=Section \
@@ -88,43 +85,26 @@ PANDOC_CMD="pandoc temp-combined-docx.md \
     -V linkcolor:blue \
     -V toccolor:blue \
     -V urlcolor:blue \
-    --highlight-style=tango"
-
-# Add reference doc if specified
-if [ -n "${REFERENCE_DOC:-}" ]; then
-    PANDOC_CMD="$PANDOC_CMD --reference-doc=$REFERENCE_DOC"
-fi
-
-# Execute the command
-eval $PANDOC_CMD
+    --highlight-style=tango
 
 # Clean up temporary file
 rm -f temp-combined-docx.md title-page-docx-temp.md
 
 echo ""
-echo "✓ DOCX generated successfully: SriLankaCourtDecisions-paper-draft.docx"
+echo "DOCX generated successfully: SriLankaCourtDecisions-paper-draft.docx"
 echo ""
 echo "The DOCX includes:"
-echo "  - Custom title page (DOCX-friendly layout)"
-echo "  - Table of contents (requires Word to update - see below)"
-echo "  - Numbered sections (1, 2, 3, etc.)"
+echo "  - EB Garamond font throughout"
+echo "  - Custom title page"
+echo "  - Table of contents (update with F9 in Word)"
+echo "  - Numbered sections"
 echo "  - Internal cross-references"
-echo "  - Each top-level section (# heading) starts on a new page"
-echo "  - Professional formatting"
-echo "  - Footnotes"
+echo "  - Each section starts on a new page"
+echo "  - Chicago-style footnotes and bibliography"
+echo "  - Professional academic formatting"
 echo ""
-echo "⚠ IMPORTANT - To see the Table of Contents in Word:"
-echo "  1. Open SriLankaCourtDecisions-paper-draft.docx in Microsoft Word"
-echo "  2. Click anywhere in the TOC area (near the top)"
-echo "  3. Press F9 (or right-click and select 'Update Field')"
-echo "  4. Choose 'Update entire table'"
-echo "  5. The TOC will now show all sections with page numbers"
+echo "To update the Table of Contents in Word:"
+echo "  1. Open the document in Microsoft Word"
+echo "  2. Click anywhere in the TOC"
+echo "  3. Press F9 and choose 'Update entire table'"
 echo ""
-echo "Alternative: The --toc flag creates a TOC that should appear automatically,"
-echo "but some Word versions may need manual refresh."
-echo ""
-echo "Note: To customize formatting, you can create a reference document:"
-echo "  1. Generate a basic DOCX with pandoc"
-echo "  2. Open it in Word and modify styles (headings, fonts, etc.)"
-echo "  3. Save it as reference.docx"
-echo "  4. Run: REFERENCE_DOC=reference.docx ./build-paper-docx.sh"

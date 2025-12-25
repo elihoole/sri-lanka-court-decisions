@@ -36,7 +36,7 @@ From an access to justice perspective, our assessment reveals that in effect, th
 
 ## Implications for Reform
 
-The findings of this study point toward specific areas for institutional reform, but implementing such reforms requires additional empirical work. If land disputes dominate long-duration cases, would specialized land tribunals reduce the burden on appellate courts? If state employment disputes constitute a substantial proportion of writ petitions, would strengthening the Administrative Appeals Tribunal and other such mechanisms reduce litigation?
+The findings of this study point toward specific areas for institutional reform, but implementing such reforms requires additional empirical work. If land disputes dominate long-duration cases, would specialised land tribunals reduce the burden on appellate courts? If state employment disputes constitute a substantial proportion of writ petitions, would strengthening the Administrative Appeals Tribunal and other such mechanisms reduce litigation?
 
 Piloting procedural reforms – such as time limits for oral submissions, case management protocols for particular dispute types, or alternative dispute resolution mechanisms for specific categories of cases – would benefit from empirical baseline data against which to measure effectiveness. The \texttt{SriLankaCourtDecisions} corpus provides such baseline data for the appellate courts, but implementing and evaluating reform requires collaboration between researchers, judiciary, legal practitioners, and policymakers.
 

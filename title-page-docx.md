@@ -1,16 +1,75 @@
-<div style="text-align:center; font-size:26pt; font-weight:bold;">First Steps</div>
-<div style="text-align:center; font-size:18pt; margin-top:4pt;">Empirical Study of Sri Lanka's Apex Courts</div>
-<div style="text-align:center; font-size:12pt; font-style:italic; margin-top:6pt;">with a Focus on Public Law Litigation</div>
+::: {custom-style="Title"}
+First Steps
+:::
 
-<div style="text-align:center; font-size:10pt; letter-spacing:1px; text-transform:uppercase; margin-top:28pt;">Authors</div>
-<div style="text-align:center; font-size:12pt; margin-top:8pt;">Elijah Hoole</div>
-<div style="text-align:center; font-size:12pt; margin-top:2pt;">Dinesha Samararatne</div>
-<div style="text-align:center; font-size:12pt; margin-top:2pt;">Yanitra Kumaraguru</div>
+::: {custom-style="Subtitle"}
+Empirical Study of Sri Lanka's Apex Courts
+:::
 
-<div style="text-align:center; font-size:10pt; letter-spacing:1px; text-transform:uppercase; margin-top:26pt;">Dataset</div>
-<div style="text-align:center; font-size:12pt; margin-top:8pt;"><code>SriLankaCourtDecisions</code> (2012–2022)</div>
+::: {custom-style="Subtitle-Italic"}
+with a Focus on Public Law Litigation
+:::
 
-<div style="text-align:center; font-size:10pt; margin-top:26pt;">Draft generated on ${TODAY}</div>
+\
 
-::: pagebreak
+::: {custom-style="Author-Label"}
+AUTHORS
+:::
+
+::: {custom-style="Author-Name"}
+Elijah Hoole^†^
+:::
+
+::: {custom-style="Author-Name"}
+Dinesha Samararatne^‡^
+:::
+
+::: {custom-style="Author-Name"}
+Yanitra Kumaraguru^§^
+:::
+
+\
+
+::: {custom-style="Author-Label"}
+DATASET
+:::
+
+::: {custom-style="Dataset-Name"}
+`SriLankaCourtDecisions` (2012–2022)
+:::
+
+\
+
+::: {custom-style="Draft-Date"}
+Draft generated on ${TODAY}
+:::
+
+\
+\
+\
+\
+\
+
+::: {custom-style="Affiliation-Line"}
+---
+:::
+
+::: {custom-style="Affiliation"}
+^†^ Founder, paralegal.lk (lead author, contributed approximately 50% towards this article)
+:::
+
+::: {custom-style="Affiliation"}
+^‡^ Professor, Dept of Public & International Law, Faculty of Law, University of Colombo, Sri Lanka and independent member of the Constitutional Council of Sri Lanka (Jan 2023 – Jan 2025) (contributed approximately 40% towards this article)
+:::
+
+::: {custom-style="Affiliation"}
+^§^ Team Lead, Legal Research, Verité Research (contributed approximately 10% towards this article)
+:::
+
+::: {custom-style="Affiliation-Note"}
+The research work for this paper was carried out 2023 to 2025. A preliminary draft of this paper by Elijah Hoole, Amanda Halliday & Yanitra Kumaraguru 'Empirical Study of Sri Lanka's Apex Courts: Taking the First Step with Dataset Curation and Analysis' was presented by Amanda Halliday at the conference on Computational Analysis of Apex Courts 2023 held June 23, in Braga, Portugal.
+:::
+
+::: {custom-style="Section-Break-Next-Page"}
+\
 :::

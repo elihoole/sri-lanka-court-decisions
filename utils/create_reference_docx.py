@@ -81,7 +81,18 @@ def create_academic_reference_docx(output_path: Path):
     section.top_margin = Inches(1)
     section.bottom_margin = Inches(1)
 
-    # === ADD PAGE NUMBERS TO FOOTER ===
+    # === SET ROMAN NUMERAL PAGE NUMBERING FOR FRONT MATTER ===
+    # The Lua filter will insert a section break to switch to Arabic before Introduction
+    sectPr = section._sectPr
+    pgNumType = OxmlElement('w:pgNumType')
+    pgNumType.set(qn('w:fmt'), 'lowerRoman')  # i, ii, iii, iv...
+    sectPr.append(pgNumType)
+
+    # === ENABLE DIFFERENT FIRST PAGE (for title page without page number) ===
+    titlePg = OxmlElement('w:titlePg')
+    sectPr.append(titlePg)
+
+    # === ADD PAGE NUMBERS TO FOOTER (for non-first pages) ===
     footer = section.footer
     footer.is_linked_to_previous = False
     footer_para = footer.paragraphs[0]
@@ -104,6 +115,10 @@ def create_academic_reference_docx(output_path: Path):
     # Style the page number
     run.font.name = 'EB Garamond'
     run.font.size = Pt(11)
+
+    # First page footer (empty - no page number on title page)
+    first_footer = section.first_page_footer
+    # Leave it empty
 
     # Get styles
     styles = doc.styles
@@ -182,6 +197,81 @@ def create_academic_reference_docx(output_path: Path):
         set_paragraph_format(caption, space_before=6, space_after=12, line_spacing=1.0)
     except KeyError:
         pass
+
+    # === TITLE PAGE STYLES ===
+    # Helper to get or create a style
+    def get_or_create_style(name, style_type=WD_STYLE_TYPE.PARAGRAPH):
+        try:
+            return styles[name]
+        except KeyError:
+            return styles.add_style(name, style_type)
+
+    # Title - Large centered bold
+    title_style = get_or_create_style('Title')
+    set_style_font(title_style, 'EB Garamond', 26, bold=True)
+    set_paragraph_format(title_style, space_before=72, space_after=4, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.CENTER)
+
+    # Subtitle - Medium centered
+    subtitle_style = get_or_create_style('Subtitle')
+    set_style_font(subtitle_style, 'EB Garamond', 18)
+    set_paragraph_format(subtitle_style, space_before=4, space_after=4, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.CENTER)
+
+    # Subtitle-Italic - Medium centered italic
+    subtitle_italic = get_or_create_style('Subtitle-Italic')
+    set_style_font(subtitle_italic, 'EB Garamond', 12, italic=True)
+    set_paragraph_format(subtitle_italic, space_before=6, space_after=28, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.CENTER)
+
+    # Author-Label - Small caps centered
+    author_label = get_or_create_style('Author-Label')
+    set_style_font(author_label, 'EB Garamond', 10)
+    author_label.font.all_caps = True
+    set_paragraph_format(author_label, space_before=28, space_after=8, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.CENTER)
+
+    # Author-Name - Normal centered
+    author_name = get_or_create_style('Author-Name')
+    set_style_font(author_name, 'EB Garamond', 12)
+    set_paragraph_format(author_name, space_before=2, space_after=2, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.CENTER)
+
+    # Dataset-Name - Normal centered with code font
+    dataset_name = get_or_create_style('Dataset-Name')
+    set_style_font(dataset_name, 'EB Garamond', 12)
+    set_paragraph_format(dataset_name, space_before=8, space_after=26, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.CENTER)
+
+    # Draft-Date - Small centered
+    draft_date = get_or_create_style('Draft-Date')
+    set_style_font(draft_date, 'EB Garamond', 10)
+    set_paragraph_format(draft_date, space_before=26, space_after=26, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.CENTER)
+
+    # Affiliation-Line - Horizontal rule substitute
+    affil_line = get_or_create_style('Affiliation-Line')
+    set_style_font(affil_line, 'EB Garamond', 10)
+    set_paragraph_format(affil_line, space_before=0, space_after=12, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.CENTER)
+
+    # Affiliation - Small footnote-style
+    affiliation = get_or_create_style('Affiliation')
+    set_style_font(affiliation, 'EB Garamond', 9)
+    set_paragraph_format(affiliation, space_before=0, space_after=6, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.LEFT)
+
+    # Affiliation-Note - Small italic note
+    affil_note = get_or_create_style('Affiliation-Note')
+    set_style_font(affil_note, 'EB Garamond', 9)
+    set_paragraph_format(affil_note, space_before=12, space_after=0, line_spacing=1.0,
+                         alignment=WD_PARAGRAPH_ALIGNMENT.LEFT)
+
+    # Section-Break-Next-Page - For section breaks
+    section_break = get_or_create_style('Section-Break-Next-Page')
+    set_style_font(section_break, 'EB Garamond', 1)
+    set_paragraph_format(section_break, space_before=0, space_after=0, line_spacing=1.0,
+                         page_break_before=True)
 
     # === Add sample content for reference ===
     doc.add_heading('Sample Heading 1', level=1)

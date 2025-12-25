@@ -7,7 +7,7 @@
 set -e  # Exit on error
 
 # Change to the sections directory
-cd "$(dirname "$0")/sections"
+cd "$(dirname "$0")/sections-final"
 
 # Get all markdown files and sort them properly
 files=(*.md)

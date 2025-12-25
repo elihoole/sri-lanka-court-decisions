@@ -164,13 +164,23 @@ def create_academic_reference_docx(output_path: Path):
     set_paragraph_format(block_text, space_before=6, space_after=6,
                          line_spacing=1.5, left_indent=0.5, right_indent=0.5)
 
-    # === FOOTNOTE TEXT ===
+    # === FOOTNOTE STYLES ===
+    # Footnote Text - the text at the bottom of the page
     try:
-        footnote = styles['Footnote Text']
-        set_style_font(footnote, 'EB Garamond', 10)
-        set_paragraph_format(footnote, space_after=3, line_spacing=1.0)
+        footnote_text = styles['Footnote Text']
     except KeyError:
-        pass  # Style may not exist in base template
+        footnote_text = styles.add_style('Footnote Text', WD_STYLE_TYPE.PARAGRAPH)
+    set_style_font(footnote_text, 'EB Garamond', 10)
+    set_paragraph_format(footnote_text, space_after=3, line_spacing=1.0)
+
+    # Footnote Reference - the superscript number in text
+    try:
+        footnote_ref = styles['Footnote Reference']
+    except KeyError:
+        footnote_ref = styles.add_style('Footnote Reference', WD_STYLE_TYPE.CHARACTER)
+    footnote_ref.font.superscript = True
+    footnote_ref.font.name = 'EB Garamond'
+    footnote_ref.font.size = Pt(10)
 
     # === TOC STYLES ===
     for i in range(1, 4):

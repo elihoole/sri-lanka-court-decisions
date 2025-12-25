@@ -34,7 +34,7 @@ The numerical dominance of the Court of Appeal translates into greater practical
 
 Three non-exclusive explanations may account for this low ratio. First, litigants may be satisfied with Court of Appeal writ determinations and choose not to pursue further appeal. Second, the Supreme Court’s leave requirements for appeals may present a significant barrier, filtering out cases that do not meet the threshold for further review. Third, Court of Appeal writ remedies may effectively resolve the underlying disputes, rendering further litigation unnecessary or impractical. Determining which explanation predominates would require further investigation into leave applications, reasons for grant or refusal of leave, and longitudinal tracking of individual cases from the Court of Appeal through potential Supreme Court appeals. Interviews with litigants, practitioners, and justices would further reveal the reasons for this implied appeal rate.
 
-## Patterns in the number of judgements within each court and between the two courts
+## Patterns in the Number of Judgements Within Each Court and Between the Two Courts
 
 Overall, in the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court’s 116 decisions. The Court of Appeal has consistently delivered more judgments than the Supreme Court throughout the decade. The Supreme Court’s output varied substantially across the decade. The court delivered 175 decisions in 2016 and 203 in 2017—the two highest annual totals in the period. Between 2012-2015, the court averaged 68 decisions per year. Between 2016-2022, it averaged 144 decisions per year, as shown in @fig:output-ratio.
 
@@ -46,7 +46,7 @@ The relationship between judicial independence and judicial productivity, if any
 
 However, correlation does not establish causation. This pattern therefore requires further investigation beyond the current data. Multiple factors influence judicial output including the number of justices, case filing rates, procedural reforms, administrative efficiency, and judicial attitudes. The constitutional developments of this period provide one plausible explanation for the observed patterns, but a fuller account would require analysis of additional variables including appointment patterns, case filing statistics, and institutional resources. 
 
-## Less time before Court of Appeal than before the Supreme Court
+## Less Time Before Court of Appeal Than Before the Supreme Court
 
 ![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.](images/time_to_decision.png){#fig:time-to-decision}
 
@@ -135,7 +135,7 @@ While this data does not directly reveal jurisprudential trends, perceptions abo
 
 After petitions clear the leave to proceed stage, the probability favors the petitioner. This suggests that the leave stage functions as a significant filter: petitions that survive this threshold have reasonable prospects of success. The slightly higher success rate for fundamental rights petitions (62%) compared to Court of Appeal writs (55%) may reflect either the nature of constitutional claims or the additional scrutiny applied at the leave stage in fundamental rights jurisdiction.
 
-## Topics of Common Concern to both courts
+## Topics of Common Concern to Both Courts
 
 To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[@blei2003latent] to \texttt{SriLankaCourtDecisions}. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
 

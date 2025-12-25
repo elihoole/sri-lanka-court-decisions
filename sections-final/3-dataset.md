@@ -7,7 +7,7 @@ The constitution establishes distinct forums for public law remedies. Article 14
 The empirical distribution confirms this constitutional design. Of the 1,278 Supreme Court decisions in the dataset, only 4 (0.3%) were original writ petitions under Article 104H. The Court of Appeal, by contrast, issued 1,741 writ decisions (23% of its docket) during the same period. In original writ jurisdiction, the Court of Appeal handles 435 times more cases than the Supreme Court. This stark disparity reflects the constitutional allocation of writ jurisdiction to the Court of Appeal as the primary forum for administrative law and judicial review.
 
 
-**3.1	Data Collection and Processing**
+## Data Collection and Processing
 
 Scraping the two court websites presented minimal technical barriers, as both are static sites without rate limiting or IP-blocking mechanisms.[^note_court_websites] The primary challenges were extended server downtimes that interrupted scraping routines and expired SSL certificates that generated runtime warnings. We converted the downloaded PDF files using PDFMiner[^note_pdfminer] with default parameters, preserving document structure while extracting text content. A small number of judgments (fewer than 10 across the entire collection) required Optical Character Recognition (OCR) conversion; we excluded these to maintain consistency in text extraction methodology and data quality.
 
@@ -22,13 +22,13 @@ Both websites contained substantial duplicate entries. Following deduplication b
 | Court of Appeal | 7314 | 1688 (2091) |
 | **Full corpus** | **8592** | **1979 (2361)**  |
 
-**3.2	Dataset Structure**
+## Dataset Structure
 
 The dataset contains eight fields for each judgment: decision date (str), case number (str), court name (str), case filed year (str), judge (str), bench (str), link to original decision (str), and decision text (str). The ‘judge’ field identifies the justice who authored the judgment, while ‘bench’ lists all justices who constituted the bench during hearings. These fields enable analysis of individual judicial contribution and bench composition patterns over time.
 
 Extracting structured data from the court websites presented several challenges. Case numbers follow non-standardised formats that vary by court, case type, and year, requiring custom parsing rules. Judge and bench information, while generally present, appears inconsistently across judgments – sometimes in formal headers, sometimes within the judgment text itself. We extracted this information using a combination of regular expressions and manual validation of a sample subset.
 
-**3.3	Descriptive Statistics and Characteristics**
+## Descriptive Statistics and Characteristics
 
 The token count statistics in Table 1 reveal marked differences between the two courts. Supreme Court judgments average 3646 tokens with substantial variation (SD \= 3038), reflecting the court’s role in addressing complex constitutional matters and questions of law alongside its appellate functions. Court of Appeal judgments average 1688 tokens (SD \= 2091), consistent with a higher-volume appellate court addressing a broader range of routine matters. The high standard deviations in both courts indicate considerable heterogeneity in judgment length, ranging from brief orders to extensive reasoned judgments spanning dozens of pages.
 

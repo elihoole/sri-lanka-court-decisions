@@ -1,4 +1,4 @@
-**6\. Insights for Administration of Justice, Legal Scholarship and Reform**
+# Insights for Administration of Justice, Legal Scholarship and Reform
 
 In this section we briefly analyse the implications of the patterns that we have identified in section 5\. We have demonstrated thus far, the way in which computational methods make visible patterns obscured by the landmark case or precedent focused approaches that dominates legal scholarship and professional discourse on case law. SriLankaCourtDecisions enables systematic study of appellate jurisprudence that was previously impossible. By analysing the entirety of decisions issued over a decade rather than selecting landmark cases, this approach reveals what courts actually do—not just what they say in celebrated constitutional moments.
 

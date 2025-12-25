@@ -53,6 +53,7 @@ pandoc temp-combined-mobile.md \
     -H font-config-mobile.tex \
     -H quote-style.tex \
     -H section-breaks.tex \
+    -B title-page-mobile.tex \
     -V geometry:paperwidth=90mm \
     -V geometry:paperheight=160mm \
     -V geometry:top=8mm \

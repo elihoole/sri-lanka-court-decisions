@@ -1,0 +1,27 @@
+% Font configuration for mobile PDF (smaller, tighter layout)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{libertinus}
+\usepackage{inconsolata}  % Better monospace font
+\usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.15}  % Tighter line spacing for mobile
+
+% Redefine \texttt to reset all formatting (not inherit bold/italic)
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{\textnormal{\oldtexttt{#1}}}
+
+% Smaller section headings for mobile
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\small\bfseries}{\thesubsubsection}{1em}{}
+
+% Tighter spacing around headings
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.4ex minus 0.2ex}{0.6ex plus 0.2ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.3ex minus 0.1ex}{0.4ex plus 0.1ex}
+
+% Smaller footnotes
+\usepackage{footmisc}
+\renewcommand{\footnotelayout}{\scriptsize}

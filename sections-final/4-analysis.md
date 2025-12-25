@@ -78,7 +78,7 @@ The reasons for these delays require further investigation. Without data on the 
 
 ### Method and Salient Terms
 
-We performed mutual information analysis on the Supreme Court and Court of Appeal decisions to identify the most salient words in each corpus. Mutual information analysis quantifies the presence or absence of words within a corpus. The frequency of the words used can reveal attributes of the jurisprudence of both courts, providing helpful entry points for further jurisprudential analysis. We tokenized decisions and stemmed each token. We used a simple add 1 smoothing scheme to avoid zero probabilities.
+We performed mutual information analysis on the Supreme Court and Court of Appeal decisions to identify the most salient words in each corpus. Mutual information analysis quantifies the presence or absence of words within a corpus. The frequency of the words used can reveal attributes of the jurisprudence of both courts, providing helpful entry points for further jurisprudential analysis. We divided decisions into individual words and stemmed each word. We used a simple add 1 smoothing scheme to avoid zero probabilities.
 
 ### Interpreting Linguistic Choices
 
@@ -96,7 +96,7 @@ Linguistic patterns reveal how courts write, but volume patterns reveal when and
 
 ## Quantitative Patterns
 
-We tokenized decisions using the regex pattern \[A-Za-z\]+, discounting all punctuation and numbers. The mean length of a Supreme Court decision is 3646 tokens (3038 SD) and that of a Court of Appeal decision is 1688 tokens (2091 SD). Although Supreme Court decisions are, on average, longer, the longest decision in the corpus was a Court of Appeal decision. This judgment on an appeal of a determination by the Tax Appeal Commission against Unilever Sri Lanka Limited (CA/TAX/04/2013) is 35,630 tokens long. The longest Supreme Court decision, at 29,620 tokens, was on the fundamental rights petition SC/FR/141/2015 filed by Centre for Environment and Nature Studies against Northern Power Company (Pvt) Ltd which operated a thermal power plant in Chunnakam, Jaffna and was alleged to have been responsible for contaminating the village’s groundwater.
+We extracted words from decisions using the regex pattern \[A-Za-z\]+, discounting all punctuation and numbers. The mean length of a Supreme Court decision is 3646 words (3038 SD) and that of a Court of Appeal decision is 1688 words (2091 SD). Although Supreme Court decisions are, on average, longer, the longest decision in the corpus was a Court of Appeal decision. This judgment on an appeal of a determination by the Tax Appeal Commission against Unilever Sri Lanka Limited (CA/TAX/04/2013) is 35,630 words long. The longest Supreme Court decision, at 29,620 words, was on the fundamental rights petition SC/FR/141/2015 filed by Centre for Environment and Nature Studies against Northern Power Company (Pvt) Ltd which operated a thermal power plant in Chunnakam, Jaffna and was alleged to have been responsible for contaminating the village's groundwater.
 
 ## Judgment Length by Court and Case Type
 
@@ -137,11 +137,11 @@ After petitions clear the leave to proceed stage, the probability favors the pet
 
 ## Topics of Common Concern to Both Courts
 
-To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[@blei2003latent] to \texttt{SriLankaCourtDecisions}. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
+To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[@blei2003latent] to \texttt{SriLankaCourtDecisions}. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to extracting and stemming words, we removed all words that appeared in less than 20 documents as well as words that recurred in more than 50% of documents. We also removed all words that were less than 3 characters long.
 
 To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of \texttt{SriLankaCourtDecisions} under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores, as shown in Table 4\.
 
-*Table 4: Top-3 Topics with Highest Average Probability and Top-40 Tokens*
+*Table 4: Top-3 Topics with Highest Average Probability and Top-40 Terms*
 
 | Topic 1 | Topic 2 | Topic 3 |
 | :---- | :---- | :---- |

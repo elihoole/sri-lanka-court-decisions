@@ -13,14 +13,13 @@ Scraping the two court websites presented minimal technical barriers, as both ar
 
 Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments, as shown in Table 1\. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
 
-*Table 1: \texttt{SriLankaCourtDecisions} dataset composition and descriptive statistics (SD \= standard deviation)*
+*Table 1: \texttt{SriLankaCourtDecisions} dataset composition and descriptive statistics (SD = standard deviation)*
 
-|  | Number of | Mean token |
-| :---- | :---- | :---- |
-|  | judgments | count (SD) |
+| Court | Number of judgments | Mean word count (SD) |
+|:---- |:---- |:---- |
 | Supreme Court | 1278 | 3646 (3038) |
 | Court of Appeal | 7314 | 1688 (2091) |
-| **Full corpus** | **8592** | **1979 (2361)**  |
+| **Full corpus** | **8592** | **1979 (2361)** |
 
 ## Dataset Structure
 
@@ -30,7 +29,7 @@ Extracting structured data from the court websites presented several challenges.
 
 ## Descriptive Statistics and Characteristics
 
-The token count statistics in Table 1 reveal marked differences between the two courts. Supreme Court judgments average 3646 tokens with substantial variation (SD \= 3038), reflecting the court’s role in addressing complex constitutional matters and questions of law alongside its appellate functions. Court of Appeal judgments average 1688 tokens (SD \= 2091), consistent with a higher-volume appellate court addressing a broader range of routine matters. The high standard deviations in both courts indicate considerable heterogeneity in judgment length, ranging from brief orders to extensive reasoned judgments spanning dozens of pages.
+The word count statistics in Table 1 reveal marked differences between the two courts. Supreme Court judgments average 3646 words with substantial variation (SD \= 3038), reflecting the court's role in addressing complex constitutional matters and questions of law alongside its appellate functions. Court of Appeal judgments average 1688 words (SD \= 2091), consistent with a higher-volume appellate court addressing a broader range of routine matters. The high standard deviations in both courts indicate considerable heterogeneity in judgment length, ranging from brief orders to extensive reasoned judgments spanning dozens of pages.
 
 The numerical dominance of Court of Appeal judgments (7314 versus 1278\) reflects the courts’ different positions in Sri Lanka’s judicial hierarchy and their distinct jurisdictional mandates, as discussed in @sec:empirical. This 5.7:1 ratio has implications for understanding the relative contribution of each court to the development of case law, a pattern we explore further in @sec:insights.
 

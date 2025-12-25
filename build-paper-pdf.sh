@@ -63,7 +63,7 @@ pandoc temp-combined.md \
     -V linkcolor:blue \
     -V toccolor:blue \
     -V urlcolor:blue \
-    -V fontsize=11pt \
+    -V fontsize=12pt \
     -V pagestyle=plain
     # Note: Uncomment the lines below if you create additional custom LaTeX templates:
     # -B title-page.tex \

@@ -36,9 +36,7 @@ Three non-exclusive explanations may account for this low ratio. First, litigant
 
 ## Patterns in the number of judgements within each court and between the two courts
 
-Overall, in the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court’s 116 decisions. The Court of Appeal has consistently delivered more judgments than the Supreme Court throughout the decade. The Supreme Court’s output varied substantially across the decade. The court delivered 175 decisions in 2016 and 203 in 2017—the two highest annual totals in the period. Between 2012-2015, the court averaged 68 decisions per year. Between 2016-2022, it averaged 144 decisions per year, as shown in @fig:output-yearly.
-
-![Supreme Court and Court of Appeal decision output 2012-2022](images/num_decisions_per_year.png){#fig:output-yearly}
+Overall, in the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court’s 116 decisions. The Court of Appeal has consistently delivered more judgments than the Supreme Court throughout the decade. The Supreme Court’s output varied substantially across the decade. The court delivered 175 decisions in 2016 and 203 in 2017—the two highest annual totals in the period. Between 2012-2015, the court averaged 68 decisions per year. Between 2016-2022, it averaged 144 decisions per year, as shown in @fig:output-ratio.
 
 We noticed that the variation in the number of judgements in the Court of Appeal ranged from a low of (…) in 2015 to a high of 1109 in 2013\. In the Supreme Court, the lowest number of judgements was issued in 2013 (…) and the highest number of judgements was issued in 2017 (…). Broadly speaking an inverse relationship is observable between the two courts and the increase/decrease in the number of judgements. When the number of judgements issued by the Court of Appeal increases, a decrease can be noticed in the Supreme Court. Identifying reasons for this pattern will be difficult, particularly because the data only includes the judgements that have been issued, not the number of petitions that have been filed. 
 

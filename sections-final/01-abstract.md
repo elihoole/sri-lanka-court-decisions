@@ -1,3 +1,5 @@
+# Abstract 
+
 **Key Insights:**
 
 *The SriLankaCourtDecisions corpus on writs and fundamental rights judgements delivered 2012 to 2022, reveals that:*

@@ -1,4 +1,4 @@
-**SriLankaCourtDecisions: Court Decision Texts Sri Lanka Dataset**
+# SriLankaCourtDecisions: Court Decision Texts Sri Lanka Dataset
 
 We compiled the SriLankaCourtDecisions dataset by scraping the official websites of Sri Lanka’s Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022\. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. The dataset will be available for use at \[URL/DOI to be provided upon release\].
 

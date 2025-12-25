@@ -1,5 +1,4 @@
-
-**A Research Agenda for the Future** 
+# A Research Agenda for the Future
 
 The empirical patterns identified in this study point toward concrete directions for further research. The limitations of the SriLankaCourtDecisions corpus – particularly the absence of precise filing and decision dates, incomplete records of dismissals at the leave stage, and the lack of systematic appeal data – define immediate priorities. Beyond addressing these data constraints, the substantive findings warrant targeted investigation into judicial performance, doctrinal development, and institutional dynamics.
 

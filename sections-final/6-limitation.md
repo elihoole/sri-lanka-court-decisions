@@ -1,4 +1,4 @@
-**4\. Limitations**
+# Limitations
 
 This study confronts limitations inherent to empirical legal research generally and to the specific constraints of legal system digitization in Sri Lanka. These limitations operate at multiple levels: methodological, temporal, archival, technical, and analytical. We address each in turn, noting how they constrain the claims advanced in this article and the research questions they leave open for future investigation.
 

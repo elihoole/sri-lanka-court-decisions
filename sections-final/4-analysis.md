@@ -1,4 +1,4 @@
-**5\. The Patterns** 
+## Patterns Beyond Precedent  
 
 The empirical analysis of SriLankaCourtDecisions reveals patterns that challenge received assumptions about the nature and distribution of judicial work in Sri Lanka’s appellate courts. These insights emerge from both descriptive statistics—the volume, timing, and length of decisions—and computational methods including topic modelling and mutual information analysis. Together, they expand the landmark case-focused understanding of judicial work by making visible the patterns that structure day-to-day judicial practice. These insights therefore broaden, deepen, and complicate our understanding of the jurisprudence on fundamental rights and writs, and of the work of the courts more broadly.
 

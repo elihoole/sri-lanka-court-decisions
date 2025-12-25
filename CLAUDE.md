@@ -13,11 +13,13 @@ What I now need to do is:
 
 1. Apply proper formatting and consistent numbering such that the errors or inconsistencies introduced by my colleague are removed. 
 
-2. Attach images from `images` correctly into `sections-final/4-analysis.md` section (these are plots)
+2. Remove weird artifacts from the .md files such as random "\" etc resulting from back conversion from .docx. 
 
-3. My colleage may have inserted new citations / bibiliography that need to be added to `references.bib`
+3. Attach images from `images` correctly into `sections-final/4-analysis.md` section (these are plots)
 
-4. My current build scripts are `build-paper-pdf.sh` and `build-paper-docx.sh`. But in another project, I used EB Garamond font and template based Word document generation which gave better output. You can find those here: `/home/elihoole/Documents/personal-work/puttalam-ilmanite-vs-sl-cement-corporation/build-submission-docx.sh` and `/home/elihoole/Documents/personal-work/puttalam-ilmanite-vs-sl-cement-corporation/build-submission-pdf.sh`. I want you to explore those and align our build scripts more closely to them. 
+4. My colleage may have inserted new citations / bibiliography that need to be added to `references.bib`
+
+5. My current build scripts are `build-paper-pdf.sh` and `build-paper-docx.sh`. But in another project, I used EB Garamond font and template based Word document generation which gave better output. You can find those here: `/home/elihoole/Documents/personal-work/puttalam-ilmanite-vs-sl-cement-corporation/build-submission-docx.sh` and `/home/elihoole/Documents/personal-work/puttalam-ilmanite-vs-sl-cement-corporation/build-submission-pdf.sh`. I want you to explore those and align our build scripts more closely to them. 
 
 
 ## Citation System Migration (Completed December 6, 2025)

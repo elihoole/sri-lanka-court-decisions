@@ -2,13 +2,13 @@
 
 The empirical patterns identified in this study point toward concrete directions for further research. The limitations of the \texttt{SriLankaCourtDecisions} corpus – particularly the absence of precise filing and decision dates, incomplete records of dismissals at the leave stage, and the lack of systematic appeal data – define immediate priorities. Beyond addressing these data constraints, the substantive findings warrant targeted investigation into judicial performance, doctrinal development, and institutional dynamics.
 
-*A) Improving Temporal Analysis*
+## Improving Temporal Analysis
 
 The approximation method employed in this study – treating filing dates as June 30 of the filing year and Court of Appeal decision dates as the 15th of the decision month – introduces substantial measurement error. Obtaining precise dates would enable accurate calculation of case duration and reveal patterns currently obscured by aggregated estimates. This requires either digitisation of court registries or systematic manual extraction from case files.
 
 More precise temporal data would permit analysis of whether delays concentrate in particular case types, whether they correlate with specific judicial panels, and whether procedural reforms have measurable effects. It would also enable survival analysis to identify the point at which cases are most likely to resolve and the factors that predict prolonged litigation. For instance, the constitutional mandate for two-month determination of fundamental rights petitions cannot be meaningfully evaluated without knowing when petitions were actually filed and when preliminary orders, interim relief, and final judgments were issued.
 
-*B) Mapping Appellate Pathways*
+## Mapping Appellate Pathways
 
 The current dataset cannot distinguish Supreme Court decisions exercising original jurisdiction from those hearing appeals from the Court of Appeal. Coding decisions by jurisdictional basis would reveal how many Court of Appeal judgments are appealed, which substantive areas generate appeals, and what proportion of Court of Appeal decisions effectively resolve disputes without further review.
 
@@ -16,7 +16,7 @@ This analysis would test the hypothesis that the Court of Appeal’s numerical d
 
 Longitudinal tracking of individual cases across judicial levels would also reveal patterns in case disposition: which cases are overturned, and which are affirmed. This would provide empirical grounding for claims about error correction, doctrinal consistency, and the division of labour between appellate levels.
 
-*C) Capturing Dismissals at Leave Stage*
+## Capturing Dismissals at Leave Stage
 
 The dataset excludes cases dismissed at the leave to proceed stage because such dismissals often generate no written judgment. The actual dismissal rate may therefore be substantially higher than the 41% (Supreme Court) and 49% (Court of Appeal) rates calculated from decided cases. Understanding judicial gatekeeping requires systematic collection of leave stage outcomes, including both grants and refusals.
 
@@ -24,7 +24,7 @@ This data exists in court registries but is not publicly accessible. Obtaining i
 
 Leave grant rates have direct implications for access to justice. If most petitions are dismissed at the threshold, the barrier to relief may lie less in substantive adjudication than in the preliminary screening process. This would redirect reform attention toward transparency in leave determinations and development of clear standards governing threshold access to appellate jurisdiction. This limitation is particularly significant for understanding writ jurisdiction, where leave stage gatekeeping may explain why only 55% of fully adjudicated Court of Appeal writs are allowed compared to 62% of Supreme Court fundamental rights petitions—and why different petitioners may strategically choose different forums despite overlapping grounds for relief.
 
-*D) Investigating Delay Through Case Studies*
+## Investigating Delay Through Case Studies
 
 While aggregate temporal data reveal systematic delays, understanding causation requires qualitative investigation. Case studies of long-duration disputes – particularly those taking ten or more years – would assist in identifying procedural bottlenecks, patterns of postponement, complexities specific to particular dispute types, and institutional practices that contribute to delay.
 
@@ -32,7 +32,7 @@ Land disputes dominate the longest-duration category, but the underlying reasons
 
 Targeted case studies would reveal whether delays concentrate at particular procedural stages: between filing and leave determination, between leave and hearing, or between hearing and judgment delivery. If delays cluster at the judgment-writing stage, interventions might focus on judicial resources and case management. If delays cluster at earlier stages, procedural reform or administrative capacity becomes the priority.
 
-*E) Substantive Analysis of Dominant Topics*
+## Substantive Analysis of Dominant Topics
 
 The identification of land disputes, state employment matters, and criminal appeals as dominant topics warrants substantive doctrinal analysis. Land dispute jurisprudence in Sri Lanka has received limited scholarly attention despite dominating appellate dockets. Systematic study of land dispute decisions would reveal patterns in how courts resolve competing claims, apply prescriptive acquisition doctrine, interpret state land alienation schemes, and manage disputes arising from incomplete or conflicting title records.
 
@@ -40,7 +40,7 @@ State employment disputes – particularly appointments, promotions, transfers, 
 
 Criminal appeal patterns warrant analysis of conviction and sentence affirmation rates, the grounds on which appeals succeed, and whether particular categories of offences generate disproportionate appeals. Vehicle offences and forest offences appear as distinct topics in Court of Appeal decisions, suggesting these categories generate substantial litigation. Understanding why requires analysis of the applicable legal framework, enforcement patterns, and the availability of defences.
 
-*F) Linguistic and Stylistic Analysis*
+## Linguistic and Stylistic Analysis
 
 The mutual information analysis identified salient terms but did not pursue detailed linguistic or stylistic analysis. Further work could employ computational linguistics methods to analyse citation practices, reasoning structures, and rhetorical patterns in judgments. Do Supreme Court decisions cite more precedent than Court of Appeal decisions? Do fundamental rights judgments cite more constitutional provisions than statutory ones? Do judgments cite foreign jurisprudence, and if so, from which jurisdictions?
 
@@ -48,7 +48,7 @@ Stylistic analysis could also examine variation across judicial panels. Do parti
 
 Computational analysis of reasoning patterns – particularly the structure of legal arguments, the weight given to different sources of law, and the methods by which courts distinguish or apply precedent – would contribute to understanding how appellate courts develop doctrine. This requires more sophisticated natural language processing methods than employed in this preliminary study but is feasible with the existing corpus.
 
-*G) Comparative Institutional Analysis*
+## Comparative Institutional Analysis
 
 The hypothesis that Supreme Court output correlates with judicial independence warrants rigorous testing through comparative analysis. This requires assembling additional variables: judicial appointment patterns, public statements by judges or judicial associations, legislative or executive actions affecting the judiciary, and external assessments of judicial independence from legal professional associations or civil society organisations.
 
@@ -56,7 +56,7 @@ Comparative analysis would also examine whether similar patterns exist in other 
 
 Such analysis would test whether the observed patterns are specific to Sri Lanka’s constitutional and institutional context or reflect broader dynamics common to appellate courts in similar legal systems.
 
-*H) Expanding the Temporal and Jurisdictional Scope*
+## Expanding the Temporal and Jurisdictional Scope
 
 The dataset covers 2012–2022, but extending the temporal scope backward would reveal longer-term trends. For instance, do constitutional amendments that reform the process for judicial appointments impact the work of the Court? How did the increase in the number of justices impact the same? Through a combination of empirical and qualitative study, it may be possible to seek answers to these questions. 
 
@@ -64,7 +64,7 @@ Expanding the jurisdictional scope to include High Court decisions – where ava
 
 District Court and Magistrate Court decisions are not systematically digitised, but targeted collection of decisions in particular substantive areas would enable analysis of lower court jurisprudence and the extent to which appellate decisions align with or depart from lower court patterns.
 
-*I) Methodological Development*
+## Methodological Development
 
 The computational methods employed in this study – topic modelling through LDA, mutual information analysis, and basic descriptive statistics – represent initial applications of established techniques. Further methodological development could employ more sophisticated approaches: dynamic topic modelling to reveal how topics shift over time, supervised machine learning to predict case outcomes based on textual features, and network analysis to map citation patterns among decisions.
 

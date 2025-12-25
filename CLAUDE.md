@@ -13,7 +13,7 @@ What I now need to do is:
 
 1. Apply proper formatting and consistent numbering such that the errors or inconsistencies introduced by my colleague are removed. [DONE]
 
-2. Remove wrong / misplaced section numbering from .docx back conversion and apply consistent # , ## , ### etc to sections and sub sections. 
+2. Remove wrong / misplaced section numbering from .docx back conversion and apply consistent # , ## , ### etc to sections and sub sections. [DONE]
 
 3. Remove weird artifacts from the .md files such as random "\" etc resulting from back conversion from .docx. 
 

@@ -74,6 +74,7 @@ PANDOC_CMD="pandoc temp-combined-docx.md \
     -o SriLankaCourtDecisions-paper-draft.docx \
     --filter pandoc-crossref \
     --include-before-body=title-page-docx-temp.md \
+    -M secPrefix=Section \
     -M tablePrefix=Table \
     -M figurePrefix=Figure \
     -M tblPrefix=Table \

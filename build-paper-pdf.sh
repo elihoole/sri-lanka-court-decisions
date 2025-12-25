@@ -42,6 +42,7 @@ pandoc temp-combined.md \
     -o SriLankaCourtDecisions-paper-draft.pdf \
     --pdf-engine=pdflatex \
     --filter pandoc-crossref \
+    -M secPrefix="Section" \
     -M tablePrefix="Table" \
     -M figurePrefix="Figure" \
     -M tblPrefix="Table" \

@@ -1,8 +1,8 @@
-## Patterns Beyond Precedent  
+# Patterns Beyond Precedent
 
 The empirical analysis of SriLankaCourtDecisions reveals patterns that challenge received assumptions about the nature and distribution of judicial work in Sri Lanka’s appellate courts. These insights emerge from both descriptive statistics—the volume, timing, and length of decisions—and computational methods including topic modelling and mutual information analysis. Together, they expand the landmark case-focused understanding of judicial work by making visible the patterns that structure day-to-day judicial practice. These insights therefore broaden, deepen, and complicate our understanding of the jurisprudence on fundamental rights and writs, and of the work of the courts more broadly.
 
-**5.1. Six-to-one: Greater numerical output by the Court of Appeal**
+## Six-to-one: Greater numerical output by the Court of Appeal
 
 ![The Court of Appeal issued nearly 6 times as many judgments as the Supreme Court in a given year.][image1]
 
@@ -16,7 +16,7 @@ The Supreme Court’s engagement under its writ jurisdiction has been minimal du
 
 This pattern has structural explanations. The Court of Appeal has a greater number of justices than the Supreme Court.[^note_court_composition] More significantly, it is a court of first instance for writ applications under Article 140 and Article 141, whereas the Supreme Court exercises appellate jurisdiction with the exception of its original jurisdiction under Article 126 (fundamental rights) and Article 129 (election petitions) and some other matters.[^note_art118_ref] The Court of Appeal thus handles both original writ petitions and appeals from lower courts across civil, criminal, and administrative matters. Moreover, benches in the Court of Appeal comprise two justices each whereas benches in the Supreme Court comprise three. Upon request and at the discretion of the Chief Justice, bigger benches may be constituted for the Supreme Court. As a result, it may take longer for benches of the Supreme Court to finalise judgements. The Supreme Court determines questions of law and arguably therefore, the task of judicial decision-making requires more time. 
 
-**5.2. Court of Appeal as the (Effectively) Final Arbiter on Writs**
+## Court of Appeal as the (Effectively) Final Arbiter on Writs
 
 The Court of Appeal’s dominance in writ jurisdiction extends beyond volume to practical finality. During the period 2012-2022, the Supreme Court decided only 31 appeals from Court of Appeal writ decisions—compared to 1,741 writ decisions issued by the Court of Appeal during the same period, as shown in Table 2\.
 
@@ -36,7 +36,7 @@ The numerical dominance of the Court of Appeal translates into greater practical
 
 Three non-exclusive explanations may account for this low ratio. First, litigants may be satisfied with Court of Appeal writ determinations and choose not to pursue further appeal. Second, the Supreme Court’s leave requirements for appeals may present a significant barrier, filtering out cases that do not meet the threshold for further review. Third, Court of Appeal writ remedies may effectively resolve the underlying disputes, rendering further litigation unnecessary or impractical. Determining which explanation predominates would require further investigation into leave applications, reasons for grant or refusal of leave, and longitudinal tracking of individual cases from the Court of Appeal through potential Supreme Court appeals. Interviews with litigants, practitioners, and justices would further reveal the reasons for this implied appeal rate.
 
-**5.3. Patterns in the number of judgements within each court and between the two courts**
+## Patterns in the number of judgements within each court and between the two courts
 
 Overall, in the period under review, the Court of Appeal averaged 665 decisions per year compared to the Supreme Court’s 116 decisions. The Court of Appeal has consistently delivered more judgments than the Supreme Court throughout the decade. The Supreme Court’s output varied substantially across the decade. The court delivered 175 decisions in 2016 and 203 in 2017—the two highest annual totals in the period. Between 2012-2015, the court averaged 68 decisions per year. Between 2016-2022, it averaged 144 decisions per year, as shown in Figure 2\.
 
@@ -52,7 +52,7 @@ The relationship between judicial independence and judicial productivity, if any
 
 However, correlation does not establish causation. This pattern therefore requires further investigation beyond the current data. Multiple factors influence judicial output including the number of justices, case filing rates, procedural reforms, administrative efficiency, and judicial attitudes. The constitutional developments of this period provide one plausible explanation for the observed patterns, but a fuller account would require analysis of additional variables including appointment patterns, case filing statistics, and institutional resources. 
 
-**5.4. Less time before Court of Appeal than before the Supreme Court**
+## Less time before Court of Appeal than before the Supreme Court
 
 ![37% of Supreme Court decisions and 48% of Court of Appeal decisions took more than five years to be delivered.][image2]
 
@@ -70,7 +70,7 @@ As demonstrated in Figure 4, Court of Appeal writ petitions resolve faster than 
 
 Unlike fundamental rights petitions, no constitutional or common law time limit governs the determination of writ petitions. Time or delay is considered when determining whether to grant leave to proceed,[^note_delay_caselaw] but no broader principles guide completion of judicial determination of writ petitions.
 
-**5.5. Fundamental Rights and the Two Months Requirement**
+## Fundamental Rights and the Two Months Requirement
 
 The Constitution mandates that fundamental rights petitions be determined within two months of filing.[^note_art126_5] However, the Supreme Court has held that this requirement is directory rather than mandatory.[^note_visuvalingam] The constitutional requirement of two months is insufficient to accommodate the practical steps involved in fundamental rights litigation, which includes filing, service, objections, counter-affidavits, reply, oral submissions, written submissions and judgment writing. The Supreme Court rules attest to this procedural issue.[^note_sc_rule45] This has led to a situation where a constitutional requirement has, in effect, been rendered meaningless.
 
@@ -84,13 +84,13 @@ Of the 361 fundamental rights petitions in the dataset, 332 took 3 to 15 years f
 
 The reasons for these delays require further investigation. Without data on the number of petitions that are dismissed by the Court at leave to proceed stage and the time taken for such dismissal. Court does not issue a judgement when a fundamental rights petition is dismissed which therefore leaves that aspect of the Court’s work beyond empirical analysis. More generally, factors that contribute to the delay may include caseload, absence of strict time allocation for oral submissions, postponements sought by parties, and the time required to write judgments. More empirical and qualitative data is required to examine these issues in more detail.
 
-**5.6. Linguistic Patterns**
+## Linguistic Patterns
 
-**5.6.1	Method and Salient Terms**
+### Method and Salient Terms
 
 We performed mutual information analysis on the Supreme Court and Court of Appeal decisions to identify the most salient words in each corpus. Mutual information analysis quantifies the presence or absence of words within a corpus. The frequency of the words used can reveal attributes of the jurisprudence of both courts, providing helpful entry points for further jurisprudential analysis. We tokenized decisions and stemmed each token. We used a simple add 1 smoothing scheme to avoid zero probabilities.
 
-**5.6.2	Interpreting Linguistic Choices**
+### Interpreting Linguistic Choices
 
 The most salient word was ‘grant’, which appeared in 91% of Supreme Court decisions but only in 32% of Court of Appeal decisions. The underlying reason is procedural: Supreme Court decisions routinely reference the granting of leave to appeal—both the grounds on which leave was granted and the date—in the decision text. This reflects a procedural practice rather than a substantive legal distinction but nonetheless marks a clear linguistic difference between the two courts.
 
@@ -104,11 +104,11 @@ These linguistic patterns reflect hierarchical position and institutional cultur
 
 Linguistic patterns reveal how courts write, but volume patterns reveal when and how much they produce. The Supreme Court’s output varied significantly across the decade under review, with notable peaks and troughs that correlate with constitutional developments affecting judicial independence.
 
-**5.7	Quantitative Patterns**
+## Quantitative Patterns
 
 We tokenized decisions using the regex pattern \[A-Za-z\]+, discounting all punctuation and numbers. The mean length of a Supreme Court decision is 3646 tokens (3038 SD) and that of a Court of Appeal decision is 1688 tokens (2091 SD). Although Supreme Court decisions are, on average, longer, the longest decision in the corpus was a Court of Appeal decision. This judgment on an appeal of a determination by the Tax Appeal Commission against Unilever Sri Lanka Limited (CA/TAX/04/2013) is 35,630 tokens long. The longest Supreme Court decision, at 29,620 tokens, was on the fundamental rights petition SC/FR/141/2015 filed by Centre for Environment and Nature Studies against Northern Power Company (Pvt) Ltd which operated a thermal power plant in Chunnakam, Jaffna and was alleged to have been responsible for contaminating the village’s groundwater.
 
-**5.8	Judgment Length by Court and Case Type**
+## Judgment Length by Court and Case Type
 
 Judgment length varies systematically across courts and case types. Supreme Court decisions are, on average, substantially longer than those of the Court of Appeal, and exhibit greater dispersion in length, as shown in Figure 6\. Across all Supreme Court cases, the median judgment length is 2,856 words, with a mean of 3,646 words and a standard deviation of 3,038 words, indicating a strongly right-skewed distribution. Court of Appeal decisions are markedly shorter, with a median length of 1,184 words, a mean of 1,688 words, and a lower standard deviation of 2,091 words, suggesting more constrained variation in judicial writing.
 
@@ -128,7 +128,7 @@ More importantly, variation in judgment length mirrors entrenched doctrinal hier
 
 The patterns identified thus far—quantitative dominance, writ prevalence, temporal dysfunction, substantive concentration, linguistic hierarchies, output variations, and decision length—describe how courts work. Outcome data provide a final empirical lens: how often do courts dismiss versus allow petitions?
 
-**5.9. Dissmials and Leave to Proceed**
+## Dismissals and Leave to Proceed
 
 Dismissal, in this section, means dismissal after a full hearing. Writs and fundamental rights petitions proceed in two stages: an initial leave determination followed by a full hearing if leave is granted. SriLankaCourtDecisions does not include data on dismissals at the leave stage, as these are typically not recorded as written judgments. The actual dismissal rates are therefore higher than the data suggests.
 
@@ -149,7 +149,7 @@ While this data does not directly reveal jurisprudential trends, perceptions abo
 
 After petitions clear the leave to proceed stage, the probability favors the petitioner. This suggests that the leave stage functions as a significant filter: petitions that survive this threshold have reasonable prospects of success. The slightly higher success rate for fundamental rights petitions (62%) compared to Court of Appeal writs (55%) may reflect either the nature of constitutional claims or the additional scrutiny applied at the leave stage in fundamental rights jurisdiction.
 
-**5.10. Topics of Common Concern to both courts**
+## Topics of Common Concern to both courts
 
 To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[@blei2003latent] to SriLankaCourtDecisions. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
 
@@ -200,7 +200,7 @@ To find the three most common topics across Supreme Court and Court of Appeal de
 | year | regul | examin |
 | procedur | examin | prove |
 
-**5.10.1. 	Topic 1: Land and Property Disputes**
+### Topic 1: Land and Property Disputes
 
 Topic 1 concerns land and property disputes, denoted by terms such as ‘defend’, ‘plaintiff’, ‘land’, ‘district’, ‘action’, ‘titl’, ‘deed’, ‘possess’, ‘lot’, ‘claim’, ‘plan’, ‘partit’, ‘owner’, ‘prescript’, ‘road’, ‘silva’, ‘properti’, ‘disput’, ‘perera’, ‘transfer’, ‘surveyor’, and ‘procedur’. These terms reflect the vocabulary of land litigation—title disputes, prescriptive rights, partition actions, and ownership claims.
 
@@ -208,7 +208,7 @@ When we ran LDA on decisions that took ten or more years for resolution (num\_to
 
 In terms of addressing case load and delay, this data also points to land disputes as an area requiring substantive attention and institutional infrastructure. Current state interventions regarding delays—such as fast-tracking commercial disputes and promoting alternative dispute resolution—may be misplaced if they do not address the types of cases that actually dominate appellate court dockets. If land disputes are both pervasive and slow-moving, institutional reform ought to target this specific substantive area. This might include specialized tribunals, streamlined procedures for particular categories of land disputes, or administrative reforms to reduce the generation of land-related litigation in the first instance.
 
-**5.10.2. 	Topic 2: State Employment and Administrative Disputes**
+### Topic 2: State Employment and Administrative Disputes
 
 Topic 2 captures state employment and administrative disputes, denoted by terms such as ‘decis’, ‘writ’, ‘mark’, ‘offic’, ‘servic’, ‘public’, ‘board’, ‘author’, ‘letter’, ‘appoint’, ‘univers’, ‘commiss’, ‘certiorari’, ‘mandamu’, ‘secretari’, ‘circular’, ‘member’, ‘inquiri’, ‘post’, ‘administr’, ‘committe’, ‘director’, ‘quash’, ‘ministri’, ‘document’, ‘depart’, ‘minist’, ‘promot’, ‘approv’, ‘recommend’, and ‘council’. This vocabulary reflects administrative law and public sector employment disputes—appointments, promotions, transfers, disciplinary inquiries, administrative circulars, and challenges to decisions by public boards, commissions, and ministries.
 
@@ -216,13 +216,13 @@ The dominance of state employment disputes, particularly visible in fundamental 
 
 This pattern raises questions about the effectiveness and confidence in administrative and quasi-judicial mechanisms such as the Administrative Appeals Tribunal, National Police Commission, and the Public Service Commission. Are they functioning effectively, or do courts primarily provide access to justice for public servants rather than the broader public? Arguably, if administrative tribunals, Public Service Commission procedures, and departmental appeal mechanisms were functioning effectively, fewer employment disputes would reach the appellate courts. The prevalence of such cases in the appellate dockets suggests either that administrative mechanisms are inadequate or that they are systematically bypassed in favour of judicial review. This has distributional consequences: if courts spend substantial time adjudicating public sector employment disputes, other types of claims—particularly those brought by marginalized communities or private citizens without institutional resources—may receive less attention. It would be useful to study the decisions of the Court of Appeal on writs in comparison with the decisions of the Provincial High Courts which exercise writ jurisdiction under Article 154(P). Those judgements are not yet accessible in the way appellate court judgements are available and hence their empirical study is not yet possible. 
 
-**5.10.3.	Topic 3: Criminal Proceedings**
+### Topic 3: Criminal Proceedings
 
 Topic 3 covers criminal proceedings, denoted by terms such as ‘accus’, ‘sentenc’, ‘trial’, ‘wit’, ‘high’, ‘polic’, ‘prosecut’, ‘convict’, ‘offenc’, ‘charg’, ‘statement’, ‘incid’, ‘victim’, ‘code’, ‘defenc’, ‘imprison’, ‘commit’, ‘hous’, ‘impos’, ‘ground’, ‘inform’, ‘crimin’, ‘count’, ‘indict’, ‘complain’, ‘find’, ‘punish’, ‘deceas’, ‘place’, ‘found’, ‘arrest’, ‘penal’, and ‘examin’. This is the vocabulary of criminal appeals—charges, indictments, convictions, sentences, witnesses, evidence, and grounds of appeal.
 
 The dominance of criminal proceedings as one of the three major topics reflects the Court of Appeal’s role in hearing criminal appeals. This finding is unsurprising given the jurisdictional structure, but it confirms empirically what is known doctrinally: criminal appeals constitute a substantial portion of the Court of Appeal’s workload.
 
-**5.10.4.	Topic Distribution Analysis**
+### Topic Distribution Analysis
 
 A study of non-intersecting top 10 topics between the two sub corpora corroborates what we know about the structure of the legal system in the country. For instance, while appeals on criminal matters are heard by the Court of Appeal, appeals on civil matters, following the institution of the Civil Appeal High Court, are no longer heard by the Court of Appeal. The fifth and sixth most common topics in the Court of Appeal decisions—denoted by terms such as ‘vehicl’, ‘owner’, ‘offenc’, ‘confisc’, ‘charg’, ‘forest’, ‘websit’, ‘accus’, ‘polic’, ‘regist’, ‘transport’, ‘station’, ‘driver’, ‘prove’, ‘timber’, ‘illeg’, ‘deceas’, ‘murder’, ‘injuri’, and ‘stab’—do not appear in the top 10 topics in the Supreme Court decisions. These terms reflect specific categories of criminal appeals (vehicle offences, forest offences, violent crimes) that fall within the Court of Appeal’s jurisdiction.
 

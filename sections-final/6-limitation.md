@@ -6,23 +6,23 @@ The dataset confronts several constraints including temporal scope, data quality
 
 The findings are preliminary but sufficient to challenge received assumptions and warrant attention in reform debates. The necessity of interpreting the empirical alongside the normative and doctrinal, and not in isolation, only increases in importance during the formulation of any such reform.
 
-**4.1. Methodological Limitations**
+## Methodological Limitations
 
 The limitations of empirical legal research are well established. Unlike in natural sciences, even with data, we cannot establish causal inference and we cannot study the counterfactual.[@epstein2014introduction, pp. 6-7] What we can offer, in this instance, are descriptive statistical inferences and making our dataset publicly available for verification and further study.[@epstein2014introduction, pp. 11-12, 15] Statistical pictures illustrate correlation but cannot be assumed to indicate causation, and therefore are inadvisable to be considered in isolation. The sheer amount of data that can be captured and processed via computational methods, however, runs the risk of concealing these limitations, resulting in a greater likelihood of researchers neglecting to recognize or address them.
 
 The quantitative perspective we offer here of the jurisprudence of the Sri Lankan Courts 2012-2022 can be interpreted only when combined with doctrinal analysis. The limited empirical analysis we offer here does not probe the way in which legal or constitutional doctrine is developed or affected, nor does it query the normative approaches adopted in jurisprudence. The analysis offered here is exploratory and descriptive. The triangulation of quantitative analysis with qualitative analysis remains for future research. There are further prospects for this type of research, which we note here. The empirical assessment may be analysed in relation to qualitative influences on judicial decision making (known in language studies as content analysis) \- whether it be specific legal doctrines, judicial dispensations, role of litigators or types of petitioners.
 
-**4.2. Temporal Scope**
+## Temporal Scope
 
 The dataset’s temporal scope (2012-2022) represents only a fraction of Sri Lankan legal history and excludes significant earlier periods that shaped the country’s jurisprudence. The Court of Appeal entries begin in 2011 and the Supreme Court entries begin 2010\. Data availability thus determined our choice of time period. Due to the limitations in the digitization of judgments and court documents in Sri Lanka, any immediate use of computational methods for the study of courts is inherently confined to the judgments of the apex courts of the country that were issued during a limited period of time.
 
-**4.3. Data Availability and Archival Gaps**
+## Data Availability and Archival Gaps
 
 One of the barriers to a comprehensive assessment of the judicial approaches of Sri Lanka’s apex courts is the incomplete reporting of judgments prior to 2012\. From 1801 to 2011, the Law Reports feature judgments selected by an editorial committee under the Chief Justice of the Supreme Court and the President of the Court of Appeal. As a consequence of this, there is no source or database in Sri Lanka which captures the entire gamut of judgments issued by the apex courts from 1801 to 2011\. What is available to the public, from this 200 year period prior to digitization, are only those judgments which the editorial committee,  determined worthy of inclusion in the Law Reports.
 
 Another barrier to a comprehensive study is the lack of information on how many cases or petitions are filed before the apex courts. Presumably, the Court Registrars are aware of this number; however, it is not released to the public. Consequently, the public only has access to the number of judgments a court delivers, and only post-2011. Without filing statistics, we cannot calculate dismissal rates, disposition rates, or the proportion of filed cases that result in published judgments. This gap significantly limits our ability to assess court performance comprehensively.
 
-**4.4. Data Quality and Digitization Challenges**
+## Data Quality and Digitization Challenges
 
 What is available digitally is not complete nor error-free. Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text. While we conducted deduplication and quality checks, we cannot guarantee that all duplicates were identified or that all extracted text perfectly represents the original PDF documents.
 
@@ -34,7 +34,7 @@ Extracting structured data from the court websites presented several challenges.
 
 Our scraping captured judgments as they appeared at the time of collection (February 2023 to April 2023); subsequent corrections or amendments to published judgments would not be reflected in the dataset. Although we have attempted to address several of these challenges in our present work, the findings therefore may remain affected by their residuary impact and other unknown issues.
 
-**4.5. Dataset Scope and Coverage**
+## Dataset Scope and Coverage
 
 The corpus captures only those judgments that the courts chose to publish on their official websites; unpublished judgments, orders, and procedural decisions remain beyond our scope. The empirical data is the data available on the official websites of the Supreme Court and Court of Appeal. The study relies on the official websites for the coverage of these judgments. However, courts issue many different orders, including interlocutory orders, interim relief, enjoining orders, and final judgments. To get a full picture, one would need to look at all of these, but our empirical study only looks at judgments.
 

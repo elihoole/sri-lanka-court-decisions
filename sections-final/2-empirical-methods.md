@@ -1,4 +1,4 @@
-# Empirical Study of Sri Lankan Courts**
+# Empirical Study of Sri Lankan Courts
 
 Legal empiricism has been defined as research that includes 'systematic, observational study of law, whether quantitative or qualitative, contemporary or historical, direct or archival'.[@suchman2010legal, p. 563] Within this broad area of legal research, the study of 'judicial behaviour' is in its early days.[@cane2010oxford, p. 1] Data on court cases has been described as 'judicial statistics' and early efforts at reporting on such statistics is dated back to 1872, in the United States.[@kritzer2010forgotten, p. 877] An early example of research on judicial statistics is *The Business of the Supreme Court: A Study in the Federal Judicial System*.[@frankfurter1928business; @kritzer2010forgotten, p. 891] This type of research too has been described as the study of judicial behaviour and broadly covers judicial personalities, judicial attitudes and case load.[^note_judicial_studies] Realists took the view that 'judgments were influenced by personal and social factors, and ought therefore to be analysed not only with reference to statute, precedent, and established legal principle, but also with reference to judges' social backgrounds and political beliefs.'[@baldwin2010empirical, p. 882]
 
@@ -12,7 +12,7 @@ In relation to fundamental rights jurisprudence, through a simple descriptive an
 
 The analysis offered here is exploratory and descriptive, not normative. The triangulation of quantitative analysis with qualitative analysis remains for future research. For a fuller discussion of the methodological and data-related constraints affecting this study, see section 4.
 
-**1.1	The Development of the Legal System**
+## The Development of the Legal System
 
 Sri Lanka's modern legal system has been shaped by its encounters with colonialism. Today it is one of the three mixed legal systems in the world.[^note_mixed_systems] Between 1505 CE to 1948 CE, a long period of 443 years, Sri Lanka was under partial colonial rule of the Portuguese, the Dutch, and, finally, under the complete control of the British. In 1972, it became a republic. During this time, the colonisers established court systems, introduced their laws and established legal institutions.[@rupesinghe2024lawmaking] The Portuguese had the least amount of territorial as well as political control whereas the Dutch had significant control over Sri Lanka's maritime provinces.[@cooray1992introduction, p. 1 ff] The British, unlike the other two colonial powers, gained and maintained total control over the whole island for over 130 years. Sri Lanka was a crown colony since 1802. Sri Lanka's Supreme Court, established in 1801 is known to be one the oldest in the region and Sri Lanka was the first crown colony to have a jury system.[^note_charters]
 
@@ -22,25 +22,25 @@ In this context, the law in Sri Lanka is developed through multiple avenues: con
 
 Delays in the Sri Lanka court system are extensive. In 2017, a Parliamentary Select Committee found that it takes an average of 17 years for a criminal case to be concluded.[@parliament2017criminal, p. 4] The lower courts are under the authority of Sri Lanka's Judicial Service Commission (JSC). In its annual report, the JSC records the number of cases filed, concluded etc. However, similar reports are not available for the Court of Appeal and Supreme Court on an annual basis.
 
-**1.2	Superior Courts and Access to Judgments**
+## Superior Courts and Access to Judgments
 
-**1.2.1	Publication and Reporting History**
+### Publication and Reporting History
 
 Judgments of the Supreme Court and the Court of Appeal from the years 1809 to 1978 are recorded in volumes titled the 'Ceylon New Law Reports'. Although Sri Lanka gained independence from Britain in 1948, it remained under the Dominion of the British Crown and was known as the Dominion of Ceylon. It was only in 1972 upon the adoption of an autochthonous Republican Constitution, that Sri Lanka gained complete independence from the British Crown and became the Democratic Socialist Republic of Sri Lanka. Starting from 1978, upon the adoption of the Second Republican Constitution, select judgments of the Supreme Court were published in volumes titled the 'Sri Lanka Law Reports'. The judgments that would be reported in this way were selected by a committee of Justices of the Court, headed by the Chief Justice. Physical copies of judgments recorded in both the Ceylon New Law Reports and the Sri Lanka Law Reports are available at the National Library in Colombo, and digital copies are available on the website run by the Ministry of Justice (<https://www.lawnet.gov.lk>).
 
-**1.2.2	Digitization and Contemporary Access**
+### Digitization and Contemporary Access
 
 Since 2012, all judgments of both apex courts are also available as digital copies, accessible on the official government websites of the Supreme Court (<https://www.supremecourt.lk>) and the Court of Appeal (<https://www.courtofappeal.lk>).[^note_ssl_invalid] This led to a paradigm shift in terms of access to the jurisprudence of the apex courts. Prior to this, accessing judgments presented practical challenges. Until a case was reported, access to the judgment could only be through a party to the case or through a formal application to the relevant court registry along with the payment of the required fees. Unreported judgments were not known or accessible except through personal knowledge of such case or through media reports.
 
 The official government websites for both the Supreme Court and the Court of Appeal have published judgments made by the apex courts from 2009 onwards. The Sri Lanka Law Reports continue to be published and the judgments reported in those volumes continue to exert influence in judicial decision making. Under the present Constitution, both the Supreme Court and the Court of Appeal are each, a 'superior court of record'.[^note_art105] While all judgements of these courts are now digitally accessible, in general, when matters are dismissed, courts do not provide a written judgement.
 
-**1.2.3	Barriers to Comprehensive Study**
+### Barriers to Comprehensive Study
 
 Two significant barriers impede comprehensive assessment of Sri Lanka's apex courts. First, prior to 2012, only judgments selected by an editorial committee were published in the Law Reports; no comprehensive record exists of judgments from 1809 to 2011. Second, filing statistics are not publicly available, leaving researchers with access only to the number of judgments delivered, and only post-2011. These archival and transparency gaps are discussed further in section 4.
 
 This raises important questions: (1) how does the law develop if the database of judgments is incomplete in a legal system that is reliant on judicial precedent? (2) is the jurisprudence that guides landmark decisions of the apex courts today an accurate representation of the cumulative jurisprudence that is unrecorded? and (3) can a discovery of these inadequacies through the use of computational methods change our perception of what we believe to be the content of the law? We aim to answer these questions to some extent through the application of computational methods to our data.
 
-**1.3	Institutional Context 2012-2022**
+## Institutional Context 2012-2022
 
 When examining the work of the Sri Lankan appellate courts for this time period, it is necessary to bear in mind the relevant constitutional developments. The enactment of the 18th Amendment in 2010 had established the strongest Executive Presidency that Sri Lanka has had so far.[@edrisinha2011eighteenth] The 18th Amendment removed the two-year term limit of the President, repealed the Constitutional Council and replaced it with a Parliamentary Council. The President, who had full immunity during office, appointed justices of the appellate courts. From 2010 to 2015, the Government enjoyed a 2/3 majority in Parliament, the support required for amending the constitution as well as for enacting laws that are inconsistent with the constitution except the entrenched clauses.[^note_art83]
 
@@ -50,7 +50,7 @@ The political cohabitation that was established between the President and the Pr
 
 During this same time, the Covid-19 pandemic spread, becoming a catalyst for another crisis in Sri Lanka which reached its peak in 2022 when the country defaulted on its foreign debt payments.[@moramudali2025foreign, p. 147] 2022 was a year of significant suffering across Sri Lanka due to shortages in electricity and LPG cooking gas among others. It was also a time of political and public unrest. These developments led to the unprecedented mobilization of the public who made many political demands, broadly described as demands for a 'system change'.[@uyangoda2024localising] The then President, Prime Minister and the Cabinet were compelled to resign. A new President was elected from Parliament as required by the Constitution.
 
-2. **Use of Computational Methods for Study of Courts**
+## Use of Computational Methods for Study of Courts
 
 Computational methods have already been used to study courts of several jurisdictions.[@chandra2023court] Computational Social Science enables the collection and analysis of data at a scale previously unattainable.[@lazer2009computational, pp. 721-722] These methods are applied within a 'law as data' approach.[@frankenreiter2020computational, pp. 19, 42] They promise the same benefits that general quantitative legal research prioritises, but on a scale that is unparalleled and previously unattainable manually. The potential that computational methods hold for data analysis pertaining to a judicial system, however, must be evaluated with caution. These methods carry the same methodological constraints as quantitative empirical research generally: correlation cannot be assumed to indicate causation.[@khosla2022science] The sheer volume of data processable via computational methods runs the risk of concealing these limitations. The methodological constraints are discussed in section 4.
 

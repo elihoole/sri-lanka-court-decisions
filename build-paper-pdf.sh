@@ -40,7 +40,7 @@ echo "Generating PDF..."
 cd ..
 pandoc temp-combined.md \
     -o SriLankaCourtDecisions-paper-draft.pdf \
-    --pdf-engine=xelatex \
+    --pdf-engine=pdflatex \
     --filter pandoc-crossref \
     -M tablePrefix="Table" \
     -M figurePrefix="Figure" \

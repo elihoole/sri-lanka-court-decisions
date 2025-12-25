@@ -1,6 +1,6 @@
 # The Dataset: \texttt{SriLankaCourtDecisions} {#sec:dataset}
 
-We compiled the \texttt{SriLankaCourtDecisions} dataset by scraping the official websites of Sri Lanka’s Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. The dataset will be available for use at \[URL/DOI to be provided upon release\].
+We compiled the \texttt{SriLankaCourtDecisions} dataset by scraping the official websites of Sri Lanka’s Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022. The resulting corpus comprises 1,278 Supreme Court judgments and 7,314 Court of Appeal judgments. Data availability determined our choice of time period. The dataset will be available for use at \[URL/DOI to be provided upon release\].
 
 The constitution establishes distinct forums for public law remedies. Article 140 confers on the Court of Appeal jurisdiction to issue prerogative writs—certiorari, mandamus, prohibition, and others—for judicial review of administrative action, tribunal decisions, and jurisdictional errors. Article 126 vests the Supreme Court with exclusive jurisdiction over fundamental rights petitions alleging constitutional violations. The Supreme Court’s original writ jurisdiction, by contrast, is narrowly circumscribed: Article 104H, for instance, limits such jurisdiction to election-related matters.
 
@@ -11,15 +11,15 @@ The empirical distribution confirms this constitutional design. Of the 1,278 Sup
 
 Scraping the two court websites presented minimal technical barriers, as both are static sites without rate limiting or IP-blocking mechanisms.[^note_court_websites] The primary challenges were extended server downtimes that interrupted scraping routines and expired SSL certificates that generated runtime warnings. We converted the downloaded PDF files using PDFMiner[^note_pdfminer] with default parameters, preserving document structure while extracting text content. A small number of judgments (fewer than 10 across the entire collection) required Optical Character Recognition (OCR) conversion; we excluded these to maintain consistency in text extraction methodology and data quality.
 
-Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments, as shown in Table 1. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
+Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1,278 Supreme Court judgments and 7,314 Court of Appeal judgments, as shown in Table 1. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
 
 *Table 1: \texttt{SriLankaCourtDecisions} dataset composition and descriptive statistics (SD = standard deviation)*
 
 | Court | Number of judgments | Mean word count (SD) |
 |:---- |:---- |:---- |
-| Supreme Court | 1278 | 3646 (3038) |
-| Court of Appeal | 7314 | 1688 (2091) |
-| **Full corpus** | **8592** | **1979 (2361)** |
+| Supreme Court | 1,278 | 3,646 (3,038) |
+| Court of Appeal | 7,314 | 1,688 (2,091) |
+| **Full corpus** | **8,592** | **1,979 (2,361)** |
 
 ## Dataset Structure
 
@@ -29,9 +29,9 @@ Extracting structured data from the court websites presented several challenges.
 
 ## Descriptive Statistics and Characteristics
 
-The word count statistics in Table 1 reveal marked differences between the two courts. Supreme Court judgments average 3646 words with substantial variation (SD = 3038), reflecting the court's role in addressing complex constitutional matters and questions of law alongside its appellate functions. Court of Appeal judgments average 1688 words (SD = 2091), consistent with a higher-volume appellate court addressing a broader range of routine matters. The high standard deviations in both courts indicate considerable heterogeneity in judgment length, ranging from brief orders to extensive reasoned judgments spanning dozens of pages.
+The word count statistics in Table 1 reveal marked differences between the two courts. Supreme Court judgments average 3,646 words with substantial variation (SD = 3,038), reflecting the court's role in addressing complex constitutional matters and questions of law alongside its appellate functions. Court of Appeal judgments average 1,688 words (SD = 2,091), consistent with a higher-volume appellate court addressing a broader range of routine matters. The high standard deviations in both courts indicate considerable heterogeneity in judgment length, ranging from brief orders to extensive reasoned judgments spanning dozens of pages.
 
-The numerical dominance of Court of Appeal judgments (7314 versus 1278) reflects the courts’ different positions in Sri Lanka’s judicial hierarchy and their distinct jurisdictional mandates, as discussed in @sec:empirical. This 5.7:1 ratio has implications for understanding the relative contribution of each court to the development of case law, a pattern we explore further in @sec:insights.
+The numerical dominance of Court of Appeal judgments (7,314 versus 1,278) reflects the courts’ different positions in Sri Lanka’s judicial hierarchy and their distinct jurisdictional mandates, as discussed in @sec:empirical. This 5.7:1 ratio has implications for understanding the relative contribution of each court to the development of case law, a pattern we explore further in @sec:insights.
 
 [^note_court_websites]: The official websites are available at [supremecourt.lk](https://supremecourt.lk/) and [courtofappeal.lk](https://courtofappeal.lk/). Scraping was conducted between February 2023 and April 2023 using custom Python scripts.
 

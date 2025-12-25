@@ -6,7 +6,7 @@ The \texttt{SriLankaCourtDecisions} corpus on writs and fundamental rights judge
 
 1. The Court of Appeal delivers nearly six times more judgments than the Supreme Court annually, yet its jurisprudence remains systematically understudied.
 2. Numerically, judgements on writ petitions vastly outnumber judgements on fundamental rights petitions.
-3. Only 31 from the 1741 judgements on writ petitions from the Court of Appeal were appealed against to Supreme Court, suggesting that at a practical level the Court of Appeal functions effectively as the first and final arbiter of these petitions.
+3. During the study period, the Supreme Court decided only 31 appeals from Court of Appeal writ decisions, compared to 1,741 writ decisions issued by the Court of Appeal. While individual cases cannot be tracked through the appellate system, this low ratio (an implied appeal rate of 1.8%) suggests that at a practical level the Court of Appeal functions effectively as the first and final arbiter of writ petitions.
 4. The Supreme Court takes an average of 4.17 years to resolve Fundamental Rights and the Court of Appeal resolves writs faster (mean 3.15 years).
 5. Land disputes and state employment matters are the dominant themes in appellate jurisprudence.
 6. The linguistic patterns and decision length in these judgements confirm, empirically, doctrinal hierarchies. Judgements by the Supreme Court are lengthier and more complex in terms of linguistic patterns.

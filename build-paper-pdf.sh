@@ -54,6 +54,7 @@ pandoc temp-combined.md \
     --number-sections \
     -H bibliography-formatting.tex \
     -H text-alignment.tex \
+    -H front-matter.tex \
     -B title-page.tex \
     -H font-config.tex \
     -H quote-style.tex \

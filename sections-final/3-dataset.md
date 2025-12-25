@@ -1,4 +1,4 @@
-# The Dataset: \texttt{SriLankaCourtDecisions}
+# The Dataset: \texttt{SriLankaCourtDecisions} {#sec:dataset}
 
 We compiled the \texttt{SriLankaCourtDecisions} dataset by scraping the official websites of Sri Lanka’s Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022\. The resulting corpus comprises 1278 Supreme Court judgments and 7314 Court of Appeal judgments. Data availability determined our choice of time period. The dataset will be available for use at \[URL/DOI to be provided upon release\].
 
@@ -32,7 +32,7 @@ Extracting structured data from the court websites presented several challenges.
 
 The token count statistics in Table 1 reveal marked differences between the two courts. Supreme Court judgments average 3646 tokens with substantial variation (SD \= 3038), reflecting the court’s role in addressing complex constitutional matters and questions of law alongside its appellate functions. Court of Appeal judgments average 1688 tokens (SD \= 2091), consistent with a higher-volume appellate court addressing a broader range of routine matters. The high standard deviations in both courts indicate considerable heterogeneity in judgment length, ranging from brief orders to extensive reasoned judgments spanning dozens of pages.
 
-The numerical dominance of Court of Appeal judgments (7314 versus 1278\) reflects the courts’ different positions in Sri Lanka’s judicial hierarchy and their distinct jurisdictional mandates, as discussed in section 2\. This 5.7:1 ratio has implications for understanding the relative contribution of each court to the development of case law, a pattern we explore further in section 5\.
+The numerical dominance of Court of Appeal judgments (7314 versus 1278\) reflects the courts’ different positions in Sri Lanka’s judicial hierarchy and their distinct jurisdictional mandates, as discussed in @sec:empirical. This 5.7:1 ratio has implications for understanding the relative contribution of each court to the development of case law, a pattern we explore further in @sec:insights.
 
 [^note_court_websites]: The official websites are available at [supremecourt.lk](https://supremecourt.lk/) and [courtofappeal.lk](https://courtofappeal.lk/). Scraping was conducted between February 2023 and April 2023 using custom Python scripts.
 

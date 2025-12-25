@@ -84,4 +84,4 @@ With due recognition of the constraints that apply, the potential that computati
 
 [^note_art83]: Article 83 of the Constitution.
 
-[^note_2018_cases]: *Sampanthan v AG* SC/FR/351-356, 358-361/2018, SC Minutes 13 December 2018; *Wickremesinghe v Rajapakse* CA/WRIT/363/2018.
+[^note_2018_cases]: *Sampanthan v Attorney General* SC/FR/351-356/2018 SC/FR/358-361/2018, SC Minutes 13 December 2018; *Wickremesinghe v Rajapakse* CA/WRIT/363/2018.

@@ -224,9 +224,9 @@ Topic modeling reveals what courts decide. Mutual information analysis reveals h
 
 [^note_delay_caselaw]: Case law on delays in writ proceedings indicates that delay is a relevant consideration at the leave stage.
 
-[^note_art126_5]: Art 126(5) of the Constitution.
+[^note_art126_5]: Article 126(5) of the Constitution.
 
-[^note_visuvalingam]: *Visuvalingam v Liyanage* 1 Sri LR 203 (1983) 226.
+[^note_visuvalingam]: *Visuvalingam v Liyanage*, 1 Sri LR 203 (1983), 226.
 
 [^note_sc_rule45]: Rule 45 of the Supreme Court Rules (as published by BASL 2021).
 

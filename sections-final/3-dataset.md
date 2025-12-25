@@ -9,7 +9,7 @@ The empirical distribution confirms this constitutional design. Of the 1,278 Sup
 
 **3.1	Data Collection and Processing**
 
-Scraping the two court websites presented minimal technical barriers, as both are static sites without rate limiting or IP-blocking mechanisms.[^51] The primary challenges were extended server downtimes that interrupted scraping routines and expired SSL certificates that generated runtime warnings. We converted the downloaded PDF files using PDFMiner[^52] with default parameters, preserving document structure while extracting text content. A small number of judgments (fewer than 10 across the entire collection) required Optical Character Recognition (OCR) conversion; we excluded these to maintain consistency in text extraction methodology and data quality.
+Scraping the two court websites presented minimal technical barriers, as both are static sites without rate limiting or IP-blocking mechanisms.[^note_court_websites] The primary challenges were extended server downtimes that interrupted scraping routines and expired SSL certificates that generated runtime warnings. We converted the downloaded PDF files using PDFMiner[^note_pdfminer] with default parameters, preserving document structure while extracting text content. A small number of judgments (fewer than 10 across the entire collection) required Optical Character Recognition (OCR) conversion; we excluded these to maintain consistency in text extraction methodology and data quality.
 
 Both websites contained substantial duplicate entries. Following deduplication based on case number and decision date, the corpus comprised 1278 Supreme Court judgments and 7314 Court of Appeal judgments, as shown in Table 1\. The deduplication process identified duplicates through exact matching of case numbers combined with decision dates; in instances where the same case number appeared with different dates, we retained the entry with the more complete judgment text.
 
@@ -34,6 +34,6 @@ The token count statistics in Table 1 reveal marked differences between the two 
 
 The numerical dominance of Court of Appeal judgments (7314 versus 1278\) reflects the courts’ different positions in Sri Lanka’s judicial hierarchy and their distinct jurisdictional mandates, as discussed in section 2\. This 5.7:1 ratio has implications for understanding the relative contribution of each court to the development of case law, a pattern we explore further in section 5\.
 
-[^51]:  The official websites are available at [supremecourt.lk](https://supremecourt.lk/) and [courtofappeal.lk](https://courtofappeal.lk/). Scraping was conducted between February 2023 and April 2023 using custom Python scripts.
+[^note_court_websites]: The official websites are available at [supremecourt.lk](https://supremecourt.lk/) and [courtofappeal.lk](https://courtofappeal.lk/). Scraping was conducted between February 2023 and April 2023 using custom Python scripts.
 
-[^52]:  PDFMiner.six version \[20221105\] was used for PDF text extraction.
+[^note_pdfminer]: PDFMiner.six version 20221105 was used for PDF text extraction.

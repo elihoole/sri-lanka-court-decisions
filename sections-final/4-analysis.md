@@ -14,7 +14,7 @@ The numerical difference between writ petitions and fundamental rights petitions
 
 The Supreme Court’s engagement under its writ jurisdiction has been minimal during the period under review. Of the 1,278 Supreme Court decisions, 4 were original writ petitions under Article 104H (election-related writs) and 31 were appeals from Court of Appeal writ decisions (identified through normalized pattern matching for case references to Court of Appeal writ applications)—together comprising only 2.7% of the Supreme Court’s docket. The Court of Appeal’s 1,741 writ decisions thus vastly outnumber not only the Supreme Court’s original writ jurisdiction but also subsequent appellate review.
 
-This pattern has structural explanations. The Court of Appeal has a greater number of justices than the Supreme Court.[^55] More significantly, it is a court of first instance for writ applications under Article 140 and Article 141, whereas the Supreme Court exercises appellate jurisdiction with the exception of its original jurisdiction under Article 126 (fundamental rights) and Article 129 (election petitions) and some other matters.[^56] The Court of Appeal thus handles both original writ petitions and appeals from lower courts across civil, criminal, and administrative matters. Moreover, benches in the Court of Appeal comprise two justices each whereas benches in the Supreme Court comprise three. Upon request and at the discretion of the Chief Justice, bigger benches may be constituted for the Supreme Court. As a result, it may take longer for benches of the Supreme Court to finalise judgements. The Supreme Court determines questions of law and arguably therefore, the task of judicial decision-making requires more time. 
+This pattern has structural explanations. The Court of Appeal has a greater number of justices than the Supreme Court.[^note_court_composition] More significantly, it is a court of first instance for writ applications under Article 140 and Article 141, whereas the Supreme Court exercises appellate jurisdiction with the exception of its original jurisdiction under Article 126 (fundamental rights) and Article 129 (election petitions) and some other matters.[^note_art118_ref] The Court of Appeal thus handles both original writ petitions and appeals from lower courts across civil, criminal, and administrative matters. Moreover, benches in the Court of Appeal comprise two justices each whereas benches in the Supreme Court comprise three. Upon request and at the discretion of the Chief Justice, bigger benches may be constituted for the Supreme Court. As a result, it may take longer for benches of the Supreme Court to finalise judgements. The Supreme Court determines questions of law and arguably therefore, the task of judicial decision-making requires more time. 
 
 **5.2. Court of Appeal as the (Effectively) Final Arbiter on Writs**
 
@@ -68,13 +68,13 @@ To approximate the date on which an application was filed, we extracted the year
 
 As demonstrated in Figure 4, Court of Appeal writ petitions resolve faster than Supreme Court fundamental rights applications.
 
-Unlike fundamental rights petitions, no constitutional or common law time limit governs the determination of writ petitions. Time or delay is considered when determining whether to grant leave to proceed,[^57] but no broader principles guide completion of judicial determination of writ petitions.
+Unlike fundamental rights petitions, no constitutional or common law time limit governs the determination of writ petitions. Time or delay is considered when determining whether to grant leave to proceed,[^note_delay_caselaw] but no broader principles guide completion of judicial determination of writ petitions.
 
 **5.5. Fundamental Rights and the Two Months Requirement**
 
-The Constitution mandates that fundamental rights petitions be determined within two months of filing.[^58] However, the Supreme Court has held that this requirement is directory rather than mandatory.[^59] The constitutional requirement of two months is insufficient to accommodate the practical steps involved in fundamental rights litigation, which includes filing, service, objections, counter-affidavits, reply, oral submissions, written submissions and judgment writing. The Supreme Court rules attest to this procedural issue.[^60] This has led to a situation where a constitutional requirement has, in effect, been rendered meaningless.
+The Constitution mandates that fundamental rights petitions be determined within two months of filing.[^note_art126_5] However, the Supreme Court has held that this requirement is directory rather than mandatory.[^note_visuvalingam] The constitutional requirement of two months is insufficient to accommodate the practical steps involved in fundamental rights litigation, which includes filing, service, objections, counter-affidavits, reply, oral submissions, written submissions and judgment writing. The Supreme Court rules attest to this procedural issue.[^note_sc_rule45] This has led to a situation where a constitutional requirement has, in effect, been rendered meaningless.
 
-As illustrated in Figure 5, the data confirm serious concerns already noted about delays in the court system.[^61]
+As illustrated in Figure 5, the data confirm serious concerns already noted about delays in the court system.[^note_delays_literature]
 
 ![37% of FR petitions took five or more years for resolution][image4]
 
@@ -151,7 +151,7 @@ After petitions clear the leave to proceed stage, the probability favors the pet
 
 **5.10. Topics of Common Concern to both courts**
 
-To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[^62] to SriLankaCourtDecisions. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
+To understand the latent topics and their word distributions present in court decisions, we applied Latent Dirichlet Allocation (LDA)[@blei2003latent] to SriLankaCourtDecisions. We used the Gensim implementation of LDA with the following parameters: 20 topics and random seed of 0 with all other values set to defaults. In addition to tokenizing and stemming, we removed all tokens that appeared in less than 20 documents as well as tokens that recurred in more than 50% of documents. We also removed all tokens that were less than 3 characters long.
 
 To find the three most common topics across Supreme Court and Court of Appeal decisions, we first ran LDA on the entirety of SriLankaCourtDecisions under the experiment conditions described above. Then, we computed the average probability score for each of the 20 topics identified by LDA under the two sub corpora, independently, by summing the document-topic probability for a given topic for each document in the sub corpus and dividing by the total number of documents in the sub corpus. We obtained the three most common topics by summing the average probability scores for each topic across the two sub corpora and selecting the three topics with the highest scores, as shown in Table 4\.
 
@@ -204,7 +204,7 @@ To find the three most common topics across Supreme Court and Court of Appeal de
 
 Topic 1 concerns land and property disputes, denoted by terms such as ‘defend’, ‘plaintiff’, ‘land’, ‘district’, ‘action’, ‘titl’, ‘deed’, ‘possess’, ‘lot’, ‘claim’, ‘plan’, ‘partit’, ‘owner’, ‘prescript’, ‘road’, ‘silva’, ‘properti’, ‘disput’, ‘perera’, ‘transfer’, ‘surveyor’, and ‘procedur’. These terms reflect the vocabulary of land litigation—title disputes, prescriptive rights, partition actions, and ownership claims.
 
-When we ran LDA on decisions that took ten or more years for resolution (num\_topics=5 and random\_seed=0), the most common topics were land and property disputes. The state owns most of the land in Sri Lanka.[^63] The state’s role as dominant landowner generates extensive litigation over state land alienation, encroachment, competing claims, and administrative decisions regarding land use and allocation.
+When we ran LDA on decisions that took ten or more years for resolution (num\_topics=5 and random\_seed=0), the most common topics were land and property disputes. The state owns most of the land in Sri Lanka.[^note_state_land] The state’s role as dominant landowner generates extensive litigation over state land alienation, encroachment, competing claims, and administrative decisions regarding land use and allocation.
 
 In terms of addressing case load and delay, this data also points to land disputes as an area requiring substantive attention and institutional infrastructure. Current state interventions regarding delays—such as fast-tracking commercial disputes and promoting alternative dispute resolution—may be misplaced if they do not address the types of cases that actually dominate appellate court dockets. If land disputes are both pervasive and slow-moving, institutional reform ought to target this specific substantive area. This might include specialized tribunals, streamlined procedures for particular categories of land disputes, or administrative reforms to reduce the generation of land-related litigation in the first instance.
 
@@ -232,21 +232,19 @@ The topic distribution analysis thus confirms empirically the jurisdictional div
 
 Topic modeling reveals what courts decide. Mutual information analysis reveals how courts write—and what those linguistic choices encode about institutional hierarchies and judicial authority.
 
-[^55]:  Until 2020, the Supreme Court comprised the Chief Justice and six to ten Justices. Subsequent to the 20th Amendment the number was increased to the Chief Justice and six to sixteen (Article 118 as amended). Until 2020 Court of Appeal comprised the President and six to eleven Justices. Subsequent to the 20th Amendment it comprises the President of the Court of Appeal and six to nineteen (Article 137 as amended). 
+[^note_court_composition]: Until 2020, the Supreme Court comprised the Chief Justice and six to ten Justices. Subsequent to the 20th Amendment the number was increased to the Chief Justice and six to sixteen (Article 118 as amended). Until 2020 Court of Appeal comprised the President and six to eleven Justices. Subsequent to the 20th Amendment it comprises the President of the Court of Appeal and six to nineteen (Article 137 as amended).
 
-[^56]:  For instance, see Article 118 of the Constitution. 
+[^note_art118_ref]: For instance, see Article 118 of the Constitution.
 
-[^57]:  Case law on delays in writ proceedings indicates that delay is a relevant consideration at the leave stage.
+[^note_delay_caselaw]: Case law on delays in writ proceedings indicates that delay is a relevant consideration at the leave stage.
 
-[^58]:  Art 126 (5) of the Constitution.
+[^note_art126_5]: Art 126(5) of the Constitution.
 
-[^59]:  *Visuvalingam v Liyanage*, 1 Sri LR 203 (1983), 226\.
+[^note_visuvalingam]: *Visuvalingam v Liyanage* 1 Sri LR 203 (1983) 226.
 
-[^60]:  Rule 45 of the Supreme Court Rules (as published by BASL 2021\)
+[^note_sc_rule45]: Rule 45 of the Supreme Court Rules (as published by BASL 2021).
 
-[^61]:  ‘*Laws Delays’ as Abuse of Process; Fresh Perspectives and Critical Analysis* LST Review 17(236) (June 2007); [Impact of legal delays \- TimesOnline](https://sundaytimes.lk/online/opinion/impact-of-legal-delays/158-1069104) (8 Feb 2019, accessed 8 December 2025).
+[^note_delays_literature]: 'Laws Delays as Abuse of Process: Fresh Perspectives and Critical Analysis' LST Review 17(236) (June 2007); [Impact of legal delays](https://sundaytimes.lk/online/opinion/impact-of-legal-delays/158-1069104) TimesOnline (8 Feb 2019).
 
-[^62]:  David M Blei et al., “Latent Dirichlet Allocation,” *Journal of Machine Learning Research* 3 (2003) 993–1022.
-
-[^63]:  There is no consistency in how the percentage is calculated. The Advocata Institute rates it at 82% ( (Advocata Institute, “Addressing the Land Problem,” 2024, [https://www.advocata.org/addressing-the-land-problem](https://www.advocata.org/addressing-the-land-problem))) while the World Bank rates it at 85% ( (World Bank, “Improving the Quality of Land Administration in Sri Lanka,” 2024, [https://www.worldbank.org/en/country/srilanka/publication/improving-the-quality-of-land-administration-in-sri-lanka](https://www.worldbank.org/en/country/srilanka/publication/improving-the-quality-of-land-administration-in-sri-lanka))).
+[^note_state_land]: There is no consistency in how the percentage is calculated. The Advocata Institute rates it at 82% ([@advocata2024land]) while the World Bank rates it at 85% ([@worldbank2024land]).
 

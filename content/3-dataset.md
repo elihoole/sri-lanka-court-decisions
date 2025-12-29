@@ -1,6 +1,6 @@
 # The Dataset: \texttt{SriLankaCourtDecisions} {#sec:dataset}
 
-We compiled the \texttt{SriLankaCourtDecisions} dataset by scraping the official websites of Sri Lanka’s Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022. The resulting corpus comprises 1,278 Supreme Court judgments and 7,314 Court of Appeal judgments. Data availability determined our choice of time period. The dataset will be available for use at \[URL/DOI to be provided upon release\].
+We compiled the \texttt{SriLankaCourtDecisions} dataset by scraping the official websites of Sri Lanka's Supreme Court and Court of Appeal for judgments delivered between 1 January 2012 and 31 December 2022. The resulting corpus comprises 1,278 Supreme Court judgments and 7,314 Court of Appeal judgments. Data availability determined our choice of time period. The dataset is available on HuggingFace.[^note_huggingface] The GitHub repository contains the analysis code to reproduce all figures, tables, LDA topic modelling, and chi-square/mutual information analyses, as well as the source files and build scripts for this paper.[^note_github]
 
 The constitution establishes distinct forums for public law remedies. Article 140 confers on the Court of Appeal jurisdiction to issue prerogative writs—certiorari, mandamus, prohibition, and others—for judicial review of administrative action, tribunal decisions, and jurisdictional errors. Article 126 vests the Supreme Court with exclusive jurisdiction over fundamental rights petitions alleging constitutional violations. The Supreme Court’s original writ jurisdiction, by contrast, is narrowly circumscribed: Article 104H, for instance, limits such jurisdiction to election-related matters.
 
@@ -32,6 +32,10 @@ Extracting structured data from the court websites presented several challenges.
 The word count statistics in Table 1 reveal marked differences between the two courts. Supreme Court judgments average 3,646 words with substantial variation (SD = 3,038), reflecting the court's role in addressing complex constitutional matters and questions of law alongside its appellate functions. Court of Appeal judgments average 1,688 words (SD = 2,091), consistent with a higher-volume appellate court addressing a broader range of routine matters. The high standard deviations in both courts indicate considerable heterogeneity in judgment length, ranging from brief orders to extensive reasoned judgments spanning dozens of pages.
 
 The numerical dominance of Court of Appeal judgments (7,314 versus 1,278) reflects the courts’ different positions in Sri Lanka’s judicial hierarchy and their distinct jurisdictional mandates, as discussed in @sec:empirical. This 5.7:1 ratio has implications for understanding the relative contribution of each court to the development of case law, a pattern we explore further in @sec:insights.
+
+[^note_huggingface]: The dataset is available at [huggingface.co/datasets/elihoole/sri-lanka-court-decisions](https://huggingface.co/datasets/elihoole/sri-lanka-court-decisions).
+
+[^note_github]: The repository is available at [github.com/elihoole/SriLankaCourtDecisions](https://github.com/elihoole/SriLankaCourtDecisions).
 
 [^note_court_websites]: The official websites are available at [supremecourt.lk](https://supremecourt.lk/) and [courtofappeal.lk](https://courtofappeal.lk/). Scraping was conducted between February 2023 and April 2023 using custom Python scripts.
 

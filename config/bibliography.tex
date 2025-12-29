@@ -1,15 +1,10 @@
 % Bibliography Formatting Customization
 % Overrides OSCOLA defaults for better readability
 
-% Figure placement - prevent images from floating to separate pages
+% Float placement - pin figures and tables to top of page
 \usepackage{float}
-\let\origfigure\figure
-\let\endorigfigure\endfigure
-\renewenvironment{figure}[1][2] {
-    \expandafter\origfigure\expandafter[H]
-} {
-    \endorigfigure
-}
+\floatplacement{figure}{t}
+\floatplacement{table}{t}
 
 % Reduce spacing around figures
 \setlength{\intextsep}{10pt plus 2pt minus 2pt}

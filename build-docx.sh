@@ -33,7 +33,7 @@ cd ..
 mkdir -p output
 
 # Prepare title page with current date
-python3 - <<'PY'
+uv run python - <<'PY'
 from pathlib import Path
 from datetime import datetime
 title = Path("config/title-page.md").read_text()
@@ -41,11 +41,16 @@ today_str = datetime.now().strftime("%B %-d, %Y")
 Path("temp-title-page.md").write_text(title.replace("${TODAY}", today_str))
 PY
 
-# Add page breaks before each top-level section
-python3 - <<'PY'
+# Add page breaks before each top-level section and prepend title page
+uv run python - <<'PY'
 from pathlib import Path
-path = Path("temp-combined-docx.md")
-lines = path.read_text().splitlines()
+
+# Read title page and content
+title_page = Path("temp-title-page.md").read_text()
+content = Path("temp-combined-docx.md").read_text()
+
+# Add page breaks before each H1 (except first)
+lines = content.splitlines()
 out = []
 first_heading = True
 for line in lines:
@@ -57,7 +62,10 @@ for line in lines:
             out.append(":::")
             out.append("")
     out.append(line)
-path.write_text("\n".join(out) + "\n")
+
+# Prepend title page to content
+final = title_page + "\n" + "\n".join(out) + "\n"
+Path("temp-combined-docx.md").write_text(final)
 PY
 
 pandoc temp-combined-docx.md \
@@ -65,7 +73,6 @@ pandoc temp-combined-docx.md \
     --reference-doc=config/reference.docx \
     --lua-filter=config/format.lua \
     --filter pandoc-crossref \
-    --include-before-body=temp-title-page.md \
     -M secPrefix=Section \
     -M tablePrefix=Table \
     -M figurePrefix=Figure \
@@ -74,8 +81,6 @@ pandoc temp-combined-docx.md \
     --citeproc \
     --bibliography=references.bib \
     --csl=config/chicago.csl \
-    --toc \
-    --toc-depth=3 \
     --number-sections \
     -V linkcolor:blue \
     -V toccolor:blue \

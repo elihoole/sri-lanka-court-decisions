@@ -26,7 +26,7 @@ except ImportError:
 mpl.rcParams['font.family'] = 'sans-serif'
 
 # Plot configuration
-IMAGES_DIR = 'images'
+IMAGES_DIR = 'figures'
 TIME_WINDOWS = ['< 1', '1+', '2+', '3+', '4+', '5-10', '10-20', '20+']
 TIME_WINDOW_LABELS = [r'$<$ 1', '1+', '2+', '3+', '4+', '5-10', '10-20', '20+']
 

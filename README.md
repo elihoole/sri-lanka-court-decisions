@@ -1,8 +1,29 @@
-# Sri Lanka Court Decisions Paper
+# Sri Lanka Court Decisions
 
-Academic paper analyzing Sri Lankan court decisions using computational text analysis.
+Academic paper and analysis code for computational text analysis of Sri Lankan court decisions.
+
+- **Paper:** Pandoc-based manuscript with PDF/DOCX output
+- **Dataset:** [elihoole/sri-lanka-court-decisions](https://huggingface.co/datasets/elihoole/sri-lanka-court-decisions) on HuggingFace
+- **Analysis:** Python code reproducing all paper results
 
 ## Quick Start
+
+### Run Analysis
+
+```bash
+# Install dependencies
+uv sync
+
+# Run all analyses (plots, LDA, chi-square)
+uv run python3 code/main.py
+
+# Run specific analysis
+uv run python3 code/main.py --plots   # Generate plots only
+uv run python3 code/main.py --lda     # LDA topic modeling
+uv run python3 code/main.py --text    # Chi-square & mutual info
+```
+
+### Build Paper
 
 ```bash
 # Build PDF
@@ -40,10 +61,14 @@ sudo apt install pandoc texlive-latex-base texlive-fonts-recommended \
 
 ```
 .
-├── build-pdf.sh       # Build A4 PDF
-├── build-docx.sh      # Build Word document
-├── build-mobile-pdf.sh # Build mobile PDF
-├── references.bib     # Bibliography (BibTeX)
+├── code/              # Analysis code
+│   ├── main.py        # Entry point
+│   ├── data_loader.py # Load from HuggingFace
+│   ├── plots.py       # Plotting functions
+│   ├── lda_analysis.py # LDA topic modeling
+│   ├── text_analysis.py # Chi-square & MI
+│   ├── utils.py       # Shared utilities
+│   └── stopwords/     # Custom stopword lists
 │
 ├── content/           # Paper sections (Markdown)
 ├── figures/           # Plots and images (PNG)
@@ -51,9 +76,13 @@ sudo apt install pandoc texlive-latex-base texlive-fonts-recommended \
 │   ├── chicago.csl    # Citation style
 │   ├── reference.docx # Word template
 │   └── *.tex          # LaTeX configs
+├── output/            # Generated files
 │
-└── output/            # Generated files
-    └── paper.pdf      # Final PDF
+├── pyproject.toml     # Python dependencies
+├── references.bib     # Bibliography (BibTeX)
+├── build-pdf.sh       # Build A4 PDF
+├── build-docx.sh      # Build Word document
+└── build-mobile-pdf.sh # Build mobile PDF
 ```
 
 ## Citation Style

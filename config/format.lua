@@ -98,22 +98,3 @@ function Header(el)
     return el
 end
 
--- Set the final document section to use Arabic (decimal) page numbers
--- This is added at the end of the document via Meta
-function Meta(meta)
-    return meta
-end
-
-function Pandoc(doc)
-    -- Append a final section break to set main content to Arabic numerals
-    -- In DOCX, the final sectPr in w:body applies to the last section
-    local arabic_section = pandoc.RawBlock('openxml', [[
-        <w:sectPr>
-            <w:pgNumType w:fmt="decimal" w:start="1"/>
-            <w:pgSz w:w="11906" w:h="16838"/>
-            <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
-        </w:sectPr>
-    ]])
-    table.insert(doc.blocks, arabic_section)
-    return doc
-end

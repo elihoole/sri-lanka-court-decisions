@@ -1,0 +1,9 @@
+% Front matter formatting
+% - Title page: no page number
+% - Abstract/TOC: Roman numerals, unnumbered sections
+% - Introduction onwards: Arabic numerals, numbered sections
+
+\usepackage{titlesec}
+
+% Start with empty page style for title page (no page number)
+\AtBeginDocument{\thispagestyle{empty}\pagenumbering{roman}}

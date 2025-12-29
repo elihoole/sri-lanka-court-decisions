@@ -1,0 +1,12 @@
+% Font configuration with Libertinus Serif (pdflatex compatible)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{libertinus}
+\usepackage{inconsolata}  % Better monospace font
+\usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.5}
+
+% Redefine \texttt to reset all formatting (not inherit bold/italic)
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{\textnormal{\oldtexttt{#1}}}

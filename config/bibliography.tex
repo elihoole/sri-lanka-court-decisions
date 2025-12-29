@@ -15,20 +15,11 @@
 \setlength{\intextsep}{10pt plus 2pt minus 2pt}
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
 
-% Add numbering to bibliography entries
+% Style Pandoc citeproc bibliography entries
+% Add vertical spacing between references
 \usepackage{etoolbox}
-\makeatletter
-\patchcmd{\thebibliography}{\list}{\enumerate}{}{}
-\patchcmd{\endthebibliography}{\endlist}{\endenumerate}{}{}
-\makeatother
-
-% Increase spacing between bibliography entries
-\usepackage{setspace}
-\let\oldbibliography\thebibliography
-\renewcommand{\thebibliography}[1]{%
-  \oldbibliography{#1}%
-  \setlength{\itemsep}{0.5em}%
-  \setlength{\parskip}{0.5em}%
+\AtBeginEnvironment{CSLReferences}{%
+  \setlength{\parskip}{0.8em plus 0.2em minus 0.1em}%
 }
 
 % Remove angle brackets from URLs
@@ -38,3 +29,10 @@
 \def\url@leostyle{%
   \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
 \makeatother
+
+% Increase vertical spacing between footnotes
+\setlength{\footnotesep}{1.2\baselineskip}
+
+% Add space between footnote number and text
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{1em}

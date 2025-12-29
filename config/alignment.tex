@@ -1,0 +1,10 @@
+% Left-align text instead of justified
+\raggedright
+
+% Left-align footnotes
+\makeatletter
+\renewcommand\@makefntext[1]{%
+  \parindent 1em\noindent
+  \hb@xt@1.8em{\hss\@makefnmark}%
+  \raggedright #1}
+\makeatother

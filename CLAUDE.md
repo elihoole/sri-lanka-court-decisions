@@ -1,55 +1,28 @@
-## My writing preferences
+## Git Workflow
 
-Based on comparing the AI version to your edited version, here are your writing preferences:
-Precision over flourish: You replaced vague phrases with more exact ones. "Constitutes the core of the legal system" became "determine the content of the law"—direct and legally precise. "Highly influential" became simply "influential," trimming unnecessary intensifiers.
-Discipline-appropriate terminology: You changed "decisions" to "judgments," which is the more accurate term in common-law usage. "Narrated" became "interpreted"—a more concrete, legally meaningful verb.
-Avoiding redundancy: You cut "past both binding precedent and" from the phrase about extending knowledge, streamlining what was a somewhat tangled construction. Similarly, "settled assumptions" became "received assumptions and ingrained perceptions"—you actually expanded here, but to add meaningful nuance rather than padding.
-Measured claims: You softened absolute statements. "Makes visible" became "can make visible." This reflects appropriate scholarly caution about what computational methods actually achieve.
-Punctuation preferences: You use spaced en-dashes (–) rather than unspaced em-dashes (—) for parenthetical insertions, though you kept the em-dash in the final sentence. You also prefer "judgments" over "decisions" and "rulings" in certain contexts.
-Cutting hollow phrases: "How judicial influence operates" was removed entirely—it didn't add substance. You prefer economy where possible.
-Overall, you favor prose that is precise, appropriately hedged, terminologically accurate, and free of vague intensifiers or filler phrases. You're comfortable with complex sentences but want each word to earn its place.
-
-## Key things
-
-1. I will have to port this as a docx file -- so very important that footnotes are properly preserved
-2. This is an academic paper so writing style should be approriate and must reflect my preferences. 
+- **Commit frequently**: After completing a logical unit of work (e.g., fixing a section, adding bib entries, converting citations), commit without prompting
+- **Use feature branches**: Create branches for significant changes (e.g., `fix/footnote-renumbering`)
+- **Commit message format**: Use clear, descriptive messages with bullet points for multiple changes
+- **Don't push without asking**: Commits are local until explicitly asked to push
 
 ## About the project
 
-I have been working on this paper for a long time and I want to bring to a conclusion. As it is, most sections are there but several issues persist:
+I have been working on this paper for a long time and I want to bring to a conclusion. My colleague returned the final Word document from her end. And I have decomposed the different sections under `sections-final`. You don't have to worry about the content of the paper sitting in any other folder. 
 
-1. Writing is very all over the place because multiple people contributed. We need to bring a consistent style.
-2. We need to think about the logical coherence and redundancy in paras and sections. I think organisation overall needs work.
-3. We need to write some parts of sections that need to be added.
+What I now need to do is:
 
-## Skeleton of the paper
+1. Apply proper formatting and consistent numbering such that the errors or inconsistencies introduced by my colleague are removed. [DONE]
 
-All sections sit within sections/ directory as separate .md files. 
+2. Remove wrong / misplaced section numbering from .docx back conversion and apply consistent # , ## , ### etc to sections and sub sections. [DONE]
 
-**0. Abstract**
-Introduces the empirical study of Sri Lanka's apex courts (Supreme Court and Court of Appeal) from 2012–2022 using computational methods. Presents the SriLankaCourtDecisions corpus (1278 Supreme Court and 7314 Court of Appeal decisions) and describes eight key patterns identified through computational analysis. Argues these insights challenge received wisdom about judicial impact and provide a necessary corrective to knowledge generated through landmark cases.
+3. Remove weird artifacts from the .md files such as random "\" etc resulting from back conversion from .docx. 
 
-**1. Introduction**
-Explains the dominance of landmark judgments in common-law systems and proposes computational methods as a means to analyse the full corpus of case law beyond this narrow focus. Sets out the article's two main questions: what insights emerge from systematic empirical examination of Sri Lankan appellate judgments, and what are the prospects for such examination given current data availability. Provides roadmap for subsequent sections.
+4. Attach images from `images` correctly into `sections-final/4-analysis.md` section (these are plots)
 
-**2. Empirical Study of Sri Lankan Courts**
-Situates the study within the tradition of legal empiricism and judicial statistics research, contrasting the rare empirical work in Sri Lanka with more established practices elsewhere. Describes Sri Lanka's mixed legal system shaped by Portuguese, Dutch, and British colonialism, explains the role of case law in developing Roman-Dutch, English Common, and Customary Laws, and details the structure and function of the Superior Courts. Examines the judicial branch from 2012–2022 in the context of constitutional developments (18th, 19th, and 20th Amendments) and discusses limitations in legal system digitisation.
+5. My colleage may have inserted new citations / bibiliography that need to be added to `references.bib`
 
-**3. SriLankaCourtDecisions: Court Decision Texts Sri Lanka Dataset**
-Describes the compilation of the SriLankaCourtDecisions dataset by scraping official court websites for the period 2012–2022. Details the dataset structure (1278 Supreme Court decisions, 7314 Court of Appeal decisions) and the technical challenges encountered, including duplicates, non-standardised case numbers, and OCR issues. Provides basic descriptive statistics including mean token counts for each court.
+6. My current build scripts are `build-paper-pdf.sh` and `build-paper-docx.sh`. But in another project, I used EB Garamond font and template based Word document generation which gave better output. You can find those here: `/home/elihoole/Documents/personal-work/puttalam-ilmanite-vs-sl-cement-corporation/build-submission-docx.sh` and `/home/elihoole/Documents/personal-work/puttalam-ilmanite-vs-sl-cement-corporation/build-submission-pdf.sh`. I want you to explore those and align our build scripts more closely to them. 
 
-**4. Insights from the SriLankaCourtDecisions**
-Presents eight empirical patterns identified through exploratory data analysis, mutual information analysis, and topic modelling. Covers: the Court of Appeal's greater numerical contribution; variations in Supreme Court output correlating with judicial independence; time taken to deliver decisions (37% of SC and 48% of CA decisions took over 5 years); length of decisions; proportion of dismissed versus allowed cases; token-level mutual information analysis revealing salient words; and topic modelling identifying land disputes, state employment writs, and criminal proceedings as dominant themes. Discusses implications for understanding judicial impact and access to justice.
-
-**5. Conclusion**
-Summarises the contribution of SriLankaCourtDecisions as both a corpus and a preliminary empirical analysis. Acknowledges the findings as preliminary given the nascent stage of legal system digitisation in Sri Lanka, while emphasising that computational methods have already revealed or confirmed trends warranting further investigation and, in some cases, urgent reform. Notes that immediate next steps are clear and will build on the findings already highlighted.
-
-**6. Future Work**
-*[Section appears to require development]*
-
-**7. References**
-
----
 
 ## Citation System Migration (Completed December 6, 2025)
 

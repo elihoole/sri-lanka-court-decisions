@@ -73,3 +73,17 @@ The research work for this paper was carried out 2023 to 2025. A preliminary dra
 ::: {custom-style="Section-Break-Next-Page"}
 \
 :::
+
+## Table of Contents {.unnumbered .unlisted}
+
+```{=openxml}
+<w:sdt>
+  <w:sdtPr><w:docPartObj><w:docPartGallery w:val="Table of Contents"/><w:docPartUnique/></w:docPartObj></w:sdtPr>
+  <w:sdtContent>
+    <w:p><w:r><w:fldChar w:fldCharType="begin" w:dirty="true"/><w:instrText xml:space="preserve"> TOC \o "1-3" \h \z \u </w:instrText><w:fldChar w:fldCharType="separate"/><w:fldChar w:fldCharType="end"/></w:r></w:p>
+  </w:sdtContent>
+</w:sdt>
+```
+
+::: pagebreak
+:::

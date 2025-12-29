@@ -77,22 +77,43 @@ function Div(el)
   return el
 end
 
--- Track headers and insert section break before first H1 (Introduction)
--- This switches from Roman numerals to Arabic numerals
+-- Track headers and insert section break before first H1 (Abstract)
+-- In DOCX, sectPr defines properties for the PRECEDING section
+-- So we insert Roman numeral sectPr before first H1 to make front matter Roman
 function Header(el)
     if el.level == 1 then
         heading_count = heading_count + 1
 
-        -- Before the first H1 (which should be Introduction/Abstract content)
-        -- Insert a section break to switch to Arabic page numbers
+        -- Before the first H1 (Abstract), insert section break
+        -- This sectPr defines the FRONT MATTER (title + TOC) as Roman numerals
         if not first_h1_found then
             first_h1_found = true
-            -- Return section break followed by the header
+            -- Return section break (Roman for front matter) followed by the header
             return {
-                create_section_break("decimal", true),
+                create_section_break("lowerRoman", false),
                 el
             }
         end
     end
     return el
+end
+
+-- Set the final document section to use Arabic (decimal) page numbers
+-- This is added at the end of the document via Meta
+function Meta(meta)
+    return meta
+end
+
+function Pandoc(doc)
+    -- Append a final section break to set main content to Arabic numerals
+    -- In DOCX, the final sectPr in w:body applies to the last section
+    local arabic_section = pandoc.RawBlock('openxml', [[
+        <w:sectPr>
+            <w:pgNumType w:fmt="decimal" w:start="1"/>
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
+        </w:sectPr>
+    ]])
+    table.insert(doc.blocks, arabic_section)
+    return doc
 end

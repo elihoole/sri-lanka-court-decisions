@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# Build script for Academic Paper DOCX
+# Build script for Sri Lanka Court Decisions DOCX
 # Generates DOCX with EB Garamond font, proper styling, and page breaks
-# Uses a reference template for consistent formatting
 
 set -e  # Exit on error
 
-# Change to the sections directory
-cd "$(dirname "$0")/sections-final"
+# Change to the content directory
+cd "$(dirname "$0")/content"
 
 # Get all markdown files and sort them properly
 files=(*.md)
@@ -22,30 +21,27 @@ echo "Combining files with page breaks..."
 temp_file="../temp-combined-docx.md"
 > "$temp_file"  # Clear/create temp file
 
-first=true
 for file in "${sorted[@]}"; do
-    if [ "$first" = true ]; then
-        first=false
-    fi
     cat "$file" >> "$temp_file"
-    echo "" >> "$temp_file"  # Add blank line after file content
+    echo "" >> "$temp_file"
 done
 
 # Build the DOCX with pandoc
 echo ""
 echo "Generating DOCX..."
 cd ..
+mkdir -p output
 
 # Prepare title page with current date
 python3 - <<'PY'
 from pathlib import Path
 from datetime import datetime
-title = Path("title-page-docx.md").read_text()
+title = Path("config/title-page.md").read_text()
 today_str = datetime.now().strftime("%B %-d, %Y")
-Path("title-page-docx-temp.md").write_text(title.replace("${TODAY}", today_str))
+Path("temp-title-page.md").write_text(title.replace("${TODAY}", today_str))
 PY
 
-# Add page breaks before each top-level section (# heading) using pandoc's pagebreak block
+# Add page breaks before each top-level section
 python3 - <<'PY'
 from pathlib import Path
 path = Path("temp-combined-docx.md")
@@ -64,13 +60,12 @@ for line in lines:
 path.write_text("\n".join(out) + "\n")
 PY
 
-# Build pandoc command with reference doc and lua filter
 pandoc temp-combined-docx.md \
-    -o SriLankaCourtDecisions-paper-draft.docx \
-    --reference-doc=utils/reference.docx \
-    --lua-filter=utils/academic-docx-format.lua \
+    -o output/paper.docx \
+    --reference-doc=config/reference.docx \
+    --lua-filter=config/format.lua \
     --filter pandoc-crossref \
-    --include-before-body=title-page-docx-temp.md \
+    --include-before-body=temp-title-page.md \
     -M secPrefix=Section \
     -M tablePrefix=Table \
     -M figurePrefix=Figure \
@@ -78,7 +73,7 @@ pandoc temp-combined-docx.md \
     -M figPrefix=Figure \
     --citeproc \
     --bibliography=references.bib \
-    --csl=chicago-fullnote-bibliography.csl \
+    --csl=config/chicago.csl \
     --toc \
     --toc-depth=3 \
     --number-sections \
@@ -87,24 +82,13 @@ pandoc temp-combined-docx.md \
     -V urlcolor:blue \
     --highlight-style=tango
 
-# Clean up temporary file
-rm -f temp-combined-docx.md title-page-docx-temp.md
+# Clean up temporary files
+rm -f temp-combined-docx.md temp-title-page.md
 
 echo ""
-echo "DOCX generated successfully: SriLankaCourtDecisions-paper-draft.docx"
-echo ""
-echo "The DOCX includes:"
-echo "  - EB Garamond font throughout"
-echo "  - Custom title page"
-echo "  - Table of contents (update with F9 in Word)"
-echo "  - Numbered sections"
-echo "  - Internal cross-references"
-echo "  - Each section starts on a new page"
-echo "  - Chicago-style footnotes and bibliography"
-echo "  - Professional academic formatting"
+echo "Generated: output/paper.docx"
 echo ""
 echo "To update the Table of Contents in Word:"
 echo "  1. Open the document in Microsoft Word"
 echo "  2. Click anywhere in the TOC"
 echo "  3. Press F9 and choose 'Update entire table'"
-echo ""

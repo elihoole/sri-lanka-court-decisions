@@ -1,2 +1,16 @@
-.instructions/*
-.diff/*
+# Archives and legacy files
+.archive/
+
+# Build artifacts (track only output/paper.pdf)
+output/*.docx
+output/*-mobile.pdf
+
+# Temporary files
+temp-*.md
+*.tmp
+
+# System files
+.claude/
+.DS_Store
+*.swp
+*~

@@ -1,6 +1,6 @@
 # A Research Agenda for the Future {#sec:agenda}
 
-The empirical patterns identified in this study point toward concrete directions for further research. The limitations of the \texttt{SriLankaCourtDecisions} corpus – particularly the absence of precise filing and decision dates, incomplete records of dismissals at the leave stage, and the lack of systematic appeal data – define immediate priorities. Beyond addressing these data constraints, the substantive findings warrant targeted investigation into judicial performance, doctrinal development, and institutional dynamics.
+The empirical patterns identified in this study point toward concrete directions for further research. The limitations of the `SriLankaCourtDecisions` corpus – particularly the absence of precise filing and decision dates, incomplete records of dismissals at the leave stage, and the lack of systematic appeal data – define immediate priorities. Beyond addressing these data constraints, the substantive findings warrant targeted investigation into judicial performance, doctrinal development, and institutional dynamics.
 
 ## Improving Temporal Analysis
 
@@ -10,7 +10,9 @@ More precise temporal data would permit analysis of whether delays concentrate i
 
 ## Mapping Appellate Pathways
 
-The current dataset cannot distinguish Supreme Court decisions exercising original jurisdiction from those hearing appeals from the Court of Appeal. Coding decisions by jurisdictional basis would reveal how many Court of Appeal judgments are appealed, which substantive areas generate appeals, and what proportion of Court of Appeal decisions effectively resolve disputes without further review.
+The case-type and jurisdictional classifications employed in this study, apart from the LDA-based topic analysis, are derived from case numbers rather than from the substantive content of judgments. They should therefore be regarded as a cursory classification. At the Supreme Court level, a case number may identify a matter simply as “SC/APPEAL” without indicating whether the appeal originated in the Court of Appeal, Civil Appellate High Court, High Court, or Commercial High Court. Although some case numbers contain more specific designations, such as “SC/CA/APPEAL”, these conventions are not applied consistently.
+
+Case-number patterns can therefore distinguish broad categories, including original and appellate jurisdiction, but cannot reliably reconstruct the appellate pathway of every case or link each Supreme Court appeal to the particular court and judgment from which it arose. Future research would require content-based coding of the judgments, together with more systematic linkage of decisions across judicial levels. This should also separately identify references made by the Court of Appeal under Article 126(3), which are distinct from appeals.
 
 This analysis would test the hypothesis that the Court of Appeal’s numerical dominance translates into practical authority because most disputes terminate there. If appeal rates are low, the jurisprudential neglect of Court of Appeal decisions constitutes a significant gap between doctrinal attention and institutional impact. If appeal rates are high in particular areas – land disputes, state employment matters, or criminal convictions – that pattern would warrant investigation into why certain categories of decisions are more contestable or less authoritative.
 
@@ -36,17 +38,17 @@ Targeted case studies would reveal whether delays concentrate at particular proc
 
 The identification of land disputes, state employment matters, and criminal appeals as dominant topics warrants substantive doctrinal analysis. Land dispute jurisprudence in Sri Lanka has received limited scholarly attention despite dominating appellate dockets. Systematic study of land dispute decisions would reveal patterns in how courts resolve competing claims, apply prescriptive acquisition doctrine, interpret state land alienation schemes, and manage disputes arising from incomplete or conflicting title records.
 
-State employment disputes – particularly appointments, promotions, transfers, and disciplinary proceedings – reveal the extent to which appellate courts function as forums for resolving internal public sector disputes. Are courts effectively reviewing administrative discretion or are they substituting their judgment for administrative decisions? Do patterns in state employment cases reveal substantive inequality in how similarly situated public servants are treated? What proportion of petitioners succeed, and does success correlate with particular grounds of challenge or particular administrative bodies?
+State employment disputes – particularly appointments, promotions, transfers, and disciplinary proceedings – reveal the extent to which superior courts function as forums for resolving internal public sector disputes. Are courts effectively reviewing administrative discretion or are they substituting their judgment for administrative decisions? Do patterns in state employment cases reveal substantive inequality in how similarly situated public servants are treated? What proportion of petitioners succeed, and does success correlate with particular grounds of challenge or particular administrative bodies?
 
 Criminal appeal patterns warrant analysis of conviction and sentence affirmation rates, the grounds on which appeals succeed, and whether particular categories of offences generate disproportionate appeals. Vehicle offences and forest offences appear as distinct topics in Court of Appeal decisions, suggesting these categories generate substantial litigation. Understanding why requires analysis of the applicable legal framework, enforcement patterns, and the availability of defences.
 
 ## Linguistic and Stylistic Analysis
 
-The mutual information analysis identified salient terms but did not pursue detailed linguistic or stylistic analysis. Further work could employ computational linguistics methods to analyse citation practices, reasoning structures, and rhetorical patterns in judgments. Do Supreme Court decisions cite more precedent than Court of Appeal decisions? Do fundamental rights judgments cite more constitutional provisions than statutory ones? Do judgments cite foreign jurisprudence, and if so, from which jurisdictions?
+The mutual information analysis identified salient terms but did not pursue detailed linguistic or stylistic analysis. Further work could employ computational linguistics methods to analyse citation practices, reasoning structures, and rhetorical patterns in judgments. Do Supreme Court decisions cite more precedent than Court of Appeal decisions? Do fundamental rights judgments cite more constitutional provisions than statutory ones? Do judgments cite foreign jurisprudence, international law, or academic commentary; and, if so, which jurisdictions, instruments, and scholarly sources are most influential?
 
-Stylistic analysis could also examine variation across judicial panels. Do particular justices employ distinct linguistic patterns, reasoning structures, or citation practices? This would not assess the quality of individual justices’ work but would reveal whether judicial style varies systematically and whether such variation correlates with case outcomes or substantive areas.
+Stylistic analysis could also examine variation across judicial panels. Do linguistic patterns, reasoning structures, or citation practices vary across benches or panels? This would not assess the quality of individual justices’ work but would reveal whether judicial style varies systematically and whether such variation correlates with case outcomes or substantive areas.
 
-Computational analysis of reasoning patterns – particularly the structure of legal arguments, the weight given to different sources of law, and the methods by which courts distinguish or apply precedent – would contribute to understanding how appellate courts develop doctrine. This requires more sophisticated natural language processing methods than employed in this preliminary study but is feasible with the existing corpus.
+Computational analysis of reasoning patterns – particularly the structure of legal arguments, the weight given to different sources of law, and the methods by which courts distinguish or apply precedent – would contribute to understanding how superior courts develop doctrine. This requires more sophisticated natural language processing methods than employed in this preliminary study but is feasible with the existing corpus.
 
 ## Comparative Institutional Analysis
 
@@ -54,7 +56,7 @@ The hypothesis that Supreme Court output correlates with judicial independence w
 
 Comparative analysis would also examine whether similar patterns exist in other common-law jurisdictions. Do courts exercising both original and appellate jurisdiction, like the Court of Appeal, consistently produce greater numerical output than apex courts exercising primarily appellate jurisdiction? Do constitutional mandates for expedited adjudication correlate with faster or slower resolution in practice? Do courts without such mandates perform better, and if so, what institutional or procedural factors explain the difference?
 
-Such analysis would test whether the observed patterns are specific to Sri Lanka’s constitutional and institutional context or reflect broader dynamics common to appellate courts in similar legal systems.
+Such analysis would test whether the observed patterns are specific to Sri Lanka’s constitutional and institutional context or reflect broader dynamics common to superior courts in similar legal systems.
 
 ## Expanding the Temporal and Jurisdictional Scope
 
@@ -66,7 +68,7 @@ District Court and Magistrate Court decisions are not systematically digitised, 
 
 ## Methodological Development
 
-The computational methods employed in this study – topic modelling through LDA, mutual information analysis, and basic descriptive statistics – represent initial applications of established techniques. Further methodological development could employ more sophisticated approaches: dynamic topic modelling to reveal how topics shift over time, supervised machine learning to predict case outcomes based on textual features, and network analysis to map citation patterns among decisions.
+The computational methods employed in this study – topic modelling through LDA, mutual information analysis, and basic descriptive statistics – represent initial applications of established techniques. Further methodological development could employ more sophisticated approaches: dynamic topic modelling to reveal how topics shift over time, supervised machine learning to identify which textual features correlate with case outcomes (not as a step toward automated adjudication), and network analysis to map citation patterns among decisions.
 
 The use of sentiment analysis – adapted to the specialised language of judicial decisions – could reveal whether particular dispute types or procedural contexts generate more emotive or more neutral judicial language. This would not assess the quality of decisions but would contribute to understanding how courts write about different categories of disputes.
 

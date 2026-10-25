@@ -11,11 +11,28 @@
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
 
 % Style Pandoc citeproc bibliography entries
-% Add vertical spacing between references
+% Add vertical spacing between references (0.8em)
 \usepackage{etoolbox}
-\AtBeginEnvironment{CSLReferences}{%
-  \setlength{\parskip}{0.8em plus 0.2em minus 0.1em}%
-}
+\newlength{\cslentrygap}
+\setlength{\cslentrygap}{0.8em plus 0.2em minus 0.1em}
+\ifdefined\cslentryspacingunit
+  % pandoc <= 3.1.6: CSLReferences spaces entries as paragraphs; override
+  % its entry-spacing unit so the template's own \parskip setting uses our gap
+  \setlength{\cslentryspacingunit}{\cslentrygap}
+\else
+  % pandoc >= 3.1.7: CSLReferences is a list; set the gap via \itemsep
+  \renewenvironment{CSLReferences}[2]
+   {\begin{list}{}{%
+    \setlength{\itemindent}{0pt}%
+    \setlength{\leftmargin}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \ifodd #1
+     \setlength{\leftmargin}{\cslhangindent}%
+     \setlength{\itemindent}{-1\cslhangindent}%
+    \fi
+    \setlength{\itemsep}{\cslentrygap}}}
+   {\end{list}}
+\fi
 
 % Remove angle brackets from URLs
 \usepackage{url}

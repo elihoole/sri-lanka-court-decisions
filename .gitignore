@@ -1,9 +1,9 @@
 # Archives and legacy files
 .archive/
 
-# Build artifacts (track only output/paper.pdf)
+# Build artifacts (track only the A4 PDF)
 output/*.docx
-output/*-mobile.pdf
+output/*mobile*.pdf
 
 # Temporary files
 temp-*.md

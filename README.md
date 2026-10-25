@@ -40,13 +40,13 @@ uv run python3 code/main.py --text    # Chi-square & mutual info
 
 | Script | Output | Description |
 |--------|--------|-------------|
-| `build-pdf.sh` | `output/paper.pdf` | A4 PDF with full formatting |
-| `build-docx.sh` | `output/paper.docx` | Word document (EB Garamond font) |
-| `build-mobile-pdf.sh` | `output/paper-mobile.pdf` | Phone-sized PDF (90mm x 160mm) |
+| `build-pdf.sh` | `output/EmpiricalStudies_300526_EH_Settled_25102026.pdf` | A4 PDF with full formatting |
+| `build-docx.sh` | `output/EmpiricalStudies_300526_EH_Settled_25102026.docx` | Word document (EB Garamond font) |
+| `build-mobile-pdf.sh` | `output/EmpiricalStudies_300526_mobile_EH_Settled_25102026.pdf` | Phone-sized PDF (90mm x 160mm) |
 
 ## Prerequisites
 
-- [Pandoc](https://pandoc.org/) (>= 2.0)
+- [Pandoc](https://pandoc.org/) (>= 3.1.8, matching the pandoc-crossref build)
 - [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref)
 - LaTeX (pdflatex) with standard packages
 - Python 3 (standard library only, no packages needed)

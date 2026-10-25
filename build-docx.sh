@@ -5,6 +5,9 @@
 
 set -e  # Exit on error
 
+# Output filename (update the version label when a new draft is settled)
+OUTPUT="output/EmpiricalStudies_300526_EH_Settled_25102026.docx"
+
 # Change to the content directory
 cd "$(dirname "$0")/content"
 
@@ -69,7 +72,7 @@ Path("temp-combined-docx.md").write_text(final)
 PY
 
 pandoc temp-combined-docx.md \
-    -o output/paper.docx \
+    -o "$OUTPUT" \
     --reference-doc=config/reference.docx \
     --lua-filter=config/format.lua \
     --filter pandoc-crossref \
@@ -91,7 +94,7 @@ pandoc temp-combined-docx.md \
 rm -f temp-combined-docx.md temp-title-page.md
 
 echo ""
-echo "Generated: output/paper.docx"
+echo "Generated: $OUTPUT"
 echo ""
 echo "To update the Table of Contents in Word:"
 echo "  1. Open the document in Microsoft Word"

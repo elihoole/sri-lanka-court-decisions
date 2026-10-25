@@ -14,7 +14,7 @@ Paper: *First Steps: Empirical Study of Sri Lanka's Apex Courts with a Focus on 
 - `references.bib` — all citations
 - `figures/` — plots referenced from `content/4-analysis.md`
 - `code/` — analysis code reproducing the figures and tables (see README)
-- `review/` — co-author review rounds (decision sheets, CriticMarkup renderings of returned docx files)
+- `review/` — co-author review rounds (decision sheets, CriticMarkup renderings of returned docx files); git-ignored, local only
 - `output/` — built files and the docx files returned by co-authors
 
 ## Building

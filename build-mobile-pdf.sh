@@ -6,7 +6,7 @@
 set -e  # Exit on error
 
 # Output filename (update the version label when a new draft is settled)
-OUTPUT="output/EmpiricalStudies_300526_mobile_EH_Settled_25102026.pdf"
+OUTPUT="output/EmpiricalStudy_300526_mobile_EH_Settled_25102026.pdf"
 
 # Change to the content directory
 cd "$(dirname "$0")/content"

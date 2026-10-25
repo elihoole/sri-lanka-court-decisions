@@ -20,9 +20,9 @@ Paper: *First Steps: Empirical Study of Sri Lanka's Apex Courts with a Focus on 
 ## Building
 
 ```bash
-./build-pdf.sh         # A4 PDF  -> output/EmpiricalStudies_300526_EH_Settled_25102026.pdf
-./build-docx.sh        # Word    -> output/EmpiricalStudies_300526_EH_Settled_25102026.docx
-./build-mobile-pdf.sh  # Phone   -> output/EmpiricalStudies_300526_mobile_EH_Settled_25102026.pdf
+./build-pdf.sh         # A4 PDF  -> output/EmpiricalStudy_300526_EH_Settled_25102026.pdf
+./build-docx.sh        # Word    -> output/EmpiricalStudy_300526_EH_Settled_25102026.docx
+./build-mobile-pdf.sh  # Phone   -> output/EmpiricalStudy_300526_mobile_EH_Settled_25102026.pdf
 ```
 
 - Output names are set by `OUTPUT=` at the top of each script; update the version label when a new draft is settled. Only the A4 PDF is tracked in git.

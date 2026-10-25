@@ -67,7 +67,7 @@ Draft generated on ${TODAY}
 :::
 
 ::: {custom-style="Affiliation-Note"}
-The research work for this paper was carried out 2023 to 2025. A preliminary draft of this paper by Elijah Hoole, Amanda Halliday & Yanitra Kumaraguru 'Empirical Study of Sri Lanka's Apex Courts: Taking the First Step with Dataset Curation and Analysis' was presented by Amanda Halliday at the conference on Computational Analysis of Apex Courts 2023 held June 23, in Braga, Portugal.
+The research work for this paper was carried out 2023 to 2025. A preliminary draft of this paper by Elijah Hoole, Amanda Halliday & Yanitra Kumaraguru 'Empirical Study of Sri Lanka's Apex Courts: Taking the First Step with Dataset Curation and Analysis' was presented by Amanda Halliday at the conference on Computational Analysis of Apex Courts 2023 held June 23, in Braga, Portugal. We thank Tavini Nanayakkara, Akalanka Tilakeratne and Shanil Wijesinha for their feedback.
 :::
 
 ::: {custom-style="Section-Break-Next-Page"}

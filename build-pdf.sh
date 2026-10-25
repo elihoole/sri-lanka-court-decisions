@@ -5,6 +5,9 @@
 
 set -e  # Exit on error
 
+# Output filename (update the version label when a new draft is settled)
+OUTPUT="output/EmpiricalStudy_300526_EH_Settled_25102026.pdf"
+
 # Change to the content directory
 cd "$(dirname "$0")/content"
 
@@ -34,8 +37,9 @@ cd ..
 mkdir -p output
 
 pandoc temp-combined.md \
-    -o output/paper.pdf \
+    -o "$OUTPUT" \
     --pdf-engine=pdflatex \
+    --lua-filter=config/review-comments.lua \
     --filter pandoc-crossref \
     -M secPrefix="Section" \
     -M tablePrefix="Table" \
@@ -67,4 +71,4 @@ pandoc temp-combined.md \
 rm -f temp-combined.md
 
 echo ""
-echo "Generated: output/paper.pdf"
+echo "Generated: $OUTPUT"

@@ -36,6 +36,7 @@ mkdir -p output
 pandoc temp-combined.md \
     -o output/paper.pdf \
     --pdf-engine=pdflatex \
+    --lua-filter=config/review-comments.lua \
     --filter pandoc-crossref \
     -M secPrefix="Section" \
     -M tablePrefix="Table" \
